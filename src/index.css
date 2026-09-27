@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Chakra Petch', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #030704;
+    color: #e2e8f0;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-tech {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Neon Glow utilities matching futuristic AI.Now style */
+.neon-glow-sm {
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.3), 0 0 6px -2px rgba(16, 185, 129, 0.2);
+}
+
+.neon-glow-md {
+  box-shadow: 0 0 25px -4px rgba(16, 185, 129, 0.45), 0 0 10px -2px rgba(16, 185, 129, 0.35);
+}
+
+.neon-glow-lg {
+  box-shadow: 0 0 50px -5px rgba(16, 185, 129, 0.35), 0 0 20px -3px rgba(16, 185, 129, 0.25);
+}
+
+.neon-glow-text {
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.6), 0 0 24px rgba(16, 185, 129, 0.3);
+}
+
+.neon-border {
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.neon-border-hover:hover {
+  border-color: rgba(52, 211, 153, 0.7);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(8, 20, 14, 0.85) 0%, rgba(3, 10, 6, 0.92) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #020503;
+}
+::-webkit-scrollbar-thumb {
+  background: #064e3b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Subtle Cyber Glitch Animation for Team Member Cards */
+@keyframes cyberGlitch {
+  0% {
+    transform: translate(0);
+    filter: drop-shadow(0 0 0 rgba(16, 185, 129, 0));
+  }
+  15% {
+    transform: translate(-1.5px, 0.5px);
+    filter: drop-shadow(1.5px 0 0 rgba(239, 68, 68, 0.35)) drop-shadow(-1.5px 0 0 rgba(16, 185, 129, 0.35));
+  }
+  30% {
+    transform: translate(1px, -1px);
+    filter: drop-shadow(-1px 0 0 rgba(56, 189, 248, 0.35)) drop-shadow(1px 0 0 rgba(16, 185, 129, 0.35));
+  }
+  45% {
+    transform: translate(-1px, 0.5px);
+  }
+  65% {
+    transform: translate(1.5px, 0.5px);
+    filter: drop-shadow(1px 0 0 rgba(245, 158, 11, 0.25));
+  }
+  85% {
+    transform: translate(-0.5px, -0.5px);
+  }
+  100% {
+    transform: translate(0);
+    filter: none;
+  }
+}
+
+@keyframes glitchScanline {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+.glitch-card-hover {
+  position: relative;
+}
+
+.glitch-card-hover:hover {
+  animation: cyberGlitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.glitch-card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.9), transparent);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 25;
+}
+
+.glitch-card-hover:hover::before {
+  animation: glitchScanline 0.9s ease-in-out infinite;
+}
+

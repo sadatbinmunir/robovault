@@ -1,0 +1,6 @@
+{
+  "name": "RoboPulse - Robotics Project Showcase",
+  "description": "Futuristic neon-green robotics class project showcase featuring interactive animated circuit board, team profiles, weekly timeline, and project architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
