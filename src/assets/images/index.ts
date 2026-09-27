@@ -1,4 +1,4 @@
-import ROBOVAULTLogo from './ROBOVAULT_logo_1790436492408.jpg';
+import ROBOVAULTLogo from './robovault_logo_1790436492408.jpg';
 import drShidujamanImg from './dr_shidujaman_1790436507022.jpg';
 import sadatMunirImg from './sadat_munir_1790436518729.jpg';
 import farihaMirzaImg from './fariha_mirza_1790436533099.jpg';
