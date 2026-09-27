@@ -47,7 +47,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           </h1>
 
           <p className="text-xl sm:text-2xl lg:text-3xl text-emerald-300 font-tech font-bold tracking-wide max-w-3xl mx-auto drop-shadow-[0_0_15px_rgba(16,185,129,0.4)]">
-            {siteConfig.shortTagline || 'Smart garbage collection and sorting robot'}
+            {siteConfig.shortTagline || 'Autonomous Lost & Found Assistant Robot'}
           </p>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">

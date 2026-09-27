@@ -37,7 +37,7 @@ export const initialSiteConfig: SiteConfig = {
     department: "Department of Computer Science & Engineering",
     note: "Research Area: Explainable AI and Robotics, HCI, HRI. Supervising ROBOVAULT intelligent waste sorting robotics architecture, computer vision perception, and manipulator grasp mechanics."
   },
-  shortTagline: "Smart garbage collection and sorting robot",
+  shortTagline: "Autonomous Lost & Found Assistant Robot",
   abstract: "ROBOVAULT is an autonomous, intelligent waste management robotic platform engineered to detect, classify, collect, and sort municipal and laboratory recyclables (plastics, metals, paper, and non-recyclables). Integrating an active multi-axis robotic claw gripper with deep-learning vision models, ultrasonic obstacle avoidance, and robust differential mobile kinematics, ROBOVAULT navigates dynamic environments, autonomously identifies discarded debris, and executes precision robotic sorting routines.",
   contact: {
     email: "sadatbinmunir@gmail.com",

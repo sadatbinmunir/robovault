@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </div>
             <span className="text-xs text-emerald-400/90 font-mono tracking-tight line-clamp-1">
-              {siteConfig.shortTagline || 'Smart garbage collection and sorting robot'}
+              {siteConfig.shortTagline || 'Autonomous Lost & Found Assistant Robot'}
             </span>
           </div>
         </button>

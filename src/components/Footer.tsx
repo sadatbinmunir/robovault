@@ -27,13 +27,13 @@ export const Footer: React.FC<FooterProps> = ({ siteConfig, onNavigate }) => {
                   ROBOVAULT
                 </span>
                 <span className="text-[10px] font-mono text-emerald-400 block -mt-0.5 tracking-wide">
-                  Smart Sorting Robot
+                  Autonomous Lost & Found Assistant Robot
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-slate-300 leading-relaxed font-light">
-              Smart garbage collection and sorting robotic platform with vision-guided claw manipulation.
+              Autonomous Lost & Found Assistant robotic platform with vision-guided claw manipulation.
             </p>
 
             <div className="text-[11px] font-mono text-emerald-400/90 space-y-0.5">
@@ -245,7 +245,7 @@ export const Footer: React.FC<FooterProps> = ({ siteConfig, onNavigate }) => {
         {/* Bottom Bar */}
         <div className="border-t border-emerald-500/20 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
           <p>
-            © {new Date().getFullYear()} ROBOVAULT · Autonomous Smart Garbage Collection & Sorting Robot · IUB CCDS HCI Wing.
+            © {new Date().getFullYear()} ROBOVAULT · Autonomous Lost & Found Assistant Robot · IUB CCDS HCI Wing.
           </p>
 
           <button

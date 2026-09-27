@@ -136,7 +136,7 @@ export const MembersPage: React.FC<MembersPageProps> = ({ members }) => {
           Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 neon-glow-text">Leadership & Team</span>
         </h1>
         <p className="text-sm sm:text-base text-slate-300">
-          Faculty research direction and undergraduate engineering team developing ROBOVAULT: Smart Garbage Collection & Sorting Robot.
+          Faculty research direction and undergraduate engineering team developing ROBOVAULT: Autonomous Lost & Found Assistant Robot.
         </p>
       </div>
 
