@@ -286,10 +286,73 @@ export const initialTeamMembers: TeamMember[] = [
     themeColor: "green",
     avatarUrl: "/members/member-2.png",
     skills: ["Computational Logic", "Tech Innovation", "Problem Solving", "Media Creation", "Clean Design", "Full-Stack Dev"],
+    pdfUrl: "/istiaque_ahmed_literature_review.pdf",
     reviewedPapers: [
-      { title: "Explainable AI in Autonomous Service Robotics: A Survey of Human-Robot Teaming", authors: "M. Shidujaman, K. Tanaka, R. Harrison", year: 2023, source: "ACM Transactions on Human-Robot Interaction (THRI)" },
-      { title: "Real-Time Telemetry Dashboard Design for IoT Robotic Systems", authors: "C. Perera et al.", year: 2023, source: "IEEE Internet of Things Journal" },
-      { title: "Human-Centered UI/UX Patterns for Robot Monitoring Interfaces", authors: "J. Nielsen", year: 2022, source: "Nielsen Norman Group Research Report" }
+      {
+        title: "An Autonomous Robotic System for Object Retrieval and Delivery",
+        year: 2026,
+        source: "MDPI Robotics · Pioneer P3-DX, ReactorX-200, YOLOv8 & Kinect depth",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "CamFi: An AI-driven and Camera-based System for Assisting Users in Finding Lost Objects in Multi-Person Scenarios",
+        year: 2022,
+        source: "ACM CHI EA · Passive visual logging & multi-user ownership disambiguation",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "Finding Misplaced Items Using a Mobile Robot in a Smart Home Environment",
+        year: 2019,
+        source: "Frontiers of IT & EE · Trajectory-informed path planning & CNN detection",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "CleanNav: Deep Learning and Reinforcement Strategies for Smart Robot Exploration",
+        year: 2026,
+        source: "ScienceDirect · Autonomous vacuum repurposed for incidental lost & found logging",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "\"Where Is My Phone?\" — Towards Developing an Episodic Memory Model for Companion Robots to Track Users' Salient Objects",
+        year: 2023,
+        source: "ACM/IEEE HRI · Fetch mobile manipulator & episodic memory for salient item tracking",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "Autonomous Robot Retrieval System",
+        authors: "Ahern, Carter & Wilson",
+        year: 2015,
+        source: "ResearchGate · RatSLAM & vision-based object recognition on low-cost hardware",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "Efficient Dynamic Object Search in Home Environment by Mobile Robot: A Priori Knowledge-Based Approach",
+        authors: "Y. Zhang, G. Tian, J. Lu, et al.",
+        year: 2019,
+        source: "IEEE Transactions on Vehicular Technology · Cost-aware room prioritization & spatial priors",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "Hierarchical Semantic Knowledge-Based Object Search Method for Household Robots",
+        authors: "M. Zhang, G. Tian, Y. Cui, et al.",
+        year: 2024,
+        source: "IEEE Transactions on Emerging Topics in Computational Intelligence · 3-level semantic hierarchy",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "Object Search Using Edge-AI Based Mobile Robot",
+        authors: "R. Miyata, O. Fukuda, et al.",
+        year: 2021,
+        source: "ICIIBMS / JICE (IEEE) · On-device voice recognition, object recognition & ROS edge-AI",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      },
+      {
+        title: "Cognitive Learning Enabled Real Time Object Search Robot",
+        authors: "C. Sadhu, M. H. Abhiram, et al.",
+        year: 2013,
+        source: "IEEE CARE · Cognitive learning-based reasoning for real-time robotic object search",
+        url: "/istiaque_ahmed_literature_review.pdf"
+      }
     ],
     links: {
       email: "istiaque0000007@gmail.com",

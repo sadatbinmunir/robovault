@@ -246,10 +246,12 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({
                   accentBorder: "border-emerald-500/30 hover:border-emerald-400/60",
                   badgeClass: "bg-emerald-950/80 text-emerald-300 border-emerald-500/40",
                   subsystemColor: "text-emerald-400",
-                  topic: "Explainable AI (XAI) State Signaling & Telemetry Interfaces in Service Robotics",
-                  foundationRef: "Shidujaman, M., et al. (2023) 'Explainable AI in Autonomous Service Robotics: A Survey of Human-Robot Teaming' (ACM THRI).",
-                  keyAnalysis: "Synthesized supervised research under Dr. Mohammad Shidujaman examining how illuminated status cues and low-latency telemetry representations reduce operator cognitive load and heighten trust in autonomous service robots.",
-                  synthesis: "Engineered the multi-state visual indication protocol (PATROL, DETECT, ALIGN, GRASP, SORT) and the live telemetry dashboard, enabling transparent auditing of robot decision confidence during sorting runs."
+                  pdfUrl: "/istiaque_ahmed_literature_review.pdf",
+                  pdfTitle: "Literature Review — Istiaque Ahmed (ID: 2230549)",
+                  topic: "Autonomous Object Retrieval, Semantic Search Priors & Edge-AI Companion Robotics (10 Studies)",
+                  foundationRef: "MDPI Robotics (2026), CamFi (2022), FITEE Smart Home MIF (2019), CleanNav (2026), Waterloo Episodic Memory HRI (2023), RatSLAM (2015), IEEE TVT A Priori Search (2019), IEEE TETCI Hierarchical Semantic Search (2024), Edge-AI Mobile Robot (2021), Cognitive Learning CARE (2013).",
+                  keyAnalysis: "Synthesized 10 foundational studies covering mobile manipulators for spoken object retrieval (MDPI 2026), multi-occupant visual item logging (CamFi), human trajectory-informed search (FITEE 2019), incidental exploration logging (CleanNav 2026), episodic memory models (Waterloo HRI 2023), and IEEE journal frameworks on cost-aware spatial priors and 3-level hierarchical semantic associations.",
+                  synthesis: "Formulated RoboVault's active lost-and-found search strategy, pairing cost-aware room prioritization with anchor-object semantic hierarchies and onboard edge-AI to locate lost belongings quickly without exhaustive scanning or cloud latency."
                 },
                 {
                   name: "Fariha Afroz",
@@ -261,10 +263,12 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({
                   accentBorder: "border-emerald-500/30 hover:border-emerald-400/60",
                   badgeClass: "bg-emerald-950/80 text-emerald-300 border-emerald-500/40",
                   subsystemColor: "text-emerald-400",
-                  topic: "Edge Deep Learning Object Detection for Multi-Category Recyclable Waste",
-                  foundationRef: "Redmon, J., & Farhadi, A. (2022) 'Real-Time Edge Object Detection in Unstructured Cluttered Environments' & Benchmark Solid Waste Datasets.",
-                  keyAnalysis: "Investigated low-bitrate quantized neural networks (YOLO architectures) optimized for edge microprocessors, evaluating classification robustness against occlusion, crumpled geometry, and ambient campus lighting shifts.",
-                  synthesis: "Established the 4-category recyclable taxonomy (Plastics, Metals, Paper, General) and camera calibration routines for the OV5640 5MP optical sensor to guarantee real-time bounding box regression and sorting confidence."
+                  pdfUrl: "/fariha_afroz_literature_review.pdf",
+                  pdfTitle: "Literature Review — Fariha Afroz (ID: 2230563)",
+                  topic: "Hybrid SLAM Navigation & ROS 2 Nav2 Fail-Safe Architectures (3 Studies)",
+                  foundationRef: "Cartographer 2D/3D LiDAR Hybrid SLAM (2024), ROS 2 Nav2 Indoor Navigation (2024), ROS 2 Jazzy Nav2 Collision Monitor (2025).",
+                  keyAnalysis: "Investigated Cartographer LiDAR-based SLAM combined with Dijkstra/DWA local planners, GPS-denied indoor localization using Nav2 and SLAM Toolbox, and dynamic-obstacle deterministic emergency braking in ROS 2.",
+                  synthesis: "Applied fail-safe SLAM navigation pipelines and deterministic obstacle avoidance controllers to ensure collision-free indoor autonomy for RoboVault during dynamic retrieval runs."
                 }
               ].map((member, idx) => (
                 <div
