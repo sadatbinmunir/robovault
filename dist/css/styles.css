@@ -3368,6 +3368,29 @@ h1, h2, h3, h4, h5, h6 {
   color: #00E5A3;
   font-weight: 700;
   flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.member-v-lit-source-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(0, 229, 163, 0.15);
+  border: 1px solid rgba(0, 229, 163, 0.4);
+  color: #00E5A3;
+  margin-right: 0.35rem;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.member-v-lit-desc {
+  display: block;
+  font-size: 0.76rem;
+  color: #94A3B8;
+  margin-top: 0.2rem;
+  line-height: 1.4;
 }
 
 .btn-member-pdf {
