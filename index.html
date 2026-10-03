@@ -1,21 +1,1568 @@
-<!doctype html>
-<html lang="en" class="dark scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ROBOVAULT - Autonomous Lost & Found Assistant Robot</title>
-    <meta name="description" content="ROBOVAULT - Autonomous Smart Garbage Collection and Sorting Robot project showcase featuring real-time AI perception, robotic claw actuation, team profiles, and research timeline." />
-    <meta property="og:title" content="ROBOVAULT - Smart Garbage Collection and Sorting Robot" />
-    <meta property="og:description" content="ROBOVAULT - Autonomous Smart Garbage Collection and Sorting Robot project showcase featuring real-time AI perception, robotic claw actuation, team profiles, and research timeline." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#030704] text-slate-100 antialiased selection:bg-emerald-500 selection:text-black min-h-screen overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusBot: An AI-Powered Interactive Desk Companion for Productivity and Well-Being</title>
+  <meta name="description" content="FocusBot is a smart desktop robot combining Computer Vision and the Gemini API for context-aware desk companionship, distraction prevention, and adaptive well-being interventions.">
+  
+  <!-- Google Fonts: Rajdhani & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Tactical HUD Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Background Scanline Effect -->
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
+  <!-- Frosted Glass Background Atmosphere -->
+  <div class="frosted-glass-bg" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       SUBTLE CIRCUIT BOARD BACKGROUND (Hardware Grounded PCB Traces)
+       NOTE: To undo/remove, simply delete this container or set 
+       .circuit-bg-overlay { display: none; } in css/styles.css
+       ========================================================================== -->
+  <div class="circuit-bg-overlay" id="circuitBgOverlay" aria-hidden="true">
+    <svg class="circuit-pcb-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Via Hole Marker -->
+        <pattern id="dotGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+          <circle cx="40" cy="40" r="1.5" fill="rgba(0, 210, 255, 0.25)" />
+        </pattern>
+      </defs>
+
+      <!-- Background Dot Vias Grid -->
+      <rect width="1920" height="1080" fill="url(#dotGrid)" />
+
+      <!-- ===================================================
+           CIRCUIT BLOCK 1 (TOP LEFT): POWER MANAGEMENT & REGULATION
+           =================================================== -->
+      <g opacity="0.9">
+        <!-- 5V Buck / 3.3V LDO IC Footprint -->
+        <rect x="120" y="100" width="130" height="90" stroke="#00D2FF" stroke-width="1.2" fill="rgba(0, 210, 255, 0.03)" />
+        <rect x="110" y="112" width="10" height="6" fill="#00D2FF" />
+        <rect x="110" y="126" width="10" height="6" fill="#00D2FF" />
+        <rect x="110" y="140" width="10" height="6" fill="#00D2FF" />
+        <rect x="110" y="154" width="10" height="6" fill="#00D2FF" />
+        <rect x="110" y="168" width="10" height="6" fill="#00D2FF" />
+        <rect x="250" y="112" width="10" height="6" fill="#00D2FF" />
+        <rect x="250" y="126" width="10" height="6" fill="#00D2FF" />
+        <rect x="250" y="140" width="10" height="6" fill="#00D2FF" />
+        <rect x="250" y="154" width="10" height="6" fill="#00D2FF" />
+        <rect x="250" y="168" width="10" height="6" fill="#00D2FF" />
+        <text x="185" y="140" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" letter-spacing="1">U0: POWER BUS</text>
+        <text x="185" y="156" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">5V 3A / 3.3V LDO</text>
+
+        <!-- Traces from Power Bus -->
+        <path d="M 260 120 L 380 120 L 420 160 L 580 160" stroke="#00D2FF" stroke-width="1.2" stroke-dasharray="8 4" />
+        <circle cx="580" cy="160" r="3.5" stroke="#00D2FF" stroke-width="1.2" fill="#0A0D12" />
+        <text x="430" y="152" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7">VCC_5V0_SERVO_RAIL</text>
+
+        <path d="M 260 160 L 340 160 L 370 190 L 520 190" stroke="#00D2FF" stroke-width="1.2" />
+        <circle cx="520" cy="190" r="3.5" stroke="#00D2FF" stroke-width="1.2" fill="#0A0D12" />
+        <text x="380" y="184" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7">VDD_3V3_MCU_RAIL</text>
+      </g>
+
+      <!-- ===================================================
+           CIRCUIT BLOCK 2 (CENTER-LEFT): ESP32-S3 CORE MICROCONTROLLER
+           =================================================== -->
+      <g opacity="0.95">
+        <!-- Main ESP32-S3 Chip Silhouette -->
+        <rect x="520" y="240" width="220" height="240" rx="4" stroke="#00D2FF" stroke-width="1.6" fill="rgba(0, 210, 255, 0.04)" />
+        <rect x="540" y="260" width="180" height="90" stroke="#8A99AD" stroke-width="1" stroke-dasharray="4 4" fill="rgba(14, 20, 30, 0.5)" />
+        
+        <!-- ESP32 RF Shield Label -->
+        <text x="630" y="295" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1.5">ESP32-S3-WROOM-1</text>
+        <text x="630" y="315" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">XTENSA DUAL-CORE 240MHz</text>
+        <text x="630" y="330" fill="#FF6B00" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">8MB PSRAM // 2.4GHz Wi-Fi / BLE 5</text>
+
+        <!-- Chip Pin Contacts (Top & Bottom) -->
+        <!-- Top pins -->
+        <g fill="#00D2FF">
+          <rect x="550" y="234" width="8" height="6" /><rect x="570" y="234" width="8" height="6" />
+          <rect x="590" y="234" width="8" height="6" /><rect x="610" y="234" width="8" height="6" />
+          <rect x="630" y="234" width="8" height="6" /><rect x="650" y="234" width="8" height="6" />
+          <rect x="670" y="234" width="8" height="6" /><rect x="690" y="234" width="8" height="6" />
+        </g>
+        <!-- Bottom pins -->
+        <g fill="#00D2FF">
+          <rect x="550" y="480" width="8" height="6" /><rect x="570" y="480" width="8" height="6" />
+          <rect x="590" y="480" width="8" height="6" /><rect x="610" y="480" width="8" height="6" />
+          <rect x="630" y="480" width="8" height="6" /><rect x="650" y="480" width="8" height="6" />
+          <rect x="670" y="480" width="8" height="6" /><rect x="690" y="480" width="8" height="6" />
+        </g>
+        <!-- Left pins -->
+        <g fill="#00D2FF">
+          <rect x="514" y="270" width="6" height="8" /><rect x="514" y="295" width="6" height="8" />
+          <rect x="514" y="320" width="6" height="8" /><rect x="514" y="345" width="6" height="8" />
+          <rect x="514" y="370" width="6" height="8" /><rect x="514" y="395" width="6" height="8" />
+          <rect x="514" y="420" width="6" height="8" /><rect x="514" y="445" width="6" height="8" />
+        </g>
+        <!-- Right pins -->
+        <g fill="#00D2FF">
+          <rect x="740" y="270" width="6" height="8" /><rect x="740" y="295" width="6" height="8" />
+          <rect x="740" y="320" width="6" height="8" /><rect x="740" y="345" width="6" height="8" />
+          <rect x="740" y="370" width="6" height="8" /><rect x="740" y="395" width="6" height="8" />
+          <rect x="740" y="420" width="6" height="8" /><rect x="740" y="445" width="6" height="8" />
+        </g>
+
+        <!-- ESP32 Main GPIO Bus Line Routes -->
+        <!-- I2C Bus Traces (GPIO 21 & 22) -->
+        <path d="M 746 295 L 880 295 L 920 255 L 1100 255" stroke="#00D2FF" stroke-width="1.4" />
+        <circle cx="1100" cy="255" r="3.5" stroke="#00D2FF" stroke-width="1.2" fill="#0A0D12" />
+        <text x="890" y="285" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="8">GPIO21_SDA</text>
+
+        <path d="M 746 320 L 860 320 L 900 280 L 1080 280" stroke="#00D2FF" stroke-width="1.4" />
+        <circle cx="1080" cy="280" r="3.5" stroke="#00D2FF" stroke-width="1.2" fill="#0A0D12" />
+        <text x="890" y="310" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="8">GPIO22_SCL</text>
+      </g>
+
+      <!-- ===================================================
+           CIRCUIT BLOCK 3 (TOP RIGHT): OV5640 5MP VISION SENSOR
+           =================================================== -->
+      <g opacity="0.9">
+        <rect x="1100" y="100" width="180" height="110" rx="3" stroke="#00D2FF" stroke-width="1.2" fill="rgba(0, 210, 255, 0.03)" />
+        <circle cx="1190" cy="145" r="22" stroke="#FF6B00" stroke-width="1.4" stroke-dasharray="4 2" />
+        <circle cx="1190" cy="145" r="10" stroke="#00D2FF" stroke-width="1.2" fill="rgba(0, 210, 255, 0.1)" />
+        <text x="1190" y="180" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" font-weight="bold">U2: OV5640 CAMERA</text>
+        <text x="1190" y="195" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7.5" text-anchor="middle">5MP 120° FOV // DVP 30FPS</text>
+        
+        <!-- FPC Ribbon Cable Lines -->
+        <line x1="1100" y1="120" x2="980" y2="120" stroke="#8A99AD" stroke-width="1" />
+        <line x1="1100" y1="135" x2="980" y2="135" stroke="#8A99AD" stroke-width="1" />
+        <line x1="1100" y1="150" x2="980" y2="150" stroke="#8A99AD" stroke-width="1" />
+        <text x="1010" y="112" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7">CAM_D0..D7_BUS</text>
+      </g>
+
+      <!-- ===================================================
+           CIRCUIT BLOCK 4 (RIGHT): SSD1306 OLED & WS2812B RING
+           =================================================== -->
+      <g opacity="0.9">
+        <!-- OLED Display Footprint -->
+        <rect x="1220" y="270" width="190" height="100" rx="4" stroke="#00D2FF" stroke-width="1.4" fill="rgba(10, 13, 18, 0.7)" />
+        <rect x="1235" y="285" width="160" height="70" stroke="#8A99AD" stroke-width="1" />
+        <text x="1315" y="318" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" font-weight="bold">U3: SSD1306 OLED</text>
+        <text x="1315" y="335" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">128x64 I2C ADDR: 0x3C</text>
+        
+        <!-- NeoPixel WS2812B Ring Controller -->
+        <rect x="1220" y="420" width="190" height="90" rx="4" stroke="#FF6B00" stroke-width="1.2" fill="rgba(255, 107, 0, 0.03)" />
+        <text x="1315" y="455" fill="#FF6B00" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" font-weight="bold">D1..D12: WS2812B RING</text>
+        <text x="1315" y="472" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7.5" text-anchor="middle">12x RGB ADAPTIVE AURA (RMT)</text>
+        <circle cx="1250" cy="485" r="4" fill="#00D2FF" /><circle cx="1270" cy="485" r="4" fill="#FF6B00" />
+        <circle cx="1290" cy="485" r="4" fill="#00D2FF" /><circle cx="1310" cy="485" r="4" fill="#FF6B00" />
+        
+        <!-- WS2812B DIN trace from ESP32 GPIO 4 -->
+        <path d="M 746 395 L 940 395 L 980 435 L 1220 435" stroke="#FF6B00" stroke-width="1.2" />
+        <text x="960" y="425" fill="#FF6B00" font-family="'JetBrains Mono', monospace" font-size="7.5">GPIO4_WS2812B_DIN</text>
+      </g>
+
+      <!-- ===================================================
+           CIRCUIT BLOCK 5 (BOTTOM LEFT): PAN-TILT SERVO GIMBAL CONTROLLERS
+           =================================================== -->
+      <g opacity="0.9">
+        <!-- Dual SG90 Servo Connectors -->
+        <rect x="180" y="560" width="160" height="110" rx="3" stroke="#00D2FF" stroke-width="1.2" fill="rgba(0, 210, 255, 0.03)" />
+        <text x="260" y="590" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" font-weight="bold">M1 &amp; M2: PAN/TILT GIMBAL</text>
+        <text x="260" y="608" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7.5" text-anchor="middle">DUAL SG90 / MG90S SERVOS</text>
+
+        <!-- Servo PWM 3-pin headers -->
+        <rect x="200" y="625" width="8" height="8" fill="#FF6B00" />
+        <rect x="215" y="625" width="8" height="8" fill="#00D2FF" />
+        <rect x="230" y="625" width="8" height="8" fill="#8A99AD" />
+        <text x="260" y="632" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7">PAN: GPIO18 (50Hz PWM)</text>
+
+        <rect x="200" y="645" width="8" height="8" fill="#FF6B00" />
+        <rect x="215" y="645" width="8" height="8" fill="#00D2FF" />
+        <rect x="230" y="645" width="8" height="8" fill="#8A99AD" />
+        <text x="260" y="652" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7">TILT: GPIO19 (50Hz PWM)</text>
+
+        <!-- Traces to ESP32 PWM pins -->
+        <path d="M 340 630 L 460 630 L 510 460 L 520 460" stroke="#00D2FF" stroke-width="1.2" />
+        <path d="M 340 650 L 480 650 L 530 470 L 550 470" stroke="#00D2FF" stroke-width="1.2" stroke-dasharray="4 3" />
+      </g>
+
+      <!-- ===================================================
+           CIRCUIT BLOCK 6 (BOTTOM RIGHT): AUDIO SUB-SYSTEM (I2S MIC & DAC)
+           =================================================== -->
+      <g opacity="0.9">
+        <!-- INMP441 Microphone -->
+        <rect x="980" y="620" width="170" height="90" rx="3" stroke="#00D2FF" stroke-width="1.2" fill="rgba(0, 210, 255, 0.03)" />
+        <circle cx="1065" cy="655" r="8" stroke="#00D2FF" stroke-width="1" />
+        <circle cx="1065" cy="655" r="2.5" fill="#00D2FF" />
+        <text x="1065" y="680" fill="#00D2FF" font-family="'JetBrains Mono', monospace" font-size="8.5" text-anchor="middle" font-weight="bold">U4: INMP441 I2S MIC</text>
+        <text x="1065" y="695" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7" text-anchor="middle">FAR-FIELD MEMS (BCK:12 / WS:14)</text>
+
+        <!-- MAX98357A DAC Amplifier -->
+        <rect x="1220" y="620" width="180" height="90" rx="3" stroke="#FF6B00" stroke-width="1.2" fill="rgba(255, 107, 0, 0.03)" />
+        <text x="1310" y="655" fill="#FF6B00" font-family="'JetBrains Mono', monospace" font-size="8.5" text-anchor="middle" font-weight="bold">U5: MAX98357A I2S AMP</text>
+        <text x="1310" y="675" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7.5" text-anchor="middle">CLASS-D 3.2W SPEAKER DRIVER</text>
+        <text x="1310" y="690" fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="7" text-anchor="middle">DOUT: GPIO33 // LRCLK: GPIO25</text>
+
+        <!-- Bus connecting Audio units -->
+        <path d="M 746 445 L 850 445 L 920 640 L 980 640" stroke="#00D2FF" stroke-width="1.2" />
+        <path d="M 1150 660 L 1220 660" stroke="#FF6B00" stroke-width="1.2" stroke-dasharray="6 3" />
+      </g>
+
+      <!-- Decorative PCB Traces, Vias & Ground Copper Pour Lines -->
+      <g stroke="#00D2FF" stroke-width="0.8" opacity="0.6">
+        <path d="M 50 400 L 150 400 L 200 450 L 320 450" />
+        <circle cx="320" cy="450" r="2.5" fill="#00D2FF" />
+        <path d="M 1600 150 L 1750 150 L 1800 200 L 1880 200" />
+        <circle cx="1880" cy="200" r="2.5" fill="#00D2FF" />
+        <path d="M 1500 550 L 1650 550 L 1720 620 L 1850 620" />
+        <circle cx="1850" cy="620" r="2.5" fill="#00D2FF" />
+        <path d="M 400 800 L 550 800 L 600 850 L 850 850" />
+        <circle cx="850" cy="850" r="2.5" fill="#00D2FF" />
+      </g>
+
+      <!-- PCB Manufacturing Markings -->
+      <g fill="#8A99AD" font-family="'JetBrains Mono', monospace" font-size="8" opacity="0.6">
+        <text x="50" y="80">FOCUS-BOT-REV1.2 // 4-LAYER FR4 PCB</text>
+        <text x="50" y="990">FAB: ENIG FINISH // COPPER: 1OZ // LAYER_1_TOP_SIGNAL</text>
+        <text x="1650" y="1030">GND_PLANE: STITCHED</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ==========================================================================
+       1. FIXED TOP HEADER WITH FULL-WIDTH NAVIGATION & TWO DROPDOWNS
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      
+      <!-- Left: Logo / Brand Block -->
+      <a href="#hero" class="brand-block">
+        <div class="brand-badge-box">
+          <span>FB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">FOCUSBOT</span>
+          <span class="brand-subtitle">Guiding your focus</span>
+        </div>
+      </a>
+
+      <!-- Center: Full Navigation Menu -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          
+          <!-- 1. Home Link -->
+          <li class="nav-item">
+            <a href="#hero" class="nav-link active">Home</a>
+          </li>
+
+          <!-- 2. Project Dropdown -->
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Project
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="#overview">Project Overview</a></li>
+              <li class="dropdown-item"><a href="#literature-review">Literature Review</a></li>
+              <li class="dropdown-item"><a href="#paper-draft">Project Paper Draft</a></li>
+              <li class="dropdown-item"><a href="#equipments">Equipments Used</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. Elements Dropdown -->
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Elements
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="#software-architecture">Software Architecture</a></li>
+              <li class="dropdown-item"><a href="#hardware-schematics">Hardware Schematics</a></li>
+              <li class="dropdown-item"><a href="#demonstration-video">Demonstration Video</a></li>
+              <li class="dropdown-item"><a href="#system-pinouts">System Design & Pinouts</a></li>
+              <li class="dropdown-item"><a href="#ieee-paper">IEEE Paper Draft</a></li>
+              <li class="dropdown-item">
+                <a href="#member-contributions" data-coming-soon="Member Contribution Matrix">
+                  Member Contribution Matrix
+                  <span class="dropdown-badge">SOON</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 4. Team Link -->
+          <li class="nav-item">
+            <a href="team.html" class="nav-link">Team</a>
+          </li>
+
+          <!-- Vision Link (Coming Soon) -->
+          <li class="nav-item">
+            <a href="#vision" class="nav-link" data-coming-soon="Vision Module">Vision</a>
+          </li>
+
+          <!-- 5. Contact Link -->
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+
+          <!-- 6. Timeline Link (Interactive Week 1) -->
+          <li class="nav-item">
+            <a href="#timeline" class="nav-link">Timeline</a>
+          </li>
+
+          <!-- 7. Survey Link (Coming Soon) -->
+          <li class="nav-item">
+            <a href="#survey" class="nav-link" data-coming-soon="Survey Module">Survey</a>
+          </li>
+
+          <!-- 8. About Us Link -->
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About Us</a>
+          </li>
+
+          <!-- 9. Future Roadmap Link (Coming Soon) -->
+          <li class="nav-item">
+            <a href="#roadmap" class="nav-link" data-coming-soon="Future Roadmap">Future Roadmap</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right: Mode toggle & Mobile Menu Toggle -->
+      <div class="header-actions">
+        <button class="header-theme-toggle" title="Tactical HUD Dark Theme" aria-label="Toggle Theme">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Center Radial Glow -->
+      <div class="hero-radial-glow" aria-hidden="true"></div>
+
+      <!-- 1. Top Centered Headline Block -->
+      <div class="container hero-top-header">
+        <div class="hero-badge-tag">
+          <span>• FOCUSBOT • AI-POWERED INTERACTIVE DESK COMPANION</span>
+        </div>
+
+        <h1 class="hero-title">
+          FocusBot: An AI-Powered Interactive Desk Companion for
+          <span class="highlight-cyan">Productivity and Well-Being</span>
+        </h1>
+
+        <p class="hero-description">
+          FocusBot is a smart desktop robot that observes user activities through a camera and identifies behaviors such as studying, reading, using a phone, taking a break, or being away from the desk. Using computer vision and the Gemini API, it understands the user's current context and interacts naturally through voice, display, lights, and physical movement.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#overview" class="btn btn-solid-cyan">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>EXPLORE ARCHITECTURE</span>
+          </a>
+          <a href="#timeline" class="btn btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span>VIEW TIMELINE</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Centered Interactive 3-Column Stage Grid -->
+      <div class="container hero-stage-grid">
+        
+        <!-- Left Pop-Up Card: How It Works -->
+        <div class="hero-popup-card corner-bracket-box hero-popup-left">
+          <div class="popup-header">
+            <span class="popup-tag cyan-text">[ OPERATIONAL PIPELINE ]</span>
+            <h3 class="popup-title">HOW IT WORKS</h3>
+          </div>
+          <ul class="popup-bullet-list">
+            <li class="popup-bullet-item">
+              <span class="bullet-idx cyan-text">&gt; 01</span>
+              <div class="bullet-content">
+                <strong>Desk Observation:</strong> Wide-angle camera continuously tracks posture, reading angles, and physical workspace presence.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx cyan-text">&gt; 02</span>
+              <div class="bullet-content">
+                <strong>Edge Vision Classifier:</strong> Identifies focused studying, mobile phone distraction loops, and user absence in real time.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx cyan-text">&gt; 03</span>
+              <div class="bullet-content">
+                <strong>Gemini Multimodal Synapse:</strong> Contextually interprets study duration, fatigue markers, and cognitive workload.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx cyan-text">&gt; 04</span>
+              <div class="bullet-content">
+                <strong>Embodied Micro-Interventions:</strong> Deploys gentle pan-tilt head nods, friendly OLED eye expressions, and subtle audio cues.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx cyan-text">&gt; 05</span>
+              <div class="bullet-content">
+                <strong>Adaptive Break Rhythms:</strong> Automatically sets personalized Pomodoro sessions and restorative stretch timers.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Center: Animated Robot Scanning the Human on Study Table -->
+        <div class="hero-center-scanner">
+          <div class="hud-graphic-container corner-bracket-box">
+            
+            <!-- Concentric Reticle Circles & Radar Sweep -->
+            <div class="reticle-circle reticle-outer"></div>
+            <div class="reticle-circle reticle-middle"></div>
+            <div class="reticle-circle reticle-inner"></div>
+            <div class="reticle-crosshair-x"></div>
+            <div class="reticle-crosshair-y"></div>
+            <div class="reticle-scanner"></div>
+
+            <!-- Central Study Table Scene with Scanning Beam -->
+            <div class="study-scan-scene-wrapper">
+              <img src="assets/focusbot-study-scan.jpg" alt="FocusBot on the study table scanning the human studying" class="study-scan-image">
+              
+              <!-- Glowing Scanning Light Cone -->
+              <div class="scan-beam-cone"></div>
+
+              <!-- Animated Scan Beam Sweep Line -->
+              <div class="scan-beam-line"></div>
+
+              <!-- Target Reticle Over Human Face & Study Notebook -->
+              <div class="human-target-reticle">
+                <div class="reticle-corner tl"></div>
+                <div class="reticle-corner tr"></div>
+                <div class="reticle-corner bl"></div>
+                <div class="reticle-corner br"></div>
+                <div class="reticle-tag">[ TARGET: STUDENT OPERATOR ]</div>
+                <div class="reticle-subtag">STATUS: STUDYING // 98.4% CONF</div>
+              </div>
+
+              <!-- Reticle Over Desk Robot Unit -->
+              <div class="robot-unit-reticle">
+                <div class="reticle-corner tl" style="border-color: var(--orange-primary);"></div>
+                <div class="reticle-corner tr" style="border-color: var(--orange-primary);"></div>
+                <div class="reticle-corner bl" style="border-color: var(--orange-primary);"></div>
+                <div class="reticle-corner br" style="border-color: var(--orange-primary);"></div>
+                <div class="reticle-tag orange-text">[ FOCUSBOT // DESK COMPANION ]</div>
+                <div class="reticle-subtag">EMITTING OPTICAL CONTEXT SCAN</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Pop-Up Card: How It Is Different from Market Robots -->
+        <div class="hero-popup-card corner-bracket-box orange-brackets hero-popup-right">
+          <div class="popup-header">
+            <span class="popup-tag orange-text">[ MARKET DIFFERENTIATION ]</span>
+            <h3 class="popup-title">WHY IT'S DIFFERENT</h3>
+          </div>
+          <ul class="popup-bullet-list">
+            <li class="popup-bullet-item">
+              <span class="bullet-idx orange-text">&gt; 01</span>
+              <div class="bullet-content">
+                <strong>Empathetic vs. Annoying:</strong> Replaces irritating chimes with friendly physical nods, OLED eyes, and gentle gaze shifts.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx orange-text">&gt; 02</span>
+              <div class="bullet-content">
+                <strong>Physical Desk Embodiment:</strong> A tangible presence creates natural social accountability that cannot be swiped away like mobile apps.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx orange-text">&gt; 03</span>
+              <div class="bullet-content">
+                <strong>Edge Privacy Architecture:</strong> Video inference runs locally on the desk; private room video streams never touch external clouds.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx orange-text">&gt; 04</span>
+              <div class="bullet-content">
+                <strong>Gemini Multimodal Synapse:</strong> Goes far beyond fixed timers by answering spoken questions and evaluating subtle fatigue contexts.
+              </div>
+            </li>
+            <li class="popup-bullet-item">
+              <span class="bullet-idx orange-text">&gt; 05</span>
+              <div class="bullet-content">
+                <strong>Accessible Maker Cost:</strong> Open-hardware architecture under $80 vs. commercial social robots costing over $1,000+.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. PROJECT OVERVIEW & GOALS / BENEFITS (PROJECT DROPDOWN)
+         ========================================================================== -->
+    <section class="section-block" id="overview">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ 01 — OVERVIEW ]</span>
+          <h2 class="section-title">PROJECT OVERVIEW & SYSTEM GOALS</h2>
+          <p class="section-subtitle">
+            FocusBot revolutionizes the desk workspace by fusing low-cost embedded hardware, physical micro-expressions, and cloud-edge multimodal intelligence.
+          </p>
+        </div>
+
+        <!-- 2 Columns: Goals & Benefits -->
+        <div class="hud-grid-2">
+          
+          <!-- Column 1: System Goals -->
+          <div class="corner-bracket-box hud-card">
+            <div class="hud-card-header">
+              <div class="card-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <span class="card-index">OBJ // 01-08</span>
+            </div>
+
+            <h3 class="cyan-text">ENGINEERING GOALS</h3>
+            <p class="muted-text" style="margin-bottom: 1.5rem;">Target benchmarks and functional milestones of the FocusBot companion:</p>
+
+            <ul class="hud-feature-list">
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 01</span>
+                <div class="feature-text">
+                  <h4>Low-Cost Desktop Robot</h4>
+                  <p>Develop an accessible, open-hardware desk companion capable of recognizing common user activities.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 02</span>
+                <div class="feature-text">
+                  <h4>Computer Vision Activity Classifier</h4>
+                  <p>Use local/edge vision models to distinguish productive studying from phone usage, fatigue, or desk absence.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 03</span>
+                <div class="feature-text">
+                  <h4>Natural Gemini API Dialogue</h4>
+                  <p>Enable natural, contextual voice-based interaction leveraging Gemini API's deep multimodal reasoning.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 04</span>
+                <div class="feature-text">
+                  <h4>Context-Aware Reminders</h4>
+                  <p>Replace jarring audio alarms with intelligent nudges, gentle head turns, and dynamic OLED gaze cues.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 05</span>
+                <div class="feature-text">
+                  <h4>Adaptive Timer Engine</h4>
+                  <p>Allow users to set and manage personalized study-break intervals based on real-time fatigue signals.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 06</span>
+                <div class="feature-text">
+                  <h4>Comprehensive Activity Telemetry</h4>
+                  <p>Continuously track focus ratios, distraction frequency, and healthy break compliance.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 07</span>
+                <div class="feature-text">
+                  <h4>Adaptive Behavioral Persona</h4>
+                  <p>Adjust the robot's physical movement, lighting tone, and speech brevity according to user response.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 08</span>
+                <div class="feature-text">
+                  <h4>Multidisciplinary HRI Proof</h4>
+                  <p>Demonstrate the seamless integration of robotics, embedded systems, computer vision, and generative AI.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: User Benefits -->
+          <div class="corner-bracket-box hud-card orange-brackets">
+            <div class="hud-card-header">
+              <div class="card-icon-wrapper" style="border-color: var(--orange-border); background: var(--orange-subtle);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span class="card-index" style="color: var(--orange-primary);">VAL // 01-07</span>
+            </div>
+
+            <h3 class="orange-text">IMPACT & USER BENEFITS</h3>
+            <p class="muted-text" style="margin-bottom: 1.5rem;">Tangible well-being and productivity advantages delivered to the user:</p>
+
+            <ul class="hud-feature-list">
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 01</span>
+                <div class="feature-text">
+                  <h4>Deep Focus Sustenance</h4>
+                  <p>Helps students and remote workers maintain long-form concentration during rigorous study sessions.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 02</span>
+                <div class="feature-text">
+                  <h4>Distraction Mitigation</h4>
+                  <p>Proactively catches and reduces subconscious smartphone pickups and social media loop triggers.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 03</span>
+                <div class="feature-text">
+                  <h4>Physical Embodiment Over Screen Notifications</h4>
+                  <p>Provides a far more natural, empathetic, and tactile presence than dismissible phone notifications.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 04</span>
+                <div class="feature-text">
+                  <h4>Restorative Study-Break Rhythms</h4>
+                  <p>Encourages hydration, eye rest, and stretching intervals timed to optimal cognitive load.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 05</span>
+                <div class="feature-text">
+                  <h4>Zero-Effort Automated Tracking</h4>
+                  <p>Provides high-fidelity productivity logs without requiring manual stopwatch buttons or time-sheeting.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 06</span>
+                <div class="feature-text">
+                  <h4>Real-World AI Application</h4>
+                  <p>Exemplifies how multimodal neural models break out of chat windows into physical domestic environments.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 07</span>
+                <div class="feature-text">
+                  <h4>Broad Domain Extensibility</h4>
+                  <p>Scalable foundation for office workplace monitoring, elderly assistance, and personalized therapy support.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. LITERATURE REVIEW & BENCHMARKING (PROJECT DROPDOWN)
+         ========================================================================== -->
+    <section class="section-block" id="literature-review">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ ACADEMIC FOUNDATIONS & STATE OF THE ART ]</span>
+          <h2 class="section-title">LITERATURE REVIEW</h2>
+          <p class="section-subtitle">
+            Benchmarking embodied Human-Robot Interaction (HRI), computer vision attention monitoring, and LLM-driven behavioral modulation.
+          </p>
+        </div>
+
+        <div class="hud-grid-3">
+          <div class="corner-bracket-box hud-card">
+            <div class="hud-card-header">
+              <span class="card-index">LIT-REF // 01</span>
+            </div>
+            <h4>Embodied Agency in HRI</h4>
+            <p>Studies in Human-Robot Interaction demonstrate that physical social robots elicit significantly higher compliance, user empathy, and task persistence compared to virtual desktop avatars or standard software pop-ups (Kiesler et al., 2008).</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <div class="hud-card-header">
+              <span class="card-index">LIT-REF // 02</span>
+            </div>
+            <h4>Edge Vision Attention Tracking</h4>
+            <p>Recent developments in lightweight convolution models (MobileNet, YOLOv8-tiny) facilitate real-time head pose estimation and object detection on edge devices without uploading continuous video feeds to external clouds, safeguarding user privacy.</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <div class="hud-card-header">
+              <span class="card-index">LIT-REF // 03</span>
+            </div>
+            <h4>Multimodal LLM Behavioral Control</h4>
+            <p>Integrating large multimodal models like Google Gemini allows robots to comprehend subtle contextual cues (e.g. distinguishing textbook study from mindless phone scrolling) and synthesize sympathetic, adaptive vocal advice.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. PROJECT PAPER DRAFT & IEEE SPECIFICATION
+         ========================================================================== -->
+    <section class="section-block" id="paper-draft">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ DOCUMENTATION ARCHIVE ]</span>
+          <h2 class="section-title">PROJECT PAPER DRAFT</h2>
+          <p class="section-subtitle">
+            Formal technical report detailing system architecture, state-machine telemetry, and empirical HRI evaluation.
+          </p>
+        </div>
+
+        <div class="corner-bracket-box hud-card" id="ieee-paper">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot"></span>
+              <span>DRAFT SPECIFICATION // IEEE FORMATTED</span>
+            </div>
+            <a href="#" class="btn btn-ghost" style="padding: 0.4rem 1rem; font-size: 0.7rem;" onclick="alert('Downloading FocusBot_IEEE_Conference_Draft.pdf'); return false;">
+              DOWNLOAD PDF DRAFT
+            </a>
+          </div>
+
+          <div style="margin-top: 1rem; border-left: 2px solid var(--cyan-primary); padding-left: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.35rem;">
+              FocusBot: An Embodied Multimodal Desk Companion Leveraging Edge Vision and Gemini API for Enhanced Student Focus
+            </h3>
+            <p class="mono-label muted-text" style="margin-bottom: 1rem;">
+              ABSTRACT // SECTION 1.0 - METHODOLOGY & FINDINGS
+            </p>
+            <p class="muted-text" style="line-height: 1.8; margin-bottom: 1rem;">
+              Prolonged digital learning environments are notoriously vulnerable to cognitive fatigue and mobile distractions. Traditional mobile lockout applications frequently provoke user resentment or are rapidly uninstalled. In this paper, we introduce FocusBot, a compact desktop robotic platform integrating a 2-DOF pan-tilt vision gimbal, an OLED ocular interface, and a dual-tier cognition pipeline combining edge vision with Google Gemini. By analyzing real-time facial orientation and handheld object classifications, FocusBot assesses cognitive state and applies graduated, non-intrusive physical interventions...
+            </p>
+            <p class="mono-label cyan-text">
+              INDEX TERMS — Human-Robot Interaction (HRI), Computer Vision, Gemini API, Embodied AI, Desk Productivity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. EQUIPMENTS USED & SYSTEM DESIGN & PINOUTS
+         ========================================================================== -->
+    <section class="section-block" id="equipments">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ BILL OF MATERIALS & HARDWARE ARCHITECTURE ]</span>
+          <h2 class="section-title">EQUIPMENTS USED & PINOUT SPECIFICATION</h2>
+          <p class="section-subtitle">
+            Component breakdown, electrical specifications, and microcontroller pinout assignments.
+          </p>
+        </div>
+
+        <!-- Equipments Grid -->
+        <div class="hud-grid-4" style="margin-bottom: 3.5rem;">
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">01 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Microcontroller Core</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">ESP32-S3 Dual-Core Xtensa LX7 (240MHz) with 8MB PSRAM & 2.4GHz Wi-Fi / BLE 5.0 for edge orchestration.</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">02 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Vision Sensor</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">OV5640 5MP / USB 1080p 120° Wide-Angle lens module optimized for close-range desktop posture & phone detection.</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">03 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Actuators & Gimbal</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">Dual SG90 / MG90S metal gear micro servos providing 180° horizontal pan and 90° vertical tilt trajectory.</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">04 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Displays & Audio</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">0.96" SSD1306 OLED (128x64 I2C), 12-LED WS2812B NeoPixel ring, INMP441 I2S microphone, and MAX98357A I2S amplifier with 3W speaker.</p>
+          </div>
+        </div>
+
+        <!-- Pinout Table -->
+        <div class="corner-bracket-box hud-card" id="system-pinouts">
+          <div class="hud-card-header">
+            <span class="section-tag">[ HARDWARE PINOUT MATRIX: ESP32-S3 INTERFACE ]</span>
+            <span class="mono-label cyan-text">BUS VOLTAGE: 3.3V LOGIC / 5.0V VCC</span>
+          </div>
+
+          <div class="tactical-table-wrapper">
+            <table class="tactical-table">
+              <thead>
+                <tr>
+                  <th>MODULE</th>
+                  <th>ESP32 PIN</th>
+                  <th>PROTOCOL</th>
+                  <th>OPERATING VOLTAGE</th>
+                  <th>FUNCTIONAL PURPOSE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>OLED Screen (SSD1306)</td>
+                  <td>GPIO 21 (SDA), GPIO 22 (SCL)</td>
+                  <td>I2C (400kHz)</td>
+                  <td>3.3V</td>
+                  <td>Expressive eye animations, Pomodoro timer digits</td>
+                </tr>
+                <tr>
+                  <td>Pan Servo (Yaw)</td>
+                  <td>GPIO 18 (PWM)</td>
+                  <td>LEDC PWM (50Hz)</td>
+                  <td>5.0V (Ext Regulated)</td>
+                  <td>Horizontal head rotation tracking user presence</td>
+                </tr>
+                <tr>
+                  <td>Tilt Servo (Pitch)</td>
+                  <td>GPIO 19 (PWM)</td>
+                  <td>LEDC PWM (50Hz)</td>
+                  <td>5.0V (Ext Regulated)</td>
+                  <td>Vertical nod & nodding cues</td>
+                </tr>
+                <tr>
+                  <td>WS2812B NeoPixel Ring</td>
+                  <td>GPIO 4 (RMT)</td>
+                  <td>Single-Wire RMT</td>
+                  <td>5.0V</td>
+                  <td>Ambient focus color aura (Cyan / Orange / Red)</td>
+                </tr>
+                <tr>
+                  <td>I2S Microphone (INMP441)</td>
+                  <td>GPIO 12 (BCLK), 14 (LRCLK), 27 (DIN)</td>
+                  <td>I2S Digital Audio</td>
+                  <td>3.3V</td>
+                  <td>Far-field voice capture for Gemini conversational queries</td>
+                </tr>
+                <tr>
+                  <td>I2S DAC Amp (MAX98357A)</td>
+                  <td>GPIO 26 (BCLK), 25 (LRC), 33 (DOUT)</td>
+                  <td>I2S Audio Out</td>
+                  <td>5.0V</td>
+                  <td>Voice synthesis playback & friendly acoustic alerts</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. SOFTWARE ARCHITECTURE & HARDWARE SCHEMATICS (ELEMENTS DROPDOWN)
+         ========================================================================== -->
+    <section class="section-block" id="software-architecture">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ MULTI-TIER PIPELINE SPECIFICATION ]</span>
+          <h2 class="section-title">SOFTWARE ARCHITECTURE</h2>
+          <p class="section-subtitle">
+            Dual-tier intelligence pipeline decoupling real-time 30 FPS edge computer vision from cloud-augmented Gemini 2.0 reasoning.
+          </p>
+        </div>
+
+        <div class="corner-bracket-box hud-card" style="padding: 2.5rem;">
+          <div class="hud-grid-4" style="gap: 1.5rem; text-align: center;">
+            
+            <div class="arch-layer-card">
+              <span class="mono-label cyan-text">LAYER 01</span>
+              <h4 style="margin: 0.8rem 0;">Camera Stream</h4>
+              <p class="muted-text" style="font-size: 0.82rem;">1080p stream downscaled to 320x240 RGB on edge buffer.</p>
+            </div>
+
+            <div class="arch-layer-card">
+              <span class="mono-label cyan-text">LAYER 02</span>
+              <h4 style="margin: 0.8rem 0;">CV Classifier</h4>
+              <p class="muted-text" style="font-size: 0.82rem;">OpenCV Haar/YOLOv8-tiny detects face direction & smartphone bounding box.</p>
+            </div>
+
+            <div class="arch-layer-card orange-layer">
+              <span class="mono-label orange-text">LAYER 03</span>
+              <h4 style="margin: 0.8rem 0;">Gemini 2.0 Synapse</h4>
+              <p class="muted-text" style="font-size: 0.82rem;">Multimodal context reasoning for voice coaching & intervention logic.</p>
+            </div>
+
+            <div class="arch-layer-card">
+              <span class="mono-label cyan-text">LAYER 04</span>
+              <h4 style="margin: 0.8rem 0;">HRI Actuators</h4>
+              <p class="muted-text" style="font-size: 0.82rem;">Synchronized Pan-Tilt servo tracking, OLED gaze change, and audio alert.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. DEMONSTRATION VIDEO & HARDWARE SCHEMATICS (ELEMENTS DROPDOWN)
+         ========================================================================== -->
+    <section class="section-block" id="demonstration-video">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ OPERATIONAL TELEMETRY & MEDIA FEED ]</span>
+          <h2 class="section-title">DEMONSTRATION VIDEO & GIMBAL KINEMATICS</h2>
+          <p class="section-subtitle">
+            Visual inspection of FocusBot detecting user posture shifts and deploying subtle head-turning gestures.
+          </p>
+        </div>
+
+        <div class="hud-grid-2">
+          
+          <!-- Demonstration Video HUD Container -->
+          <div class="corner-bracket-box hud-card" style="padding: 1rem;">
+            <div class="timeline-block-video" style="border-radius: 4px;">
+              <div class="hud-video-player">
+                
+                <div class="video-hud-overlay">
+                  <div class="video-hud-top">
+                    <span>FEED // CAM_01 [BENCHMARK RUN]</span>
+                    <span>1080P // 60 FPS RECORDING</span>
+                  </div>
+                  <div class="video-hud-bottom">
+                    <span>STATE: DETECTING RECOVERY CYCLE</span>
+                    <div class="waveform-anim">
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="video-center-controls" onclick="alert('Loading FocusBot interactive laboratory demo reel...');">
+                  <div class="video-play-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                  <span class="video-play-caption">STREAM DEMO REEL</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Hardware Schematics Container -->
+          <div class="corner-bracket-box hud-card" id="hardware-schematics">
+            <div class="hud-card-header">
+              <span class="section-tag">[ SCHEMATIC BLOCK DIAGRAM ]</span>
+              <span class="mono-label orange-text">REVISION 1.2</span>
+            </div>
+            
+            <h4 style="color: var(--cyan-primary); margin-bottom: 0.5rem;">Power & Logic Isolation Schematic</h4>
+            <p class="muted-text" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+              The system features decoupled power rails: a dedicated 5V 3A buck converter for servo high-surge current spikes, preventing ESP32 brownouts during pan-tilt acceleration.
+            </p>
+
+            <div style="background: #06090E; border: 1px dashed var(--cyan-border); padding: 1.5rem; text-align: center;">
+              <svg width="100%" height="160" viewBox="0 0 400 160" fill="none">
+                <!-- Power Supply Block -->
+                <rect x="10" y="20" width="80" height="50" stroke="#FF6B00" stroke-width="1.5" fill="rgba(255,107,0,0.08)"></rect>
+                <text x="50" y="48" fill="#FF6B00" font-size="10" font-family="'JetBrains Mono'" text-anchor="middle">5V 3A PSU</text>
+
+                <!-- Buck Converter -->
+                <line x1="90" y1="45" x2="130" y2="45" stroke="#FF6B00" stroke-width="2"></line>
+                <rect x="130" y="20" width="90" height="50" stroke="#00D2FF" stroke-width="1.5" fill="rgba(0,210,255,0.08)"></rect>
+                <text x="175" y="48" fill="#00D2FF" font-size="10" font-family="'JetBrains Mono'" text-anchor="middle">ESP32-S3 CORE</text>
+
+                <!-- Servo Gimbal Block -->
+                <line x1="175" y1="70" x2="175" y2="105" stroke="#00D2FF" stroke-width="1.5"></line>
+                <rect x="130" y="105" width="90" height="40" stroke="#00D2FF" stroke-width="1.5" fill="#090E17"></rect>
+                <text x="175" y="128" fill="#8A99AD" font-size="9" font-family="'JetBrains Mono'" text-anchor="middle">PAN/TILT SERVOS</text>
+
+                <!-- Sensors Block -->
+                <line x1="220" y1="45" x2="260" y2="45" stroke="#00D2FF" stroke-width="2"></line>
+                <rect x="260" y="20" width="120" height="50" stroke="#00D2FF" stroke-width="1.5" fill="#090E17"></rect>
+                <text x="320" y="42" fill="#00D2FF" font-size="9" font-family="'JetBrains Mono'" text-anchor="middle">I2C OLED + MIC</text>
+                <text x="320" y="56" fill="#8A99AD" font-size="8" font-family="'JetBrains Mono'" text-anchor="middle">+ WS2812B RING</text>
+              </svg>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. TIMELINE SECTION (INTERACTIVE WEEK 1 WITH TEXT/VIDEO/PICTURE OPTIONS)
+         ========================================================================== -->
+    <section class="section-block" id="timeline">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ DEVELOPMENT LOG & PROGRESS TELEMETRY ]</span>
+          <h2 class="section-title">PROJECT TIMELINE</h2>
+          <p class="section-subtitle">
+            Explore week-by-week engineering milestones with selectable post modalities: Text Report, Video Log, Photo Documentation, or all three combined.
+          </p>
+        </div>
+
+        <!-- Timeline Controls: Week Nav & Post Type Filters -->
+        <div class="timeline-controls">
+          
+          <!-- Week Selector Pills -->
+          <div class="timeline-nav-pills">
+            <button class="week-selector-btn active" data-week="1">WEEK 01 (ACTIVE)</button>
+            <button class="week-selector-btn" data-coming-soon="Week 2 Telemetry">WEEK 02</button>
+            <button class="week-selector-btn" data-coming-soon="Week 3 Telemetry">WEEK 03</button>
+            <button class="week-selector-btn" data-coming-soon="Week 4 Telemetry">WEEK 04</button>
+          </div>
+
+          <!-- Post Modality Filter Tabs (Key user requirement) -->
+          <div class="timeline-filter-group" role="tablist">
+            <button class="filter-tab-btn active" data-filter="all">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>ALL COMBINED</span>
+            </button>
+            <button class="filter-tab-btn" data-filter="text">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="21" y1="10" x2="3" y2="10"></line>
+                <line x1="21" y1="6" x2="3" y2="6"></line>
+                <line x1="21" y1="14" x2="3" y2="14"></line>
+                <line x1="21" y1="18" x2="3" y2="18"></line>
+              </svg>
+              <span>TEXT POST</span>
+            </button>
+            <button class="filter-tab-btn" data-filter="video">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+              <span>VIDEO POST</span>
+            </button>
+            <button class="filter-tab-btn" data-filter="picture">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span>PICTURE POST</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Week 1 Content Wrapper -->
+        <div class="timeline-card-wrapper" id="timelineWeek1Container">
+          <div class="corner-bracket-box timeline-post-card">
+            
+            <!-- Meta Bar -->
+            <div class="timeline-post-meta">
+              <div class="meta-badges">
+                <span class="meta-badge-cyan">WEEK 01 ARCHIVE</span>
+                <span class="meta-badge-orange">STATUS: COMPLETED</span>
+              </div>
+              <span class="meta-timestamp">TIMESTAMP: LOG // W01-VERIFIED</span>
+            </div>
+
+            <!-- Content Modalities (Displayed according to active filter) -->
+            <div class="timeline-content-blocks">
+              
+              <!-- 1. TEXT POST -->
+              <div class="timeline-block-text">
+                <h4>WEEK 1 ENGINEERING REPORT: PROBLEM FORMULATION & COMPONENT VALIDATION</h4>
+                <p>
+                  During the inaugural sprint of the FocusBot project, the engineering unit established core system specifications, tested edge computer vision benchmarks, and drafted initial CAD schematics for the 2-DOF pan-tilt desk chassis.
+                </p>
+                <ul>
+                  <li><span>[✓]</span> Finalized Bill of Materials: Selected ESP32-S3 microcontroller, wide-angle 120° FOV camera, and dual SG90 micro-servos.</li>
+                  <li><span>[✓]</span> Configured Gemini 2.0 API pipeline: Built low-latency system prompts tailored for adaptive study coaching and gentle distraction nudges.</li>
+                  <li><span>[✓]</span> Computer Vision Prototyping: Verified 30 FPS facial landmark detection and phone bounding box classification using OpenCV and MediaPipe.</li>
+                  <li><span>[✓]</span> Electrical Layout: Designed power bus isolation to safeguard 3.3V logic from servo PWM transient voltages.</li>
+                </ul>
+              </div>
+
+              <!-- 2. VIDEO POST -->
+              <div class="timeline-block-video">
+                <div class="hud-video-player">
+                  <div class="video-hud-overlay">
+                    <div class="video-hud-top">
+                      <span>VIDEO ARCHIVE // SPRINT 01 LAB DEMO</span>
+                      <span>FORMAT: MP4 // STEREO I2S</span>
+                    </div>
+                    <div class="video-hud-bottom">
+                      <span>RUN TIME: 03:42 // SERVO & OPENCV TRACKING TEST</span>
+                      <div class="waveform-anim">
+                        <div class="waveform-bar"></div>
+                        <div class="waveform-bar"></div>
+                        <div class="waveform-bar"></div>
+                        <div class="waveform-bar"></div>
+                        <div class="waveform-bar"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="video-center-controls" id="timelineVideoPlayBtn">
+                    <div class="video-play-btn">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                      </svg>
+                    </div>
+                    <span class="video-play-caption">PLAY WEEK 1 LAB VIDEO</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. PICTURE / PHOTO POST -->
+              <div class="timeline-block-picture">
+                
+                <div class="picture-card corner-bracket-box">
+                  <div class="picture-placeholder">
+                    <!-- SVG CAD Wireframe Art -->
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span class="mono-label cyan-text">FIG 1.1: 3D CAD CHASSIS EXPLODED VIEW</span>
+                  </div>
+                  <div class="picture-caption">
+                    <span>PAN-TILT GIMBAL ENCLOSURE</span>
+                    <span class="cyan-text">STL READY</span>
+                  </div>
+                </div>
+
+                <div class="picture-card corner-bracket-box orange-brackets">
+                  <div class="picture-placeholder">
+                    <!-- SVG Breadboard Schematic Vector -->
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="1.5">
+                      <rect x="2" y="2" width="20" height="20" rx="2"></rect>
+                      <line x1="7" y1="2" x2="7" y2="22"></line>
+                      <line x1="17" y1="2" x2="17" y2="22"></line>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                    </svg>
+                    <span class="mono-label orange-text">FIG 1.2: BREADBOARD BENCHMARK SETUP</span>
+                  </div>
+                  <div class="picture-caption">
+                    <span>ESP32-S3 + OLED + SERVO HARNESS</span>
+                    <span class="orange-text">VERIFIED</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. COMING SOON MODULES (Team, Survey, Future Roadmap, Contributions)
+         ========================================================================== -->
+    
+    <!-- Team Section -->
+    <section class="section-block" id="team">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ ROSTER TELEMETRY ]</span>
+          <h2 class="section-title">FACULTY &amp; RESEARCH SQUAD</h2>
+          <p class="section-subtitle">
+            Academic supervision under CCDS HCI Wing, Independent University, Bangladesh, and undergraduate robotics researchers.
+          </p>
+        </div>
+
+        <div class="corner-bracket-box" style="text-align: center; padding: 3rem 2rem; max-width: 700px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-glow); backdrop-filter: blur(12px);">
+          <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 210, 255, 0.1); border: 1px solid var(--cyan-primary); color: var(--cyan-primary); margin-bottom: 1.5rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="badge-status-ready" style="display: inline-block; margin-bottom: 1rem;">ACADEMIC ROSTER: VERIFIED</span>
+          </div>
+          <h3 style="font-family: var(--font-rajdhani); font-size: 1.8rem; margin-bottom: 0.8rem; letter-spacing: 0.05em; color: var(--text-bright);">PROJECT LEADERSHIP &amp; SQUAD</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 540px; margin: 0 auto 2rem auto; line-height: 1.6;">
+            Explore full faculty supervision profiles including Research Supervisor Mohammad Shidujaman, PhD (CCDS HCI Wing), and the student engineering researchers.
+          </p>
+          <a href="team.html" class="btn btn-solid-cyan" style="display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none;">
+            <span>VIEW TEAM &amp; FACULTY SUPERVISOR</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section (Coming Soon) -->
+    <section class="section-block" id="vision">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ CORE VISION & STRATEGIC DIRECTION ]</span>
+          <h2 class="section-title">PROJECT VISION</h2>
+        </div>
+
+        <div class="corner-bracket-box coming-soon-card">
+          <div class="coming-soon-lock-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            </svg>
+          </div>
+          <span class="coming-soon-badge">STRATEGY DOSSIER: INITIALIZING</span>
+          <h3>VISION COMING SOON</h3>
+          <p>
+            Detailed documentation on our long-term vision, core philosophy, and human-robot interaction paradigm is currently in development.
+          </p>
+          <button class="btn btn-ghost" data-coming-soon="Vision Module">NOTIFY ON RELEASE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Member Contribution Matrix (Coming Soon) -->
+    <section class="section-block" id="member-contributions">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ ACCOUNTABILITY MATRIX ]</span>
+          <h2 class="section-title">MEMBER CONTRIBUTION MATRIX</h2>
+        </div>
+
+        <div class="corner-bracket-box coming-soon-card">
+          <div class="coming-soon-lock-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <span class="coming-soon-badge">EVALUATION METRIC: IN PROGRESS</span>
+          <h3>CONTRIBUTION MATRIX COMING SOON</h3>
+          <p>
+            Workload distribution breakdown across Embedded Firmware, Computer Vision, CAD Mechanical Assembly, and Gemini Integration will be documented upon peer review.
+          </p>
+          <button class="btn btn-ghost" data-coming-soon="Member Contribution Matrix">REQUEST PEER REVIEW DATA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Survey Section (Coming Soon) -->
+    <section class="section-block" id="survey">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ USER FEEDBACK INSTRUMENTATION ]</span>
+          <h2 class="section-title">DESK COMPANION STUDY SURVEY</h2>
+        </div>
+
+        <div class="corner-bracket-box coming-soon-card">
+          <div class="coming-soon-lock-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <span class="coming-soon-badge">DATA RECEPTION: LOCKED</span>
+          <h3>STUDENT PRODUCTIVITY SURVEY COMING SOON</h3>
+          <p>
+            An interactive questionnaire evaluating desk habits, study distractions, and preferences for embodied robotic nudges versus mobile push notifications is launching soon.
+          </p>
+          <button class="btn btn-ghost" data-coming-soon="Survey Module">JOIN SURVEY WAITLIST</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Roadmap Section (Coming Soon) -->
+    <section class="section-block" id="roadmap">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ LONG-TERM TRAJECTORY ]</span>
+          <h2 class="section-title">FUTURE ROADMAP</h2>
+        </div>
+
+        <div class="corner-bracket-box coming-soon-card">
+          <div class="coming-soon-lock-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </div>
+          <span class="coming-soon-badge">TACTICAL HORIZON: PHASE II & III</span>
+          <h3>FUTURE ROADMAP COMING SOON</h3>
+          <p>
+            Next-generation objectives including wireless inductive charging dock, on-device Edge TPU quantization, multi-occupant gaze arbitration, and personalized emotional therapy modes will be released soon.
+          </p>
+          <button class="btn btn-ghost" data-coming-soon="Future Roadmap">VIEW PHASE ARCHITECTURE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         12. ABOUT US & CONTACT SECTION
+         ========================================================================== -->
+    <section class="section-block" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ ABOUT THE INITIATIVE ]</span>
+          <h2 class="section-title">ABOUT FOCUSBOT LABS</h2>
+          <p class="section-subtitle">
+            Pioneering tangible Human-Robot Interaction through conversational intelligence and embedded vision.
+          </p>
+        </div>
+
+        <div class="corner-bracket-box hud-card" style="margin-bottom: 3.5rem;">
+          <h3 class="cyan-text" style="margin-bottom: 1rem;">THE FOCUSBOT PARADIGM</h3>
+          <p class="muted-text" style="line-height: 1.8; margin-bottom: 1rem;">
+            Modern knowledge work is saturated with disruptive digital noise. We believe that hardware companions should not simply be alarms or passive timers; they should possess situational spatial awareness, physical warmth, and genuine communicative agency. FocusBot was conceived to transform the desk experience into a sanctuary of sustained focus and calm well-being.
+          </p>
+          <p class="muted-text" style="line-height: 1.8;">
+            By unifying Google Gemini's multimodal prowess with affordable maker hardware, our mission is to make intelligent desk robotics a ubiquitous reality for students and professionals worldwide.
+          </p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section-header" id="contact">
+          <span class="section-tag">[ ENCRYPTED COMMUNICATION CHANNEL ]</span>
+          <h2 class="section-title">CONTACT THE RESEARCH TEAM</h2>
+          <p class="section-subtitle">
+            Inquire about collaboration, research partnerships, or demonstration access.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Details -->
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">SIGNAL TRANSMISSION</span>
+            <h4 style="margin: 1rem 0; color: var(--cyan-primary);">DIRECT CHANNELS</h4>
+            
+            <p class="muted-text" style="margin-bottom: 1.5rem;">
+              Reach out directly for inquiries regarding hardware schematics, software integration, research collaborations, or demonstration access.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
+                <span class="cyan-text">NAME:</span> Sadat bin Munir
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
+                <span class="cyan-text">EMAIL:</span> 
+                <a href="mailto:sadatbinmunir@gmail.com" style="color: var(--text-primary); text-decoration: none; border-bottom: 1px dashed var(--cyan-primary); transition: color var(--transition-fast);">sadatbinmunir@gmail.com</a>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
+                <span class="cyan-text">LOCATION:</span> Dhaka, Bangladesh
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
+                <span class="cyan-text">COORDINATES:</span> 23.8103° N, 90.4125° E
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
+                <span class="cyan-text">STATUS:</span> ACCEPTING INQUIRIES
+              </div>
+            </div>
+
+            <a href="mailto:sadatbinmunir@gmail.com" class="btn btn-ghost" style="margin-top: 1.75rem; width: 100%; justify-content: center;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>SEND EMAIL DIRECTLY</span>
+            </a>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="corner-bracket-box hud-card orange-brackets">
+            <form id="contactForm">
+              <div class="hud-input-group">
+                <label class="hud-input-label" for="contactName">YOUR NAME</label>
+                <input type="text" id="contactName" class="hud-input" required autocomplete="name">
+              </div>
+
+              <div class="hud-input-group">
+                <label class="hud-input-label" for="contactEmail">YOUR EMAIL ADDRESS</label>
+                <input type="email" id="contactEmail" class="hud-input" required autocomplete="email">
+              </div>
+
+              <div class="hud-input-group">
+                <label class="hud-input-label" for="contactMessage">TRANSMISSION MESSAGE</label>
+                <textarea id="contactMessage" class="hud-textarea" rows="4" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-solid-cyan" style="width: 100%; justify-content: center;">
+                <span>TRANSMIT TELEMETRY PACKET</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       13. FOOTER (MINIMALIST DARK TACTICAL)
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      
+      <!-- Top Grid: Brand & Vision, Quick Index, Contact & Connect -->
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Identity & Website Placeholder -->
+        <div class="footer-col footer-col-brand">
+          <a href="#hero" class="brand-block footer-brand-block">
+            <div class="brand-badge-box">
+              <span>FB</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">FOCUSBOT</span>
+              <span class="brand-subtitle">Guiding your focus</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            An embodied multimodal robotic desk companion designed to monitor cognitive fatigue, minimize distractions, and elevate well-being through real-time adaptive interventions.
+          </p>
+          <div class="footer-website-box">
+            <span class="footer-web-tag">OFFICIAL PROJECT WEB</span>
+            <a href="https://focusbot.dev" target="_blank" rel="noopener noreferrer" class="footer-web-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>https://focusbot.dev</span>
+              <span class="badge-status-soon">PLACEHOLDER</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Index -->
+        <div class="footer-col footer-col-nav">
+          <h4 class="footer-col-title">NAVIGATION INDEX</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#overview"><span class="footer-nav-num">[01]</span> Overview</a></li>
+            <li><a href="#architecture"><span class="footer-nav-num">[02]</span> Software Architecture</a></li>
+            <li><a href="#hardware"><span class="footer-nav-num">[03]</span> Hardware Schematics</a></li>
+            <li><a href="team.html"><span class="footer-nav-num">[04]</span> Team &amp; Faculty</a></li>
+            <li><a href="#timeline"><span class="footer-nav-num">[05]</span> Week 1 Timeline</a></li>
+            <li><a href="#vision"><span class="footer-nav-num">[06]</span> Vision &amp; Roadmap</a></li>
+            <li><a href="#contact"><span class="footer-nav-num">[07]</span> Inquiries &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Direct Inquiries & Social Links -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-col-title">COMMUNICATIONS</h4>
+          <p class="footer-contact-caption">For research collaborations, inquiries, or feedback:</p>
+          
+          <a href="mailto:sadatbinmunir@gmail.com" class="footer-email-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span class="footer-email-text">sadatbinmunir@gmail.com</span>
+          </a>
+
+          <div class="footer-social-section">
+            <span class="footer-social-label">CONNECT &amp; NETWORK</span>
+            <div class="footer-social-icons">
+              <!-- GitHub -->
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- X / Twitter -->
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)" title="X / Twitter">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+
+              <!-- Discord -->
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Discord" title="Discord Community">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright, Telemetry, and Scroll-to-Top -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          &copy; 2026 FocusBot Robotics Project. All telemetry rights reserved.
+        </div>
+        <div class="footer-meta-status">
+          <span class="footer-status-dot"></span>
+          <span>SYS: ONLINE // HRI LAB // PROTOCOL v1.0.4</span>
+        </div>
+        <a href="#hero" class="footer-back-to-top" aria-label="Return to top">
+          <span>RETURN TO TOP</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
