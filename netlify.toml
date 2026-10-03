@@ -1,10 +1,10 @@
 # Netlify Configuration for FocusBot Static Web Platform
 
 [build]
-  # Publish directory is the repository root containing index.html and team.html
-  publish = "."
-  # No build command required for standard HTML5/CSS3/Vanilla JS
-  command = ""
+  # Build command will create dist/
+  command = "node build.js"
+  # Publish directory
+  publish = "dist"
 
 # Security and cache headers
 [[headers]]

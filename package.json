@@ -1,0 +1,11 @@
+{
+  "name": "focusbot",
+  "version": "1.0.0",
+  "description": "FocusBot: Embodied Multimodal Robotics Platform",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": ["robotics", "focusbot", "hri"],
+  "author": "MD Sadat Bin Munir",
+  "license": "MIT"
+}
