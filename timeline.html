@@ -111,8 +111,9 @@
         
         <!-- Week Selector Pills -->
         <div class="timeline-nav-pills">
-          <button class="week-selector-btn active" data-week="1">WEEK 01 (ACTIVE)</button>
-          <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 02 Upcoming">WEEK 02 (UPCOMING)</button>
+          <button class="week-selector-btn active" data-week="all">ALL WEEKS</button>
+          <button class="week-selector-btn" data-week="1">WEEK 01</button>
+          <button class="week-selector-btn" data-week="2">WEEK 02 (ACTIVE)</button>
           <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 03 Upcoming">WEEK 03 (UPCOMING)</button>
           <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 04 Upcoming">WEEK 04 (UPCOMING)</button>
         </div>
@@ -156,8 +157,10 @@
 
       </div>
 
-      <!-- Week 1 Content Wrapper -->
-      <div class="timeline-card-wrapper" id="timelineWeek1Container" style="margin-bottom: 4rem;">
+      <!-- ==========================================================================
+           WEEK 01 CONTENT WRAPPER
+           ========================================================================== -->
+      <div class="timeline-card-wrapper" id="timelineWeek1Container" data-week="1" style="margin-bottom: 3.5rem;">
         <div class="corner-bracket-box timeline-post-card">
           
           <!-- Meta Bar -->
@@ -174,15 +177,15 @@
             
             <!-- 1. TEXT POST -->
             <div class="timeline-block-text">
-              <h4>WEEK 1 ENGINEERING REPORT: PROBLEM FORMULATION &amp; COMPONENT VALIDATION</h4>
+              <h4>WEEK 1 ENGINEERING REPORT: PROJECT SELECTION &amp; SPECIFICATION INITIATION</h4>
               <p>
-                During the inaugural sprint of the FocusBot project, the engineering unit established core system specifications, tested edge computer vision benchmarks, and drafted initial CAD schematics for the 2-DOF pan-tilt desk chassis.
+                During the inaugural sprint of the robotics project, the engineering unit reviewed candidate initiatives across Human-Robot Interaction (HRI) and computer vision assistive systems. Following comprehensive problem formulation, <strong>Project FocusBot was chosen</strong> as our official robotics capstone initiative.
               </p>
               <ul>
-                <li><span>[✓]</span> Finalized Bill of Materials: Selected ESP32-S3 microcontroller, wide-angle 120° FOV camera, and dual SG90 micro-servos.</li>
-                <li><span>[✓]</span> Configured Gemini 2.0 API pipeline: Built low-latency system prompts tailored for adaptive study coaching and gentle distraction nudges.</li>
-                <li><span>[✓]</span> Computer Vision Prototyping: Verified 30 FPS facial landmark detection and phone bounding box classification using OpenCV and MediaPipe.</li>
-                <li><span>[✓]</span> Electrical Layout: Designed power bus isolation to safeguard 3.3V logic from servo PWM transient voltages.</li>
+                <li><span>[✓]</span> <strong>Project FocusBot Chosen:</strong> Officially adopted FocusBot—an AI-powered interactive desk companion providing real-time posture tracking, study guidance, and multimodal encouragement.</li>
+                <li><span>[✓]</span> <strong>Visual Form Factor &amp; Identity:</strong> Conceptualized a spherical desk companion with 2-DOF pan-tilt articulation, expressive digital eye display, and ambient status illumination.</li>
+                <li><span>[✓]</span> <strong>Dual-Tier Pipeline Architecture:</strong> Established hardware/software boundaries decoupling low-latency 30 FPS edge computer vision (ESP32-S3 + camera) from high-level reasoning via Google Gemini 2.0 API.</li>
+                <li><span>[✓]</span> <strong>Specification Dossier:</strong> Outlined physical dimensions (12cm x 10cm), color palette, 6 key facial screen expressions, and operational flow from distraction alerts to break reminders.</li>
               </ul>
             </div>
 
@@ -221,33 +224,119 @@
             <div class="timeline-block-picture">
               
               <div class="picture-card corner-bracket-box">
-                <div class="picture-placeholder">
-                  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                  </svg>
-                  <span class="mono-label cyan-text">FIG 1.1: 3D CAD CHASSIS EXPLODED VIEW</span>
+                <div class="picture-img-frame">
+                  <a href="assets/focusbot-week1-companion.jpg" target="_blank" class="picture-link" title="Click to view full resolution">
+                    <img src="assets/focusbot-week1-companion.jpg" alt="FocusBot AI-Powered Interactive Desk Companion Concept" loading="lazy">
+                  </a>
                 </div>
                 <div class="picture-caption">
-                  <span>PAN-TILT GIMBAL ENCLOSURE</span>
-                  <span class="cyan-text">STL READY</span>
+                  <span>FIG 1.1: FOCUSBOT DESK COMPANION CONCEPT</span>
+                  <span class="cyan-text">PROJECT CHOSEN</span>
                 </div>
               </div>
 
               <div class="picture-card corner-bracket-box orange-brackets">
-                <div class="picture-placeholder">
-                  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="1.5">
-                    <rect x="2" y="2" width="20" height="20" rx="2"></rect>
-                    <line x1="7" y1="2" x2="7" y2="22"></line>
-                    <line x1="17" y1="2" x2="17" y2="22"></line>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                  </svg>
-                  <span class="mono-label orange-text">FIG 1.2: BREADBOARD BENCHMARK SETUP</span>
+                <div class="picture-img-frame">
+                  <a href="assets/focusbot-week1-specsheet.jpg" target="_blank" class="picture-link" title="Click to view full resolution">
+                    <img src="assets/focusbot-week1-specsheet.jpg" alt="FocusBot System Architecture and Specification Sheet" loading="lazy">
+                  </a>
                 </div>
                 <div class="picture-caption">
-                  <span>ESP32-S3 + OLED + SERVO HARNESS</span>
+                  <span>FIG 1.2: SPECIFICATION SHEET &amp; USAGE FLOW</span>
                   <span class="orange-text">VERIFIED</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           WEEK 02 CONTENT WRAPPER
+           ========================================================================== -->
+      <div class="timeline-card-wrapper" id="timelineWeek2Container" data-week="2" style="margin-bottom: 4rem;">
+        <div class="corner-bracket-box timeline-post-card">
+          
+          <!-- Meta Bar -->
+          <div class="timeline-post-meta">
+            <div class="meta-badges">
+              <span class="meta-badge-cyan">WEEK 02 SPRINT</span>
+              <span class="meta-badge-orange">STATUS: ACTIVE / DEPLOYED</span>
+            </div>
+            <span class="meta-timestamp">TIMESTAMP: LOG // W02-VERIFIED</span>
+          </div>
+
+          <!-- Content Modalities -->
+          <div class="timeline-content-blocks">
+            
+            <!-- 1. TEXT POST -->
+            <div class="timeline-block-text">
+              <h4>WEEK 2 ENGINEERING REPORT: PROJECT FINALISATION &amp; HARDWARE SOURCING</h4>
+              <p>
+                <strong>Project finalised and parts selection done, considering further improvement.</strong> Following team synthesis and advisor alignment, the research squad established hardware component intercompatibility, confirmed bill-of-materials procurement, and mapped out edge model optimizations.
+              </p>
+              <ul>
+                <li><span>[✓]</span> <strong>Project Finalised:</strong> Consolidated project specifications, operational states (Study, Distraction Alert, Break Reminder, Sleep), and behavioral interaction scripts into a finalized architecture document.</li>
+                <li><span>[✓]</span> <strong>Parts Selection Done:</strong> Confirmed core hardware components—ESP32-S3-WROOM-1 dual-core MCU, OV5640 5MP camera module, SSD1306 128x64 OLED screen, dual SG90 micro-servos for pan-tilt kinematics, and WS2812B NeoPixel aura ring.</li>
+                <li><span>[✓]</span> <strong>Considering Further Improvement:</strong> Investigating whisper-quiet stepper/FOC actuators to minimize servo buzzing during deep focus sessions, evaluating dedicated LDO voltage regulation to suppress PWM transient noise, and planning on-device model quantization.</li>
+                <li><span>[✓]</span> <strong>Team Alignment Session:</strong> Conducted a collaborative planning review to assign module ownership across embedded firmware, edge computer vision, circuit schematic capture, and cloud synapse integration.</li>
+              </ul>
+            </div>
+
+            <!-- 2. PICTURE / PHOTO POST -->
+            <div class="timeline-block-picture">
+              
+              <div class="picture-card corner-bracket-box">
+                <div class="picture-img-frame" style="height: 340px;">
+                  <a href="assets/focusbot-week2-team-meeting.jpg" target="_blank" class="picture-link" title="Click to view full resolution">
+                    <img src="assets/focusbot-week2-team-meeting.jpg" alt="FocusBot Research Squad in Laboratory Planning Session" style="object-position: center 25%;" loading="lazy">
+                  </a>
+                </div>
+                <div class="picture-caption">
+                  <span>FIG 2.1: SQUAD SPRINT &amp; PARTS SELECTION REVIEW</span>
+                  <span class="cyan-text">TEAM ALIGNED</span>
+                </div>
+              </div>
+
+              <div class="picture-card corner-bracket-box orange-brackets" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="padding: 1.2rem; background: #05080E; border: 1px solid var(--border-dim); height: 340px; display: flex; flex-direction: column; justify-content: space-between; overflow-y: auto;">
+                  <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; border-bottom: 1px dashed var(--border-dim); padding-bottom: 0.5rem;">
+                      <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary); font-weight: 700;">[ BOM TELEMETRY &amp; HARDWARE SELECTION ]</span>
+                      <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan-primary);">STATUS: LOCKED</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.72rem;">
+                      <div style="background: rgba(0, 210, 255, 0.04); padding: 0.5rem; border: 1px solid rgba(0, 210, 255, 0.15);">
+                        <div style="color: var(--cyan-primary); font-weight: 600;">ESP32-S3 DUAL-CORE</div>
+                        <div style="color: var(--text-muted); font-size: 0.65rem;">240MHz // 8MB PSRAM</div>
+                      </div>
+                      <div style="background: rgba(0, 210, 255, 0.04); padding: 0.5rem; border: 1px solid rgba(0, 210, 255, 0.15);">
+                        <div style="color: var(--cyan-primary); font-weight: 600;">OV5640 5MP SENSOR</div>
+                        <div style="color: var(--text-muted); font-size: 0.65rem;">120° DVP Edge Camera</div>
+                      </div>
+                      <div style="background: rgba(255, 107, 0, 0.04); padding: 0.5rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+                        <div style="color: var(--orange-primary); font-weight: 600;">SSD1306 OLED (0.96")</div>
+                        <div style="color: var(--text-muted); font-size: 0.65rem;">I2C 128x64 Expressions</div>
+                      </div>
+                      <div style="background: rgba(255, 107, 0, 0.04); padding: 0.5rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+                        <div style="color: var(--orange-primary); font-weight: 600;">2-DOF PAN-TILT SERVOS</div>
+                        <div style="color: var(--text-muted); font-size: 0.65rem;">SG90 Actuation Mechanism</div>
+                      </div>
+                    </div>
+                    <div style="margin-top: 0.8rem; padding: 0.6rem; background: rgba(0, 210, 255, 0.03); border: 1px dashed var(--border-dim); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+                      <span style="color: var(--orange-primary); font-weight: 700; font-family: var(--font-mono);">FURTHER IMPROVEMENTS:</span> Evaluating ultra-quiet magnetic steppers to eliminate servo noise, dedicated power decoupling for logic protection, and Quantized MobileNet for on-edge attention tracking.
+                    </div>
+                  </div>
+                  <div style="margin-top: 0.5rem; text-align: right;">
+                    <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan-primary);">PARTS SELECTION COMPLETE ✓</span>
+                  </div>
+                </div>
+                <div class="picture-caption" style="margin-top: 0.75rem;">
+                  <span>FIG 2.2: CONFIRMED BOM &amp; IMPROVEMENT ROADMAP</span>
+                  <span class="orange-text">SPEC LOCKED</span>
                 </div>
               </div>
 

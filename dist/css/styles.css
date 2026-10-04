@@ -1663,6 +1663,39 @@ h1, h2, h3, h4, h5, h6 {
   stroke: var(--cyan-primary);
 }
 
+.picture-img-frame {
+  width: 100%;
+  height: 300px;
+  background: #05080E;
+  border: 1px solid var(--border-dim);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.picture-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.picture-card:hover .picture-img-frame img {
+  transform: scale(1.04);
+}
+
+.picture-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
 .picture-caption {
   font-family: var(--font-mono);
   font-size: 0.75rem;

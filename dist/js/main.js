@@ -174,46 +174,64 @@ function initNavigation() {
 }
 
 /* ==========================================================================
-   3. WEEK 1 TIMELINE FILTER (All Combined / Text / Video / Picture)
+   3. TIMELINE POST & WEEK FILTERS
    ========================================================================== */
 function initTimelineFilter() {
   const filterButtons = document.querySelectorAll('.filter-tab-btn');
-  const postContainer = document.getElementById('timelineWeek1Container');
+  const weekContainers = document.querySelectorAll('.timeline-card-wrapper');
+  const weekButtons = document.querySelectorAll('.week-selector-btn');
 
-  if (!filterButtons.length || !postContainer) return;
+  if (!weekContainers.length) return;
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Toggle active classes
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  // Modality Filtering (All Combined / Text / Video / Picture)
+  if (filterButtons.length) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      const filterType = btn.getAttribute('data-filter');
-      const textBlock = postContainer.querySelector('.timeline-block-text');
-      const videoBlock = postContainer.querySelector('.timeline-block-video');
-      const pictureBlock = postContainer.querySelector('.timeline-block-picture');
+        const filterType = btn.getAttribute('data-filter');
 
-      if (!textBlock || !videoBlock || !pictureBlock) return;
+        weekContainers.forEach(postContainer => {
+          const textBlock = postContainer.querySelector('.timeline-block-text');
+          const videoBlock = postContainer.querySelector('.timeline-block-video');
+          const pictureBlock = postContainer.querySelector('.timeline-block-picture');
 
-      // Reset displays
-      textBlock.style.display = 'none';
-      videoBlock.style.display = 'none';
-      pictureBlock.style.display = 'none';
-
-      // Apply view mode
-      if (filterType === 'all') {
-        textBlock.style.display = 'block';
-        videoBlock.style.display = 'block';
-        pictureBlock.style.display = 'grid';
-      } else if (filterType === 'text') {
-        textBlock.style.display = 'block';
-      } else if (filterType === 'video') {
-        videoBlock.style.display = 'block';
-      } else if (filterType === 'picture') {
-        pictureBlock.style.display = 'grid';
-      }
+          if (textBlock) {
+            textBlock.style.display = (filterType === 'all' || filterType === 'text') ? 'block' : 'none';
+          }
+          if (videoBlock) {
+            videoBlock.style.display = (filterType === 'all' || filterType === 'video') ? 'block' : 'none';
+          }
+          if (pictureBlock) {
+            pictureBlock.style.display = (filterType === 'all' || filterType === 'picture') ? 'grid' : 'none';
+          }
+        });
+      });
     });
-  });
+  }
+
+  // Week Selector Pills Filtering
+  if (weekButtons.length) {
+    weekButtons.forEach(wBtn => {
+      wBtn.addEventListener('click', () => {
+        const selectedWeek = wBtn.getAttribute('data-week');
+        if (!selectedWeek || wBtn.disabled) return;
+
+        weekButtons.forEach(b => b.classList.remove('active'));
+        wBtn.classList.add('active');
+
+        weekContainers.forEach(container => {
+          const weekNum = container.getAttribute('data-week');
+          if (selectedWeek === 'all' || selectedWeek === weekNum) {
+            container.style.display = 'block';
+          } else {
+            container.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
 
   // Video play simulation
   const playBtn = document.getElementById('timelineVideoPlayBtn');
