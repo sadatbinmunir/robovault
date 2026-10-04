@@ -335,46 +335,13 @@ function initComingSoonModals() {
   comingSoonLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      const featureName = link.getAttribute('data-coming-soon') || "This section";
-      showTacticalNotice(`[ ACCESS PENDING ]: ${featureName.toUpperCase()} is currently in deployment. Full details will be revealed in the upcoming release.`);
+      // Silently handled without fixed popup toasts at bottom of screen
     });
   });
 }
 
 function showTacticalNotice(message) {
-  let notice = document.getElementById('tacticalNoticeBox');
-  if (!notice) {
-    notice = document.createElement('div');
-    notice.id = 'tacticalNoticeBox';
-    notice.style.position = 'fixed';
-    notice.style.bottom = '30px';
-    notice.style.right = '30px';
-    notice.style.padding = '14px 22px';
-    notice.style.background = 'rgba(10, 15, 24, 0.85)';
-    notice.style.backdropFilter = 'blur(16px)';
-    notice.style.webkitBackdropFilter = 'blur(16px)';
-    notice.style.border = '1px solid rgba(255, 107, 0, 0.7)';
-    notice.style.borderLeft = '4px solid #FF6B00';
-    notice.style.color = '#FFFFFF';
-    notice.style.fontFamily = "'JetBrains Mono', monospace";
-    notice.style.fontSize = '0.78rem';
-    notice.style.letterSpacing = '0.12em';
-    notice.style.boxShadow = '0 16px 36px rgba(0,0,0,0.8), 0 0 20px rgba(255,107,0,0.35)';
-    notice.style.zIndex = '9999';
-    notice.style.transition = 'all 0.3s ease';
-    document.body.appendChild(notice);
-  }
-
-  notice.innerText = message;
-  notice.style.opacity = '1';
-  notice.style.transform = 'translateY(0)';
-
-  playHudBeep(700, 0.08, 'square');
-
-  setTimeout(() => {
-    notice.style.opacity = '0';
-    notice.style.transform = 'translateY(15px)';
-  }, 3500);
+  // Disabled as per user request to keep bottom clean
 }
 
 /* ==========================================================================

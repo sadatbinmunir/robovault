@@ -265,7 +265,7 @@
             </button>
             <ul class="dropdown-menu">
               <li class="dropdown-item"><a href="#overview">Project Overview</a></li>
-              <li class="dropdown-item"><a href="#literature-review">Literature Review</a></li>
+              <li class="dropdown-item"><a href="team.html#literature-review">Literature Review</a></li>
               <li class="dropdown-item"><a href="#paper-draft">Project Paper Draft</a></li>
               <li class="dropdown-item"><a href="#equipments">Equipments Used</a></li>
             </ul>
@@ -362,10 +362,6 @@
 
       <!-- 1. Top Centered Headline Block -->
       <div class="container hero-top-header">
-        <div class="hero-badge-tag">
-          <span>• FOCUSBOT • AI-POWERED INTERACTIVE DESK COMPANION</span>
-        </div>
-
         <h1 class="hero-title">
           FocusBot: An AI-Powered Interactive Desk Companion for
           <span class="highlight-cyan">Productivity and Well-Being</span>
@@ -727,6 +723,19 @@
           </div>
         </div>
 
+        <!-- Direct Link to Team Member Literature Reviews -->
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="team.html#literature-review" class="btn btn-solid-cyan" style="display: inline-flex; align-items: center; gap: 0.6rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>READ TEAM MEMBER LITERATURE REVIEWS &amp; PAPERS (PDFs)</span>
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -1045,9 +1054,9 @@
           <!-- Week Selector Pills -->
           <div class="timeline-nav-pills">
             <button class="week-selector-btn active" data-week="1">WEEK 01 (ACTIVE)</button>
-            <button class="week-selector-btn" data-coming-soon="Week 2 Telemetry">WEEK 02</button>
-            <button class="week-selector-btn" data-coming-soon="Week 3 Telemetry">WEEK 03</button>
-            <button class="week-selector-btn" data-coming-soon="Week 4 Telemetry">WEEK 04</button>
+            <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 02 Upcoming">WEEK 02</button>
+            <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 03 Upcoming">WEEK 03</button>
+            <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 04 Upcoming">WEEK 04</button>
           </div>
 
           <!-- Post Modality Filter Tabs (Key user requirement) -->
@@ -1542,15 +1551,8 @@
 
       </div>
 
-      <!-- Bottom Bar: Copyright, Telemetry, and Scroll-to-Top -->
-      <div class="footer-bottom-bar">
-        <div class="footer-copy">
-          &copy; 2026 FocusBot Robotics Project. All telemetry rights reserved.
-        </div>
-        <div class="footer-meta-status">
-          <span class="footer-status-dot"></span>
-          <span>SYS: ONLINE // HRI LAB // PROTOCOL v1.0.4</span>
-        </div>
+      <!-- Bottom Bar: Scroll-to-Top Only -->
+      <div class="footer-bottom-bar" style="justify-content: center;">
         <a href="#hero" class="footer-back-to-top" aria-label="Return to top">
           <span>RETURN TO TOP</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
