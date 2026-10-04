@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us // FocusBot Labs</title>
+  <meta name="description" content="About FocusBot - Human-Computer Interaction research initiative combining embedded edge vision and conversational AI for productive desk companionship.">
+  
+  <!-- Fonts: Space Grotesk, Rajdhani, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="tactical-hud-body">
+
+  <!-- Scanline & Ambient Backdrop -->
+  <div class="scanline-overlay" aria-hidden="true"></div>
+  <div class="frosted-glass-bg" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Block -->
+      <a href="index.html#hero" class="brand-block">
+        <div class="brand-badge-box">
+          <span>FB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">FOCUSBOT</span>
+          <span class="brand-subtitle">Guiding your focus</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Project
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="index.html#overview">Project Overview</a></li>
+              <li class="dropdown-item"><a href="team.html#literature-review">Literature Review</a></li>
+              <li class="dropdown-item"><a href="index.html#paper-draft">Project Paper Draft</a></li>
+              <li class="dropdown-item"><a href="index.html#equipments">Equipments Used</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Elements
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="index.html#software-architecture">Software Architecture</a></li>
+              <li class="dropdown-item"><a href="index.html#hardware-schematics">Hardware Schematics</a></li>
+              <li class="dropdown-item"><a href="index.html#demonstration-video">Demonstration Video</a></li>
+              <li class="dropdown-item"><a href="index.html#system-pinouts">System Design &amp; Pinouts</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li class="nav-item"><a href="survey.html" class="nav-link">Survey</a></li>
+          <li class="nav-item"><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.72rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>MAIN SITE</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main style="padding-top: calc(var(--header-height) + 3rem); min-height: 80vh;">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <span class="section-tag">[ ABOUT THE INITIATIVE &amp; MISSION ]</span>
+        <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3rem);">ABOUT FOCUSBOT LABS</h1>
+        <p class="section-subtitle">
+          Pioneering tangible Human-Robot Interaction through conversational multimodal intelligence and edge computer vision.
+        </p>
+      </div>
+
+      <!-- Main Paradigm Card -->
+      <div class="corner-bracket-box hud-card" style="margin-bottom: 3.5rem; padding: 2.5rem;">
+        <h3 class="cyan-text" style="font-size: 1.5rem; margin-bottom: 1.25rem;">THE FOCUSBOT PARADIGM</h3>
+        <p class="muted-text" style="line-height: 1.85; font-size: 1rem; margin-bottom: 1.25rem;">
+          Modern knowledge work and academic study are saturated with disruptive digital noise. Smartphones, browser tabs, and notification alerts continuously fracture human cognitive attention. We believe that desktop companions should not simply be static alarms or passive mobile timers; they should possess situational spatial awareness, physical warmth, and genuine communicative agency.
+        </p>
+        <p class="muted-text" style="line-height: 1.85; font-size: 1rem; margin-bottom: 1.25rem;">
+          FocusBot was conceived to transform the desk experience into a sanctuary of sustained focus and calm well-being. Using a wide-angle edge camera, FocusBot gently recognizes when you are immersed in deep study, taking a well-earned break, or falling into a mobile distraction loop.
+        </p>
+        <p class="muted-text" style="line-height: 1.85; font-size: 1rem;">
+          By unifying Google Gemini's multimodal conversational reasoning with affordable maker hardware, our mission is to make embodied, empathetic desk robotics a ubiquitous reality for students and researchers worldwide.
+        </p>
+      </div>
+
+      <!-- Core Research Tenets Grid -->
+      <div class="hud-grid-3" style="margin-bottom: 4rem;">
+        
+        <div class="corner-bracket-box hud-card">
+          <div class="hud-card-header">
+            <span class="card-index">TENET // 01</span>
+          </div>
+          <h4 style="color: var(--cyan-primary); margin-bottom: 0.75rem;">Embodied Physical Presence</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+            HRI research consistently shows that physical embodiment (smooth pan-tilt head nods, gaze following) triggers substantially greater user compliance and empathy than flat screen pop-ups or smartphone notifications.
+          </p>
+        </div>
+
+        <div class="corner-bracket-box hud-card">
+          <div class="hud-card-header">
+            <span class="card-index">TENET // 02</span>
+          </div>
+          <h4 style="color: var(--cyan-primary); margin-bottom: 0.75rem;">Privacy-By-Design</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+            Vision classification operates directly at the local edge. No raw camera video feeds are stored, recorded, or broadcast to cloud databases, guaranteeing absolute peace of mind at your personal desk.
+          </p>
+        </div>
+
+        <div class="corner-bracket-box hud-card">
+          <div class="hud-card-header">
+            <span class="card-index">TENET // 03</span>
+          </div>
+          <h4 style="color: var(--cyan-primary); margin-bottom: 0.75rem;">Adaptive AI Empathy</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+            Powered by Google Gemini multimodal synapses, FocusBot does not bark generic commands. It understands study fatigue, encourages restorative breaks, and offers supportive conversational check-ins.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Academic Affiliation Banner -->
+      <div class="corner-bracket-box hud-card orange-brackets" style="margin-bottom: 5rem; padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <span class="section-tag" style="border-color: rgba(255, 107, 0, 0.4); color: var(--orange-primary); background: rgba(255, 107, 0, 0.08);">
+            [ ACADEMIC SUPERVISION &amp; LAB ]
+          </span>
+          <h3 style="color: var(--text-bright); font-size: 1.3rem; margin: 0.5rem 0;">
+            Center for Computational &amp; Data Sciences (CCDS) HCI Wing
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">
+            Independent University, Bangladesh (IUB) &middot; Supervised by Mohammad Shidujaman, PhD
+          </p>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="team.html" class="btn btn-solid-cyan" style="text-decoration: none;">
+            <span>MEET THE TEAM</span>
+          </a>
+          <a href="contact.html" class="btn btn-ghost" style="text-decoration: none;">
+            <span>CONTACT US</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer with Return to Top Only -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      <div class="footer-bottom-bar" style="justify-content: center;">
+        <a href="#siteHeader" class="footer-back-to-top" aria-label="Return to top">
+          <span>RETURN TO TOP</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

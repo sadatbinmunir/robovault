@@ -299,34 +299,29 @@
             <a href="team.html" class="nav-link">Team</a>
           </li>
 
-          <!-- Vision Link (Coming Soon) -->
+          <!-- 5. Timeline Link -->
           <li class="nav-item">
-            <a href="#vision" class="nav-link" data-coming-soon="Vision Module">Vision</a>
+            <a href="timeline.html" class="nav-link">Timeline</a>
           </li>
 
-          <!-- 5. Contact Link -->
+          <!-- 6. Survey Link -->
           <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="survey.html" class="nav-link">Survey</a>
           </li>
 
-          <!-- 6. Timeline Link (Interactive Week 1) -->
+          <!-- 7. Future Roadmap Link -->
           <li class="nav-item">
-            <a href="#timeline" class="nav-link">Timeline</a>
-          </li>
-
-          <!-- 7. Survey Link (Coming Soon) -->
-          <li class="nav-item">
-            <a href="#survey" class="nav-link" data-coming-soon="Survey Module">Survey</a>
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
           </li>
 
           <!-- 8. About Us Link -->
           <li class="nav-item">
-            <a href="#about" class="nav-link">About Us</a>
+            <a href="about.html" class="nav-link">About Us</a>
           </li>
 
-          <!-- 9. Future Roadmap Link (Coming Soon) -->
+          <!-- 9. Contact Link -->
           <li class="nav-item">
-            <a href="#roadmap" class="nav-link" data-coming-soon="Future Roadmap">Future Roadmap</a>
+            <a href="contact.html" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -1034,176 +1029,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         10. TIMELINE SECTION (INTERACTIVE WEEK 1 WITH TEXT/VIDEO/PICTURE OPTIONS)
-         ========================================================================== -->
-    <section class="section-block" id="timeline">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="section-tag">[ DEVELOPMENT LOG & PROGRESS TELEMETRY ]</span>
-          <h2 class="section-title">PROJECT TIMELINE</h2>
-          <p class="section-subtitle">
-            Explore week-by-week engineering milestones with selectable post modalities: Text Report, Video Log, Photo Documentation, or all three combined.
-          </p>
-        </div>
 
-        <!-- Timeline Controls: Week Nav & Post Type Filters -->
-        <div class="timeline-controls">
-          
-          <!-- Week Selector Pills -->
-          <div class="timeline-nav-pills">
-            <button class="week-selector-btn active" data-week="1">WEEK 01 (ACTIVE)</button>
-            <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 02 Upcoming">WEEK 02</button>
-            <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 03 Upcoming">WEEK 03</button>
-            <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 04 Upcoming">WEEK 04</button>
-          </div>
-
-          <!-- Post Modality Filter Tabs (Key user requirement) -->
-          <div class="timeline-filter-group" role="tablist">
-            <button class="filter-tab-btn active" data-filter="all">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
-              <span>ALL COMBINED</span>
-            </button>
-            <button class="filter-tab-btn" data-filter="text">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="21" y1="10" x2="3" y2="10"></line>
-                <line x1="21" y1="6" x2="3" y2="6"></line>
-                <line x1="21" y1="14" x2="3" y2="14"></line>
-                <line x1="21" y1="18" x2="3" y2="18"></line>
-              </svg>
-              <span>TEXT POST</span>
-            </button>
-            <button class="filter-tab-btn" data-filter="video">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-              </svg>
-              <span>VIDEO POST</span>
-            </button>
-            <button class="filter-tab-btn" data-filter="picture">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
-              <span>PICTURE POST</span>
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Week 1 Content Wrapper -->
-        <div class="timeline-card-wrapper" id="timelineWeek1Container">
-          <div class="corner-bracket-box timeline-post-card">
-            
-            <!-- Meta Bar -->
-            <div class="timeline-post-meta">
-              <div class="meta-badges">
-                <span class="meta-badge-cyan">WEEK 01 ARCHIVE</span>
-                <span class="meta-badge-orange">STATUS: COMPLETED</span>
-              </div>
-              <span class="meta-timestamp">TIMESTAMP: LOG // W01-VERIFIED</span>
-            </div>
-
-            <!-- Content Modalities (Displayed according to active filter) -->
-            <div class="timeline-content-blocks">
-              
-              <!-- 1. TEXT POST -->
-              <div class="timeline-block-text">
-                <h4>WEEK 1 ENGINEERING REPORT: PROBLEM FORMULATION & COMPONENT VALIDATION</h4>
-                <p>
-                  During the inaugural sprint of the FocusBot project, the engineering unit established core system specifications, tested edge computer vision benchmarks, and drafted initial CAD schematics for the 2-DOF pan-tilt desk chassis.
-                </p>
-                <ul>
-                  <li><span>[✓]</span> Finalized Bill of Materials: Selected ESP32-S3 microcontroller, wide-angle 120° FOV camera, and dual SG90 micro-servos.</li>
-                  <li><span>[✓]</span> Configured Gemini 2.0 API pipeline: Built low-latency system prompts tailored for adaptive study coaching and gentle distraction nudges.</li>
-                  <li><span>[✓]</span> Computer Vision Prototyping: Verified 30 FPS facial landmark detection and phone bounding box classification using OpenCV and MediaPipe.</li>
-                  <li><span>[✓]</span> Electrical Layout: Designed power bus isolation to safeguard 3.3V logic from servo PWM transient voltages.</li>
-                </ul>
-              </div>
-
-              <!-- 2. VIDEO POST -->
-              <div class="timeline-block-video">
-                <div class="hud-video-player">
-                  <div class="video-hud-overlay">
-                    <div class="video-hud-top">
-                      <span>VIDEO ARCHIVE // SPRINT 01 LAB DEMO</span>
-                      <span>FORMAT: MP4 // STEREO I2S</span>
-                    </div>
-                    <div class="video-hud-bottom">
-                      <span>RUN TIME: 03:42 // SERVO & OPENCV TRACKING TEST</span>
-                      <div class="waveform-anim">
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="video-center-controls" id="timelineVideoPlayBtn">
-                    <div class="video-play-btn">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                      </svg>
-                    </div>
-                    <span class="video-play-caption">PLAY WEEK 1 LAB VIDEO</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 3. PICTURE / PHOTO POST -->
-              <div class="timeline-block-picture">
-                
-                <div class="picture-card corner-bracket-box">
-                  <div class="picture-placeholder">
-                    <!-- SVG CAD Wireframe Art -->
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
-                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                      <polyline points="2 17 12 22 22 17"></polyline>
-                      <polyline points="2 12 12 17 22 12"></polyline>
-                    </svg>
-                    <span class="mono-label cyan-text">FIG 1.1: 3D CAD CHASSIS EXPLODED VIEW</span>
-                  </div>
-                  <div class="picture-caption">
-                    <span>PAN-TILT GIMBAL ENCLOSURE</span>
-                    <span class="cyan-text">STL READY</span>
-                  </div>
-                </div>
-
-                <div class="picture-card corner-bracket-box orange-brackets">
-                  <div class="picture-placeholder">
-                    <!-- SVG Breadboard Schematic Vector -->
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="1.5">
-                      <rect x="2" y="2" width="20" height="20" rx="2"></rect>
-                      <line x1="7" y1="2" x2="7" y2="22"></line>
-                      <line x1="17" y1="2" x2="17" y2="22"></line>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                    </svg>
-                    <span class="mono-label orange-text">FIG 1.2: BREADBOARD BENCHMARK SETUP</span>
-                  </div>
-                  <div class="picture-caption">
-                    <span>ESP32-S3 + OLED + SERVO HARNESS</span>
-                    <span class="orange-text">VERIFIED</span>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     <!-- ==========================================================================
          11. COMING SOON MODULES (Team, Survey, Future Roadmap, Contributions)
@@ -1295,160 +1121,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Survey Section (Coming Soon) -->
-    <section class="section-block" id="survey">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">[ USER FEEDBACK INSTRUMENTATION ]</span>
-          <h2 class="section-title">DESK COMPANION STUDY SURVEY</h2>
-        </div>
-
-        <div class="corner-bracket-box coming-soon-card">
-          <div class="coming-soon-lock-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
-          <span class="coming-soon-badge">DATA RECEPTION: LOCKED</span>
-          <h3>STUDENT PRODUCTIVITY SURVEY COMING SOON</h3>
-          <p>
-            An interactive questionnaire evaluating desk habits, study distractions, and preferences for embodied robotic nudges versus mobile push notifications is launching soon.
-          </p>
-          <button class="btn btn-ghost" data-coming-soon="Survey Module">JOIN SURVEY WAITLIST</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Future Roadmap Section (Coming Soon) -->
-    <section class="section-block" id="roadmap">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">[ LONG-TERM TRAJECTORY ]</span>
-          <h2 class="section-title">FUTURE ROADMAP</h2>
-        </div>
-
-        <div class="corner-bracket-box coming-soon-card">
-          <div class="coming-soon-lock-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-            </svg>
-          </div>
-          <span class="coming-soon-badge">TACTICAL HORIZON: PHASE II & III</span>
-          <h3>FUTURE ROADMAP COMING SOON</h3>
-          <p>
-            Next-generation objectives including wireless inductive charging dock, on-device Edge TPU quantization, multi-occupant gaze arbitration, and personalized emotional therapy modes will be released soon.
-          </p>
-          <button class="btn btn-ghost" data-coming-soon="Future Roadmap">VIEW PHASE ARCHITECTURE</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         12. ABOUT US & CONTACT SECTION
-         ========================================================================== -->
-    <section class="section-block" id="about">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="section-tag">[ ABOUT THE INITIATIVE ]</span>
-          <h2 class="section-title">ABOUT FOCUSBOT LABS</h2>
-          <p class="section-subtitle">
-            Pioneering tangible Human-Robot Interaction through conversational intelligence and embedded vision.
-          </p>
-        </div>
-
-        <div class="corner-bracket-box hud-card" style="margin-bottom: 3.5rem;">
-          <h3 class="cyan-text" style="margin-bottom: 1rem;">THE FOCUSBOT PARADIGM</h3>
-          <p class="muted-text" style="line-height: 1.8; margin-bottom: 1rem;">
-            Modern knowledge work is saturated with disruptive digital noise. We believe that hardware companions should not simply be alarms or passive timers; they should possess situational spatial awareness, physical warmth, and genuine communicative agency. FocusBot was conceived to transform the desk experience into a sanctuary of sustained focus and calm well-being.
-          </p>
-          <p class="muted-text" style="line-height: 1.8;">
-            By unifying Google Gemini's multimodal prowess with affordable maker hardware, our mission is to make intelligent desk robotics a ubiquitous reality for students and professionals worldwide.
-          </p>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="section-header" id="contact">
-          <span class="section-tag">[ ENCRYPTED COMMUNICATION CHANNEL ]</span>
-          <h2 class="section-title">CONTACT THE RESEARCH TEAM</h2>
-          <p class="section-subtitle">
-            Inquire about collaboration, research partnerships, or demonstration access.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          
-          <!-- Contact Details -->
-          <div class="corner-bracket-box hud-card">
-            <span class="card-index">SIGNAL TRANSMISSION</span>
-            <h4 style="margin: 1rem 0; color: var(--cyan-primary);">DIRECT CHANNELS</h4>
-            
-            <p class="muted-text" style="margin-bottom: 1.5rem;">
-              Reach out directly for inquiries regarding hardware schematics, software integration, research collaborations, or demonstration access.
-            </p>
-
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
-                <span class="cyan-text">NAME:</span> Sadat bin Munir
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
-                <span class="cyan-text">EMAIL:</span> 
-                <a href="mailto:sadatbinmunir@gmail.com" style="color: var(--text-primary); text-decoration: none; border-bottom: 1px dashed var(--cyan-primary); transition: color var(--transition-fast);">sadatbinmunir@gmail.com</a>
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
-                <span class="cyan-text">LOCATION:</span> Dhaka, Bangladesh
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
-                <span class="cyan-text">COORDINATES:</span> 23.8103° N, 90.4125° E
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 0.82rem;">
-                <span class="cyan-text">STATUS:</span> ACCEPTING INQUIRIES
-              </div>
-            </div>
-
-            <a href="mailto:sadatbinmunir@gmail.com" class="btn btn-ghost" style="margin-top: 1.75rem; width: 100%; justify-content: center;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <span>SEND EMAIL DIRECTLY</span>
-            </a>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="corner-bracket-box hud-card orange-brackets">
-            <form id="contactForm">
-              <div class="hud-input-group">
-                <label class="hud-input-label" for="contactName">YOUR NAME</label>
-                <input type="text" id="contactName" class="hud-input" required autocomplete="name">
-              </div>
-
-              <div class="hud-input-group">
-                <label class="hud-input-label" for="contactEmail">YOUR EMAIL ADDRESS</label>
-                <input type="email" id="contactEmail" class="hud-input" required autocomplete="email">
-              </div>
-
-              <div class="hud-input-group">
-                <label class="hud-input-label" for="contactMessage">TRANSMISSION MESSAGE</label>
-                <textarea id="contactMessage" class="hud-textarea" rows="4" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-solid-cyan" style="width: 100%; justify-content: center;">
-                <span>TRANSMIT TELEMETRY PACKET</span>
-              </button>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
   </main>
 
   <!-- ==========================================================================
@@ -1493,12 +1165,14 @@
           <h4 class="footer-col-title">NAVIGATION INDEX</h4>
           <ul class="footer-nav-list">
             <li><a href="#overview"><span class="footer-nav-num">[01]</span> Overview</a></li>
-            <li><a href="#architecture"><span class="footer-nav-num">[02]</span> Software Architecture</a></li>
-            <li><a href="#hardware"><span class="footer-nav-num">[03]</span> Hardware Schematics</a></li>
+            <li><a href="#software-architecture"><span class="footer-nav-num">[02]</span> Architecture</a></li>
+            <li><a href="#hardware-schematics"><span class="footer-nav-num">[03]</span> Schematics</a></li>
             <li><a href="team.html"><span class="footer-nav-num">[04]</span> Team &amp; Faculty</a></li>
-            <li><a href="#timeline"><span class="footer-nav-num">[05]</span> Week 1 Timeline</a></li>
-            <li><a href="#vision"><span class="footer-nav-num">[06]</span> Vision &amp; Roadmap</a></li>
-            <li><a href="#contact"><span class="footer-nav-num">[07]</span> Inquiries &amp; Contact</a></li>
+            <li><a href="timeline.html"><span class="footer-nav-num">[05]</span> Project Timeline</a></li>
+            <li><a href="survey.html"><span class="footer-nav-num">[06]</span> User Study Survey</a></li>
+            <li><a href="roadmap.html"><span class="footer-nav-num">[07]</span> Future Roadmap</a></li>
+            <li><a href="about.html"><span class="footer-nav-num">[08]</span> About Us</a></li>
+            <li><a href="contact.html"><span class="footer-nav-num">[09]</span> Inquiries &amp; Contact</a></li>
           </ul>
         </div>
 

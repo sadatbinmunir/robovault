@@ -25,8 +25,11 @@ function copyFolderSync(from, to) {
 
 // Copy static assets
 console.log('Building FocusBot for production...');
-fs.copyFileSync(path.join(__dirname, 'index.html'), path.join(distDir, 'index.html'));
-fs.copyFileSync(path.join(__dirname, 'team.html'), path.join(distDir, 'team.html'));
+fs.readdirSync(__dirname).forEach(file => {
+  if (file.endsWith('.html')) {
+    fs.copyFileSync(path.join(__dirname, file), path.join(distDir, file));
+  }
+});
 copyFolderSync(path.join(__dirname, 'assets'), path.join(distDir, 'assets'));
 copyFolderSync(path.join(__dirname, 'css'), path.join(distDir, 'css'));
 copyFolderSync(path.join(__dirname, 'js'), path.join(distDir, 'js'));

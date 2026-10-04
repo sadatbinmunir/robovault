@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Roadmap // FocusBot</title>
+  <meta name="description" content="FocusBot Strategic Roadmap - Phased milestones spanning edge neural acceleration, wireless charging, and multi-occupant affective HRI.">
+  
+  <!-- Fonts: Space Grotesk, Rajdhani, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="tactical-hud-body">
+
+  <!-- Scanline & Ambient Backdrop -->
+  <div class="scanline-overlay" aria-hidden="true"></div>
+  <div class="frosted-glass-bg" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Block -->
+      <a href="index.html#hero" class="brand-block">
+        <div class="brand-badge-box">
+          <span>FB</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">FOCUSBOT</span>
+          <span class="brand-subtitle">Guiding your focus</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Project
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="index.html#overview">Project Overview</a></li>
+              <li class="dropdown-item"><a href="team.html#literature-review">Literature Review</a></li>
+              <li class="dropdown-item"><a href="index.html#paper-draft">Project Paper Draft</a></li>
+              <li class="dropdown-item"><a href="index.html#equipments">Equipments Used</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item nav-dropdown">
+            <button class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Elements
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="index.html#software-architecture">Software Architecture</a></li>
+              <li class="dropdown-item"><a href="index.html#hardware-schematics">Hardware Schematics</a></li>
+              <li class="dropdown-item"><a href="index.html#demonstration-video">Demonstration Video</a></li>
+              <li class="dropdown-item"><a href="index.html#system-pinouts">System Design &amp; Pinouts</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+          <li class="nav-item"><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li class="nav-item"><a href="survey.html" class="nav-link">Survey</a></li>
+          <li class="nav-item"><a href="roadmap.html" class="nav-link active">Roadmap</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.72rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>MAIN SITE</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main style="padding-top: calc(var(--header-height) + 3rem); min-height: 80vh;">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-header" style="margin-bottom: 3rem;">
+        <span class="section-tag">[ LONG-TERM TRAJECTORY &amp; ARCHITECTURAL HORIZON ]</span>
+        <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3rem);">FUTURE ROADMAP</h1>
+        <p class="section-subtitle">
+          Multiphase engineering trajectory transitioning FocusBot from experimental bench prototype to an autonomous commercial desktop ecosystem.
+        </p>
+      </div>
+
+      <!-- Roadmap Phases Grid -->
+      <div style="display: flex; flex-direction: column; gap: 2.5rem; margin-bottom: 5rem;">
+        
+        <!-- Phase 1: Current In-Flight Milestone -->
+        <div class="corner-bracket-box hud-card" style="border-left: 4px solid var(--cyan-primary);">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot"></span>
+              <span class="status-text">PHASE 01 // ACTIVE IN FLIGHT</span>
+            </div>
+            <span class="card-index">HORIZON: Q1 2026</span>
+          </div>
+
+          <h3 style="color: var(--cyan-primary); font-size: 1.4rem; margin-bottom: 1rem;">
+            Core Embodied Architecture &amp; Proof-of-Concept
+          </h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Establishment of the physical pan-tilt 2-DOF companion chassis, edge-based OpenCV activity inference (distinguishing textbook study from mobile scrolling), and low-latency conversational synapse powered by Google Gemini 2.0 API.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">ESP32-S3 Firmware Stack</div>
+            </div>
+            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Edge Vision Pipeline &amp; Phone Detection</div>
+            </div>
+            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Gemini Prompt Context Synthesizer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2: Hardware Refinement & Neural Acceleration -->
+        <div class="corner-bracket-box hud-card orange-brackets" style="border-left: 4px solid var(--orange-primary);">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot" style="background: var(--orange-primary); box-shadow: 0 0 8px var(--orange-primary);"></span>
+              <span class="status-text" style="color: var(--orange-primary);">PHASE 02 // HARDWARE TELEMETRY &amp; EXPANSION</span>
+            </div>
+            <span class="card-index" style="color: var(--orange-primary);">HORIZON: Q2–Q3 2026</span>
+          </div>
+
+          <h3 style="color: var(--orange-primary); font-size: 1.4rem; margin-bottom: 1rem;">
+            On-Device TPU Quantization &amp; Inductive Wireless Power
+          </h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Migration from micro-servos to ultra-quiet magnetic field-oriented control (FOC) gimbal motors to eliminate actuator buzz during deep study sessions. Integration of an inductive charging desktop dock and quantized 8-bit MobileNetV4 models for 100% on-device vision inference without cloud dependencies.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Whisper-Quiet FOC Steppers</div>
+            </div>
+            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Wireless Qi Desk Docking Base</div>
+            </div>
+            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Edge TPU Quantized Neural Models</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3: Multi-User Social Agency & Affective Computing -->
+        <div class="corner-bracket-box hud-card" style="border-left: 4px solid #A855F7;">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot" style="background: #A855F7; box-shadow: 0 0 8px #A855F7;"></span>
+              <span class="status-text" style="color: #A855F7;">PHASE 03 // MULTI-USER COGNITIVE SYNAPSE</span>
+            </div>
+            <span class="card-index" style="color: #A855F7;">HORIZON: 2027</span>
+          </div>
+
+          <h3 style="color: #C084FC; font-size: 1.4rem; margin-bottom: 1rem;">
+            Affective HRI, Multi-Occupant Arbitration &amp; Longitudinal Habit Learning
+          </h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Longitudinal multi-session adaptation that learns an individual's idiosyncratic productivity rhythms over weeks. Addition of multi-occupant gaze arbitration for shared library desks and specialized ADHD cognitive scaffolding modes.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Affective Emotional State Classifier</div>
+            </div>
+            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Shared Desk Spatial Arbitration</div>
+            </div>
+            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Personalized ADHD Study Scaffolding</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer with Return to Top Only -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      <div class="footer-bottom-bar" style="justify-content: center;">
+        <a href="#siteHeader" class="footer-back-to-top" aria-label="Return to top">
+          <span>RETURN TO TOP</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
