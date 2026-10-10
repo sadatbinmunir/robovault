@@ -947,33 +947,42 @@
             <div class="timeline-block-video" style="border-radius: 4px;">
               <div class="hud-video-player">
                 
-                <div class="video-hud-overlay">
-                  <div class="video-hud-top">
-                    <span>FEED // CAM_01 [BENCHMARK RUN]</span>
-                    <span>1080P // 60 FPS RECORDING</span>
-                  </div>
-                  <div class="video-hud-bottom">
-                    <span>STATE: DETECTING RECOVERY CYCLE</span>
-                    <div class="waveform-anim">
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                    </div>
-                  </div>
-                </div>
+                <video id="mainDemoVideo" class="hud-video-element" controls playsinline preload="metadata" poster="assets/focusbot-study-scan.jpg">
+                  <source src="assets/videos/demo_reel.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video playback.
+                </video>
 
-                <div class="video-center-controls" onclick="alert('Loading FocusBot interactive laboratory demo reel...');">
-                  <div class="video-play-btn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
+                <div class="video-hud-overlay video-overlay-minimal">
+                  <div class="video-hud-top">
+                    <span id="mainDemoVideo-status">FEED // CAM_01 [BENCHMARK RUN]</span>
+                    <span>1080P // 60 FPS</span>
                   </div>
-                  <span class="video-play-caption">STREAM DEMO REEL</span>
                 </div>
 
               </div>
+
+              <!-- Video Action / Controls Toolbar -->
+              <div class="hud-video-toolbar">
+                <div class="hud-video-toolbar-left">
+                  <label class="video-tool-btn" title="Choose any local MP4 video file from your computer to play here">
+                    <input type="file" accept="video/mp4,video/webm" style="display:none;" onchange="loadLocalVideoFile(this, 'mainDemoVideo')">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    <span>LOAD LOCAL MP4</span>
+                  </label>
+                  <button type="button" class="video-tool-btn" onclick="togglePlayPause('mainDemoVideo')" title="Toggle Play / Pause">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>PLAY / PAUSE</span>
+                  </button>
+                  <button type="button" class="video-tool-btn" onclick="toggleFullscreen('mainDemoVideo')" title="Full Screen View">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    <span>FULLSCREEN</span>
+                  </button>
+                </div>
+                <div class="hud-video-toolbar-right">
+                  <span class="cyan-text" style="font-size: 0.68rem;">MP4 STREAM READY</span>
+                </div>
+              </div>
+
             </div>
           </div>
 

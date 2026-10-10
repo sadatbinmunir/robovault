@@ -233,14 +233,58 @@ function initTimelineFilter() {
     });
   }
 
-  // Video play simulation
-  const playBtn = document.getElementById('timelineVideoPlayBtn');
-  if (playBtn) {
-    playBtn.addEventListener('click', () => {
-      alert("FOCUSBOT ARCHIVE: Week 1 Prototype & OpenCV Testing stream loaded.");
-    });
   }
 }
+
+/* ==========================================================================
+   VIDEO PLAYBACK & LOCAL FILE STREAMING UTILITIES
+   ========================================================================== */
+function loadLocalVideoFile(inputElement, videoElementId) {
+  if (inputElement.files && inputElement.files[0]) {
+    const file = inputElement.files[0];
+    const video = document.getElementById(videoElementId);
+    if (video) {
+      const fileUrl = URL.createObjectURL(file);
+      video.src = fileUrl;
+      video.load();
+      video.play().catch(err => {
+        console.log('Autoplay handled:', err);
+      });
+      const statusElem = document.getElementById(videoElementId + '-status');
+      if (statusElem) {
+        statusElem.textContent = 'LOCAL // ' + file.name.toUpperCase();
+        statusElem.style.color = 'var(--cyan-primary)';
+      }
+    }
+  }
+}
+
+function togglePlayPause(videoElementId) {
+  const video = document.getElementById(videoElementId);
+  if (!video) return;
+  if (video.paused || video.ended) {
+    video.play().catch(err => console.log('Playback error:', err));
+  } else {
+    video.pause();
+  }
+}
+
+function toggleFullscreen(videoElementId) {
+  const video = document.getElementById(videoElementId);
+  if (!video) return;
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) {
+    video.webkitRequestFullscreen();
+  }
+}
+
+window.loadLocalVideoFile = loadLocalVideoFile;
+window.togglePlayPause = togglePlayPause;
+window.toggleFullscreen = toggleFullscreen;
+
 
 /* ==========================================================================
    4. ROBOT LINE-ART SCHEMATIC HOTSPOTS
