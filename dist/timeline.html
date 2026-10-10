@@ -113,8 +113,8 @@
         <div class="timeline-nav-pills">
           <button class="week-selector-btn active" data-week="all">ALL WEEKS</button>
           <button class="week-selector-btn" data-week="1">WEEK 01</button>
-          <button class="week-selector-btn" data-week="2">WEEK 02 (ACTIVE)</button>
-          <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 03 Upcoming">WEEK 03 (UPCOMING)</button>
+          <button class="week-selector-btn" data-week="2">WEEK 02</button>
+          <button class="week-selector-btn" data-week="3">WEEK 03 (ACTIVE)</button>
           <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 04 Upcoming">WEEK 04 (UPCOMING)</button>
         </div>
 
@@ -192,31 +192,14 @@
             <!-- 2. VIDEO POST -->
             <div class="timeline-block-video">
               <div class="hud-video-player">
-                <div class="video-hud-overlay">
-                  <div class="video-hud-top">
-                    <span>VIDEO ARCHIVE // SPRINT 01 LAB DEMO</span>
-                    <span>FORMAT: MP4 // STEREO I2S</span>
-                  </div>
-                  <div class="video-hud-bottom">
-                    <span>RUN TIME: 03:42 // SERVO &amp; OPENCV TRACKING TEST</span>
-                    <div class="waveform-anim">
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                      <div class="waveform-bar"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="video-center-controls" id="timelineVideoPlayBtn">
-                  <div class="video-play-btn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                  </div>
-                  <span class="video-play-caption">PLAY WEEK 1 LAB VIDEO</span>
-                </div>
+                <video class="hud-video-element" controls playsinline preload="metadata" poster="assets/focusbot-week1-companion.jpg">
+                  <source src="assets/videos/week1_demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="picture-caption" style="padding: 0.75rem 1rem; background: rgba(10, 15, 23, 0.9); border-top: 1px solid var(--border-dim);">
+                <span>VIDEO ARCHIVE // SPRINT 01 SERVO &amp; OPENCV BENCHMARK</span>
+                <span class="cyan-text">MP4 NATIVE STREAMING</span>
               </div>
             </div>
 
@@ -264,7 +247,7 @@
           <div class="timeline-post-meta">
             <div class="meta-badges">
               <span class="meta-badge-cyan">WEEK 02 SPRINT</span>
-              <span class="meta-badge-orange">STATUS: ACTIVE / DEPLOYED</span>
+              <span class="meta-badge-orange">STATUS: COMPLETED</span>
             </div>
             <span class="meta-timestamp">TIMESTAMP: LOG // W02-VERIFIED</span>
           </div>
@@ -337,6 +320,87 @@
                 <div class="picture-caption" style="margin-top: 0.75rem;">
                   <span>FIG 2.2: CONFIRMED BOM &amp; IMPROVEMENT ROADMAP</span>
                   <span class="orange-text">SPEC LOCKED</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           WEEK 03 CONTENT WRAPPER
+           ========================================================================== -->
+      <div class="timeline-card-wrapper" id="timelineWeek3Container" data-week="3" style="margin-bottom: 4rem;">
+        <div class="corner-bracket-box timeline-post-card">
+          
+          <!-- Meta Bar -->
+          <div class="timeline-post-meta">
+            <div class="meta-badges">
+              <span class="meta-badge-cyan">WEEK 03 SPRINT</span>
+              <span class="meta-badge-orange">STATUS: ACTIVE / HARDWARE ARRIVED</span>
+            </div>
+            <span class="meta-timestamp">TIMESTAMP: LOG // W03-PROCUREMENT</span>
+          </div>
+
+          <!-- Content Modalities -->
+          <div class="timeline-content-blocks">
+            
+            <!-- 1. TEXT POST -->
+            <div class="timeline-block-text">
+              <h4>WEEK 3 ENGINEERING REPORT: HARDWARE PROCUREMENT, UNBOXING &amp; LAB BENCH VALIDATION</h4>
+              <p>
+                <strong>Hardware components successfully procured and unboxed in the robotics lab.</strong> During Week 3, the research squad achieved a crucial physical milestone by sourcing physical electronics modules, battery power cells, and MCU dev boards from local hardware suppliers in Dhaka (Swadesh Electronics). Component pinouts and initial logic lines are being verified on the test bench.
+              </p>
+              <ul>
+                <li><span>[✓]</span> <strong>Physical Hardware Procurement Completed:</strong> Successfully sourced key modules from specialized electronics providers, securing all critical silicon, power, and acoustic elements.</li>
+                <li><span>[✓]</span> <strong>ESP32-S3 Dev Board &amp; Vision Header Unboxed:</strong> Received and inspected the ESP32-S3 dual-core microcontroller development board featuring dual Type-C USB interfaces, 8MB PSRAM, breakout headers, and dedicated camera FPC ribbon socket.</li>
+                <li><span>[✓]</span> <strong>Power Delivery &amp; Mobile Battery Subsystem:</strong> Acquired 18650 high-capacity rechargeable lithium-ion cells alongside TP4056 charge-management circuitry for untethered desktop companion mobility.</li>
+                <li><span>[✓]</span> <strong>Acoustics &amp; Prototyping Harness:</strong> Procured an 8Ω 2W miniature acoustic chamber speaker for voice coaching and audio chime alerts, assorted status LEDs, breadboard tactile switches, and multi-color DuPont jumper ribbon cables.</li>
+                <li><span>[✓]</span> <strong>Bench Testing Readiness:</strong> Verified pin compatibility and initiated breadboard test harnesses for logic power rails and I2S/PWM audio synthesis.</li>
+              </ul>
+            </div>
+
+            <!-- 2. VIDEO POST -->
+            <div class="timeline-block-video">
+              <div class="hud-video-player">
+                <video class="hud-video-element" controls playsinline preload="metadata" poster="assets/focusbot-week3-hardware-procurement.jpg">
+                  <source src="assets/videos/week3_demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="picture-caption" style="padding: 0.75rem 1rem; background: rgba(10, 15, 23, 0.9); border-top: 1px solid var(--border-dim);">
+                <span>WEEK 3 HARDWARE LAB VIDEO // BENCH TEST &amp; UNBOXING</span>
+                <span class="cyan-text">MP4 NATIVE PLAYER</span>
+              </div>
+            </div>
+
+            <!-- 3. PICTURE / PHOTO POST -->
+            <div class="timeline-block-picture">
+              
+              <div class="picture-card corner-bracket-box">
+                <div class="picture-img-frame" style="height: 380px;">
+                  <a href="assets/focusbot-week3-hardware-procurement.jpg" target="_blank" class="picture-link" title="Click to view full resolution">
+                    <img src="assets/focusbot-week3-hardware-procurement.jpg" alt="FocusBot Hardware Procurement at Swadesh Electronics" style="object-position: center;" loading="lazy">
+                  </a>
+                </div>
+                <div class="picture-caption">
+                  <span>FIG 3.1: PHYSICAL HARDWARE SOURCING &amp; UNBOXING</span>
+                  <span class="cyan-text">PARTS ACQUIRED</span>
+                </div>
+              </div>
+
+              <div class="picture-card corner-bracket-box orange-brackets">
+                <div class="picture-img-frame" style="height: 380px;">
+                  <a href="assets/focusbot-week3-esp32s3-unboxing.jpg" target="_blank" class="picture-link" title="Click to view full resolution">
+                    <img src="assets/focusbot-week3-esp32s3-unboxing.jpg" alt="ESP32-S3 Dual-Core MCU with Camera Interface Unboxing" style="object-position: center;" loading="lazy">
+                  </a>
+                </div>
+                <div class="picture-caption">
+                  <span>FIG 3.2: ESP32-S3 CORE BOARD &amp; CAMERA FPC CONNECTOR</span>
+                  <span class="orange-text">VERIFIED</span>
                 </div>
               </div>
 
