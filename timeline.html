@@ -115,8 +115,9 @@
           <button class="week-selector-btn" data-week="1">WEEK 01</button>
           <button class="week-selector-btn" data-week="2">WEEK 02</button>
           <button class="week-selector-btn" data-week="3">WEEK 03</button>
-          <button class="week-selector-btn" data-week="4">WEEK 04 (ACTIVE)</button>
-          <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 05 Upcoming">WEEK 05 (UPCOMING)</button>
+          <button class="week-selector-btn" data-week="4">WEEK 04</button>
+          <button class="week-selector-btn" data-week="5">WEEK 05 (ACTIVE)</button>
+          <button class="week-selector-btn" disabled style="opacity: 0.6; cursor: not-allowed;" title="Week 06 Upcoming">WEEK 06 (UPCOMING)</button>
         </div>
 
         <!-- Post Modality Filter Tabs -->
@@ -489,7 +490,7 @@
           <div class="timeline-post-meta">
             <div class="meta-badges">
               <span class="meta-badge-cyan">WEEK 04 SPRINT</span>
-              <span class="meta-badge-orange">STATUS: ACTIVE / PROTOTYPE ASSEMBLED</span>
+              <span class="meta-badge-orange">STATUS: COMPLETED</span>
             </div>
             <span class="meta-timestamp">TIMESTAMP: LOG // W04-INITIAL-ASSEMBLY</span>
           </div>
@@ -617,6 +618,152 @@
                 </div>
               </div>
 
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    
+
+      <!-- ==========================================================================
+           WEEK 05 CONTENT WRAPPER
+           ========================================================================== -->
+      <div class="timeline-card-wrapper" id="timelineWeek5Container" data-week="5" style="margin-bottom: 4rem;">
+        <div class="corner-bracket-box timeline-post-card">
+          
+          <!-- Meta Bar -->
+          <div class="timeline-post-meta">
+            <div class="meta-badges">
+              <span class="meta-badge-cyan">WEEK 05 SPRINT</span>
+              <span class="meta-badge-orange">STATUS: ACTIVE / ENVIRONMENT TESTED</span>
+            </div>
+            <span class="meta-timestamp">TIMESTAMP: LOG // W05-ASSEMBLY-FEATURESET1</span>
+          </div>
+
+          <!-- Content Modalities -->
+          <div class="timeline-content-blocks">
+            
+            <!-- 1. TEXT POST -->
+            <div class="timeline-block-text">
+              <h4>WEEK 5 ENGINEERING REPORT: ASSEMBLY AND FEATURESET 1 (ENVIRONMENT) TEST</h4>
+              <p>
+                <strong>Assempbly and featureset 1 ( Environment ) test.</strong> In Week 5, the engineering squad achieved physical assembly integration and successfully validated Feature Set 1—ambient environment monitoring and comfort index assessment. Peripheral sensors, power distribution, and the dual-core MCU harness were brought together to verify live sensor polling, environmental data telemetry, and interactive alerts.
+              </p>
+              <ul>
+                <li><span>[✓]</span> <strong>Physical System Assembly:</strong> Mounted and harnessed the ESP32-S3 microcontroller, display interface, audio amp, and power distribution into the initial robot assembly configuration.</li>
+                <li><span>[✓]</span> <strong>Feature Set 1 (Environment) Integration:</strong> Connected and validated environmental sensors for real-time ambient temperature and humidity tracking to optimize desktop study comfort.</li>
+                <li><span>[✓]</span> <strong>Live Telemetry &amp; Sensor Calibration:</strong> Verified dynamic sensor polling rates, threshold alert triggers, and communication bus stability under active runtime conditions.</li>
+                <li><span>[✓]</span> <strong>Dual Demonstration Video Captures:</strong> Recorded and staged Demo Vid 1 and Demo Vid 2 verifying the assembled system and live environmental feature responsiveness.</li>
+              </ul>
+            </div>
+
+            <!-- 2. VIDEO POST: DEMO VID 1 -->
+            <div class="timeline-block-video">
+              <div class="hud-video-player">
+                <video id="week5Video1" class="hud-video-element" controls playsinline preload="metadata" poster="assets/focusbot-week5-demo1-poster.jpg">
+                  <source src="assets/videos/demo vid 1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-hud-overlay video-overlay-minimal">
+                  <div class="video-hud-top">
+                    <span id="week5Video1-status">FEED 01 // SPRINT_05 [DEMO VID 1: ASSEMBLY &amp; ENVIRONMENT TEST]</span>
+                    <span>1080P // LAB BENCH FEED</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hud-video-toolbar">
+                <div class="hud-video-toolbar-left">
+                  <label class="video-tool-btn orange-btn" title="Choose Demo Vid 1 MP4 from your computer">
+                    <input type="file" accept="video/mp4,video/webm" style="display:none;" onchange="loadLocalVideoFile(this, 'week5Video1')">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    <span>LOAD DEMO VID 1</span>
+                  </label>
+                  <button type="button" class="video-tool-btn" onclick="togglePlayPause('week5Video1')" title="Toggle Play / Pause">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>PLAY / PAUSE</span>
+                  </button>
+                  <button type="button" class="video-tool-btn" onclick="toggleFullscreen('week5Video1')" title="Full Screen View">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    <span>FULLSCREEN</span>
+                  </button>
+                </div>
+                <div class="hud-video-toolbar-right">
+                  <span class="orange-text" style="font-size: 0.68rem;">WEEK 05 DEMO 1</span>
+                </div>
+              </div>
+              <div class="picture-caption" style="padding: 0.6rem 1rem; background: rgba(10, 15, 23, 0.9); border-top: 1px solid var(--border-dim);">
+                <span>DEMO VID 1 // ASSEMPBLY AND FEATURESET 1 ( ENVIRONMENT ) TEST</span>
+                <span class="cyan-text">MP4 NATIVE PLAYER</span>
+              </div>
+            </div>
+
+            <!-- 2. VIDEO POST: DEMO VID 2 -->
+            <div class="timeline-block-video">
+              <div class="hud-video-player">
+                <video id="week5Video2" class="hud-video-element" controls playsinline preload="metadata" poster="assets/focusbot-week5-demo2-poster.jpg">
+                  <source src="assets/videos/demo vid 2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-hud-overlay video-overlay-minimal">
+                  <div class="video-hud-top">
+                    <span id="week5Video2-status">FEED 02 // SPRINT_05 [DEMO VID 2: ENVIRONMENT TEST TELEMETRY]</span>
+                    <span>1080P // LAB BENCH FEED</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hud-video-toolbar">
+                <div class="hud-video-toolbar-left">
+                  <label class="video-tool-btn orange-btn" title="Choose Demo Vid 2 MP4 from your computer">
+                    <input type="file" accept="video/mp4,video/webm" style="display:none;" onchange="loadLocalVideoFile(this, 'week5Video2')">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    <span>LOAD DEMO VID 2</span>
+                  </label>
+                  <button type="button" class="video-tool-btn" onclick="togglePlayPause('week5Video2')" title="Toggle Play / Pause">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>PLAY / PAUSE</span>
+                  </button>
+                  <button type="button" class="video-tool-btn" onclick="toggleFullscreen('week5Video2')" title="Full Screen View">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                    <span>FULLSCREEN</span>
+                  </button>
+                </div>
+                <div class="hud-video-toolbar-right">
+                  <span class="orange-text" style="font-size: 0.68rem;">WEEK 05 DEMO 2</span>
+                </div>
+              </div>
+              <div class="picture-caption" style="padding: 0.6rem 1rem; background: rgba(10, 15, 23, 0.9); border-top: 1px solid var(--border-dim);">
+                <span>DEMO VID 2 // ASSEMPBLY AND FEATURESET 1 ( ENVIRONMENT ) TEST</span>
+                <span class="cyan-text">MP4 NATIVE PLAYER</span>
+              </div>
+            </div>
+
+            <!-- 3. PICTURE / PHOTO POST -->
+            <div class="timeline-block-picture">
+              <div class="picture-card corner-bracket-box">
+                <div class="picture-img-frame" style="height: 380px;">
+                  <a href="assets/focusbot-week5-demo1-poster.jpg" target="_blank" class="picture-link" title="Click to view full resolution">
+                    <img src="assets/focusbot-week5-demo1-poster.jpg" alt="FocusBot Assembly and Featureset 1 (Environment) Test Feed 1" style="object-position: center;" loading="lazy">
+                  </a>
+                </div>
+                <div class="picture-caption">
+                  <span>FIG 5.1: ASSEMBLY &amp; FEATURESET 1 (ENVIRONMENT) BENCH RUN</span>
+                  <span class="cyan-text">SYSTEM ASSEMBLED</span>
+                </div>
+              </div>
+
+              <div class="picture-card corner-bracket-box orange-brackets">
+                <div class="picture-img-frame" style="height: 380px;">
+                  <a href="assets/focusbot-week5-demo2-poster.jpg" target="_blank" class="picture-link" title="Click to view full resolution">
+                    <img src="assets/focusbot-week5-demo2-poster.jpg" alt="FocusBot Assembly and Featureset 1 (Environment) Telemetry Feed 2" style="object-position: center;" loading="lazy">
+                  </a>
+                </div>
+                <div class="picture-caption">
+                  <span>FIG 5.2: FEATURESET 1 (ENVIRONMENT) SENSOR TELEMETRY</span>
+                  <span class="orange-text">ENVIRONMENT TESTED</span>
+                </div>
+              </div>
             </div>
 
           </div>

@@ -193,19 +193,19 @@ function initTimelineFilter() {
         const filterType = btn.getAttribute('data-filter');
 
         weekContainers.forEach(postContainer => {
-          const textBlock = postContainer.querySelector('.timeline-block-text');
-          const videoBlock = postContainer.querySelector('.timeline-block-video');
-          const pictureBlock = postContainer.querySelector('.timeline-block-picture');
+          const textBlocks = postContainer.querySelectorAll('.timeline-block-text');
+          const videoBlocks = postContainer.querySelectorAll('.timeline-block-video');
+          const pictureBlocks = postContainer.querySelectorAll('.timeline-block-picture');
 
-          if (textBlock) {
-            textBlock.style.display = (filterType === 'all' || filterType === 'text') ? 'block' : 'none';
-          }
-          if (videoBlock) {
-            videoBlock.style.display = (filterType === 'all' || filterType === 'video') ? 'block' : 'none';
-          }
-          if (pictureBlock) {
-            pictureBlock.style.display = (filterType === 'all' || filterType === 'picture') ? 'grid' : 'none';
-          }
+          textBlocks.forEach(tb => {
+            tb.style.display = (filterType === 'all' || filterType === 'text') ? 'block' : 'none';
+          });
+          videoBlocks.forEach(vb => {
+            vb.style.display = (filterType === 'all' || filterType === 'video') ? 'block' : 'none';
+          });
+          pictureBlocks.forEach(pb => {
+            pb.style.display = (filterType === 'all' || filterType === 'picture') ? 'grid' : 'none';
+          });
         });
       });
     });
