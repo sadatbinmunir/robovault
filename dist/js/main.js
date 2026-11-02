@@ -211,27 +211,128 @@ function initTimelineFilter() {
     });
   }
 
-  // Week Selector Pills Filtering
+  // Helper function to navigate and smoothly scroll to a specific week
+  let isNavigating = false;
+  let navTimeout = null;
+
+  function navigateToWeek(selectedWeek, smooth = true) {
+    if (!selectedWeek) return;
+
+    // Ensure all containers are visible so the user can freely explore the timeline
+    weekContainers.forEach(container => {
+      container.style.display = 'block';
+    });
+
+    // Update active pill state
+    weekButtons.forEach(b => {
+      if (b.getAttribute('data-week') === selectedWeek) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
+    // Suppress scrollspy during programmatic scroll
+    isNavigating = true;
+    clearTimeout(navTimeout);
+
+    if (selectedWeek === 'all') {
+      const controls = document.querySelector('.timeline-controls') || document.querySelector('.section-header');
+      if (controls) {
+        const header = document.getElementById('siteHeader');
+        const headerHeight = header ? header.offsetHeight : 72;
+        const targetPos = controls.getBoundingClientRect().top + window.pageYOffset - (headerHeight + 20);
+        window.scrollTo({
+          top: Math.max(0, targetPos),
+          behavior: smooth ? 'smooth' : 'auto'
+        });
+      }
+      navTimeout = setTimeout(() => { isNavigating = false; }, 800);
+      return;
+    }
+
+    const targetContainer = document.getElementById(`timelineWeek${selectedWeek}Container`)
+      || document.querySelector(`.timeline-card-wrapper[data-week="${selectedWeek}"]`);
+
+    if (targetContainer) {
+      const header = document.getElementById('siteHeader');
+      const headerHeight = header ? header.offsetHeight : 72;
+      const targetPos = targetContainer.getBoundingClientRect().top + window.pageYOffset - (headerHeight + 20);
+
+      window.scrollTo({
+        top: Math.max(0, targetPos),
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+
+      // Visual tactical pulse highlight on target post card
+      const card = targetContainer.querySelector('.timeline-post-card') || targetContainer;
+      card.classList.remove('target-highlight');
+      void card.offsetWidth; // Force reflow to restart CSS animation
+      card.classList.add('target-highlight');
+      setTimeout(() => card.classList.remove('target-highlight'), 1800);
+    }
+
+    navTimeout = setTimeout(() => { isNavigating = false; }, 900);
+  }
+
+  // Week Selector Pills Navigation Click Handlers
   if (weekButtons.length) {
     weekButtons.forEach(wBtn => {
-      wBtn.addEventListener('click', () => {
+      wBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         const selectedWeek = wBtn.getAttribute('data-week');
         if (!selectedWeek || wBtn.disabled) return;
 
-        weekButtons.forEach(b => b.classList.remove('active'));
-        wBtn.classList.add('active');
+        navigateToWeek(selectedWeek, true);
 
-        weekContainers.forEach(container => {
-          const weekNum = container.getAttribute('data-week');
-          if (selectedWeek === 'all' || selectedWeek === weekNum) {
-            container.style.display = 'block';
-          } else {
-            container.style.display = 'none';
-          }
-        });
+        // Update URL hash cleanly without page reload
+        if (selectedWeek === 'all') {
+          history.replaceState(null, null, window.location.pathname);
+        } else {
+          history.replaceState(null, null, `#week-${selectedWeek}`);
+        }
       });
     });
   }
+
+  // Handle URL hash on initial load (e.g. timeline.html#week-5 or #week-2)
+  if (window.location.hash) {
+    const hash = window.location.hash.toLowerCase();
+    const match = hash.match(/week-?(\d+)/);
+    if (match && match[1]) {
+      setTimeout(() => {
+        navigateToWeek(match[1], true);
+      }, 350);
+    }
+  }
+
+  // ScrollSpy for Week Pills: dynamically highlight active pill as user scrolls
+  window.addEventListener('scroll', () => {
+    if (isNavigating) return;
+
+    const scrollPos = window.scrollY + 200;
+    let currentWeek = 'all';
+
+    weekContainers.forEach(container => {
+      const top = container.offsetTop;
+      const height = container.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentWeek = container.getAttribute('data-week');
+      }
+    });
+
+    if (scrollPos < (weekContainers[0]?.offsetTop || 400) - 80) {
+      currentWeek = 'all';
+    }
+
+    weekButtons.forEach(b => {
+      if (b.getAttribute('data-week') === currentWeek) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+  }, { passive: true });
 }
 
 /* ==========================================================================
