@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollHeader();
   initNavigation();
   initTimelineFilter();
+  initVideoAudioExclusion();
+  initTacticalLightbox();
   initComingSoonModals();
   initContactForm();
 });
@@ -383,6 +385,106 @@ function toggleFullscreen(videoElementId) {
 window.loadLocalVideoFile = loadLocalVideoFile;
 window.togglePlayPause = togglePlayPause;
 window.toggleFullscreen = toggleFullscreen;
+
+/* ==========================================================================
+   MUTUAL-EXCLUSIVE VIDEO PLAYBACK (PAUSE OTHERS WHEN ONE PLAYS)
+   ========================================================================== */
+function initVideoAudioExclusion() {
+  const allVideos = document.querySelectorAll('video');
+  allVideos.forEach(vid => {
+    vid.addEventListener('play', () => {
+      allVideos.forEach(otherVid => {
+        if (otherVid !== vid && !otherVid.paused) {
+          otherVid.pause();
+        }
+      });
+    });
+  });
+}
+
+/* ==========================================================================
+   IN-PAGE TACTICAL HUD LIGHTBOX FOR FIGURES & PHOTOS
+   ========================================================================== */
+function initTacticalLightbox() {
+  let lightbox = document.getElementById('hudLightboxModal');
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'hudLightboxModal';
+    lightbox.className = 'hud-lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.innerHTML = `
+      <div class="hud-lightbox-container corner-bracket-box">
+        <div class="hud-lightbox-header">
+          <span class="hud-lightbox-title" id="hudLightboxTitle">TELEMETRY INSPECTION // FIGURE VIEW</span>
+          <button type="button" class="hud-lightbox-close" id="hudLightboxCloseBtn" aria-label="Close modal">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span>ESC / CLOSE</span>
+          </button>
+        </div>
+        <div class="hud-lightbox-body">
+          <img id="hudLightboxImg" class="hud-lightbox-img" src="" alt="Tactical view">
+        </div>
+        <div class="hud-lightbox-caption" id="hudLightboxCaption">
+          <span id="hudLightboxCaptionText"></span>
+          <span id="hudLightboxBadge" class="cyan-text"></span>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+  }
+
+  const closeBtn = document.getElementById('hudLightboxCloseBtn');
+  const lightboxImg = document.getElementById('hudLightboxImg');
+  const captionText = document.getElementById('hudLightboxCaptionText');
+  const badgeText = document.getElementById('hudLightboxBadge');
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+
+  document.querySelectorAll('.picture-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      const img = link.querySelector('img');
+      const card = link.closest('.picture-card');
+      const caption = card ? card.querySelector('.picture-caption') : null;
+
+      if (href) {
+        lightboxImg.src = href;
+        lightboxImg.alt = img ? img.alt : 'FocusBot Figure Preview';
+
+        const span1 = caption ? caption.querySelector('span:first-child') : null;
+        const span2 = caption ? caption.querySelector('span:last-child') : null;
+
+        captionText.textContent = span1 ? span1.textContent : (img ? img.alt : 'Figure Preview');
+        badgeText.textContent = (span2 && span2 !== span1) ? span2.textContent : 'INSPECTED';
+
+        if (span2 && span2.classList.contains('orange-text')) {
+          badgeText.className = 'orange-text';
+        } else {
+          badgeText.className = 'cyan-text';
+        }
+
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+}
 
 
 /* ==========================================================================

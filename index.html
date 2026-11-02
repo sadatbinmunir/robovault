@@ -373,11 +373,12 @@
             </svg>
             <span>EXPLORE ARCHITECTURE</span>
           </a>
-          <a href="timeline.html" class="btn btn-ghost">
+          <a href="timeline.html#week-5" class="btn btn-ghost" title="View Week 5 Prototype Assembly & Environment Tests">
+            <span class="status-dot" style="background: var(--orange-primary); box-shadow: 0 0 8px var(--orange-primary); margin-right: 6px;"></span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
             </svg>
-            <span>VIEW TIMELINE</span>
+            <span>WEEK 05 DEMO // ASSEMBLED</span>
           </a>
         </div>
       </div>
@@ -793,7 +794,7 @@
         </div>
 
         <!-- Equipments Grid -->
-        <div class="hud-grid-4" style="margin-bottom: 3.5rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
           <div class="corner-bracket-box hud-card">
             <span class="card-index">01 // COMPONENT</span>
             <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Microcontroller Core</h4>
@@ -816,6 +817,12 @@
             <span class="card-index">04 // COMPONENT</span>
             <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Displays & Audio</h4>
             <p class="muted-text" style="font-size: 0.85rem;">0.96" SSD1306 OLED (128x64 I2C), 12-LED WS2812B NeoPixel ring, INMP441 I2S microphone, and MAX98357A I2S amplifier with 3W speaker.</p>
+          </div>
+        
+          <div class="corner-bracket-box hud-card orange-brackets">
+            <span class="card-index orange-text">05 // FEATURE SET 1</span>
+            <h4 style="margin: 0.5rem 0; color: var(--orange-primary);">Environment Sensing</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">Digital ambient temperature and relative humidity sensor for real-time desk climate and study comfort telemetry.</p>
           </div>
         </div>
 
@@ -880,6 +887,14 @@
                   <td>5.0V</td>
                   <td>Voice synthesis playback & friendly acoustic alerts</td>
                 </tr>
+                <tr>
+                  <td>Environment Sensor (Comfort)</td>
+                  <td>GPIO 4 / GPIO 21, 22</td>
+                  <td>1-Wire / I2C Bus</td>
+                  <td>3.3V</td>
+                  <td>Feature Set 1: Ambient temperature, humidity &amp; study comfort telemetry</td>
+                </tr>
+
               </tbody>
             </table>
           </div>
@@ -938,6 +953,20 @@
           <p class="section-subtitle">
             Visual inspection of FocusBot detecting user posture shifts and deploying subtle head-turning gestures.
           </p>
+        </div>
+
+        <!-- Week 5 SPRINT 05 TELEMETRY ANNOUNCEMENT BANNER -->
+        <div class="corner-bracket-box" style="padding: 0.85rem 1.4rem; background: rgba(10, 15, 23, 0.88); border-left: 3px solid var(--orange-primary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 2rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="status-dot" style="background: var(--orange-primary); box-shadow: 0 0 10px var(--orange-primary);"></span>
+            <span style="font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em;">
+              <strong style="color: var(--orange-primary);">LATEST SPRINT (WEEK 05):</strong> INITIAL SYSTEM ASSEMBLY &amp; FEATURE SET 1 (ENVIRONMENT COMFORT SENSING) TESTS ARE NOW LIVE
+            </span>
+          </div>
+          <a href="timeline.html#week-5" class="btn btn-ghost" style="padding: 0.4rem 0.95rem; font-size: 0.72rem; border-color: var(--orange-primary); color: var(--orange-primary);">
+            <span>WATCH WEEK 5 DUAL DEMO REELS</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
         </div>
 
         <div class="hud-grid-2">
