@@ -40,6 +40,16 @@
 
 ---
 
+## 📅 Project Sprints & Engineering Milestones
+
+* **Week 1:** Project Inception, Companion Concept & Spec Sheet Verification
+* **Week 2:** Project Finalisation, Parts Selection & BOM Confirmation
+* **Week 3:** Hardware Procurement, ESP32-S3 Board Unboxing & 3D Chassis CAD Sheet
+* **Week 4:** Prototype Feature Decisions & Initial System Assembly
+* **Week 5 (Latest):** **Assempbly and featureset 1 ( Environment ) test** — Bench assembly integration, ESP32-S3 microcontroller wiring, real-time environment comfort sensing (temperature & humidity), and dual video demonstrations (`demo_vid_1.mp4`, `demo_vid_2.mp4`).
+
+---
+
 ## 🛠️ System Architecture
 
 * **Embedded Processing**: Dual ESP32-S3 (Core A for real-time sensor processing and kinematics; Core B for audio streaming and Wi-Fi synapse).
