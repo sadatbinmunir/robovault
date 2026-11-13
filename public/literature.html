@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literature Reviews & Paper Draft // FocusBot.Ai</title>
+  <meta name="description" content="Academic foundations, individual member literature reviews, citations, and IEEE paper draft.">
+  
+  <!-- Fonts: Space Grotesk, Rajdhani, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="tactical-hud-body">
+
+  <!-- Ambient Backdrop & PCB Overlay -->
+  <div class="frosted-glass-bg" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL (SEPARATED PAGES)
+       ========================================================================== -->
+  <header class="home-style-header">
+    
+    <!-- Top Left: Focusbot.Ai Brand Logo Link -->
+    <div class="header-logo-wrapper">
+      <a href="/" class="focusbot-brand-link" aria-label="Focusbot.Ai Home">
+        <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+      </a>
+    </div>
+
+    <!-- Center: Horizontal Side-Scrollable Page Selectors Rail -->
+    <div class="header-scroll-rail-wrapper">
+      <button type="button" class="rail-scroll-arrow rail-arrow-left" id="railScrollLeftBtn" aria-label="Scroll left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <nav class="quick-nav-scroll-container" id="quickNavScrollContainer" aria-label="All Pages Navigation">
+        <a href="/" class="nav-rail-item ">Home</a>
+        <a href="/overview" class="nav-rail-item ">Overview</a>
+        <a href="/team" class="nav-rail-item ">Team & Faculty</a>
+        <a href="/literature" class="nav-rail-item active">Literature</a>
+        <a href="/timeline" class="nav-rail-item ">Timeline</a>
+        <a href="/roadmap" class="nav-rail-item ">Roadmap</a>
+        <a href="/architecture" class="nav-rail-item ">Architecture &amp; Schematics</a>
+        <a href="/survey" class="nav-rail-item ">Survey</a>
+        <a href="/about" class="nav-rail-item ">About</a>
+        <a href="/contact" class="nav-rail-item ">Contact</a>
+      </nav>
+
+      <button type="button" class="rail-scroll-arrow rail-arrow-right" id="railScrollRightBtn" aria-label="Scroll right">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    </header>
+
+  <!-- Main Content Area -->
+  <main style="padding-top: calc(var(--header-height) + 2.5rem); min-height: 85vh; padding-bottom: 5rem;">
+    <div class="container">
+      
+    <section class="section-block" id="paper-draft">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[ DOCUMENTATION ARCHIVE ]</span>
+          <h2 class="section-title">PROJECT PAPER DRAFT</h2>
+          <p class="section-subtitle">
+            Formal technical report detailing system architecture, state-machine telemetry, and empirical HRI evaluation.
+          </p>
+        </div>
+
+        <div class="corner-bracket-box hud-card" id="ieee-paper">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot"></span>
+              <span>DRAFT SPECIFICATION // IEEE FORMATTED</span>
+            </div>
+            <a href="#" class="btn btn-ghost" style="padding: 0.4rem 1rem; font-size: 0.7rem;" onclick="alert('Downloading FocusBot_IEEE_Conference_Draft.pdf'); return false;">
+              DOWNLOAD PDF DRAFT
+            </a>
+          </div>
+
+          <div style="margin-top: 1rem; border-left: 2px solid var(--cyan-primary); padding-left: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.35rem;">
+              FocusBot: An Embodied Multimodal Desk Companion Leveraging Edge Vision and Gemini API for Enhanced Student Focus
+            </h3>
+            <p class="mono-label muted-text" style="margin-bottom: 1rem;">
+              ABSTRACT // SECTION 1.0 - METHODOLOGY & FINDINGS
+            </p>
+            <p class="muted-text" style="line-height: 1.8; margin-bottom: 1rem;">
+              Prolonged digital learning environments are notoriously vulnerable to cognitive fatigue and mobile distractions. Traditional mobile lockout applications frequently provoke user resentment or are rapidly uninstalled. In this paper, we introduce FocusBot, a compact desktop robotic platform integrating a 2-DOF pan-tilt vision gimbal, an OLED ocular interface, and a dual-tier cognition pipeline combining edge vision with Google Gemini. By analyzing real-time facial orientation and handheld object classifications, FocusBot assesses cognitive state and applies graduated, non-intrusive physical interventions...
+            </p>
+            <p class="mono-label cyan-text">
+              INDEX TERMS — Human-Robot Interaction (HRI), Computer Vision, Gemini API, Embodied AI, Desk Productivity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <div style="margin-top: 3rem;"></div>
+    <div id="literature-review" style="margin-top: 4.5rem; margin-bottom: 3.5rem;">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <span class="section-tag" style="border-color: rgba(255, 30, 75, 0.45); color: #FF3B68; background: rgba(255, 20, 60, 0.08);">[ 02 &mdash; CO-PROJECT LEADERSHIP &amp; ARCHITECTS ]</span>
+          <h2 class="section-title" style="letter-spacing: 0.04em;">PROJECT LEADERS</h2>
+          <p class="section-subtitle">
+            Leading project architecture, computational intelligence, hardware kinematics, and academic literature synthesis.
+          </p>
+        </div>
+
+        <div class="leaders-section-container">
+          
+          <!-- LEADER 1: MD SADAT BIN MUNIR -->
+          <div class="leader-hud-card" id="leader1">
+            <div class="leader-main-content">
+              
+              <!-- Left: Photo Frame (Blank Placeholder as requested) -->
+              <div class="leader-photo-column">
+                <div class="leader-photo-frame">
+                  <div class="leader-photo-blank">
+                    <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="leader-photo-blank-tag">PORTRAIT PENDING</span>
+                  </div>
+                </div>
+                <div class="leader-badge-pill">ACTIVE LEAD</div>
+              </div>
+
+              <!-- Right: Leader Info & Details -->
+              <div class="leader-info-column">
+                <div class="leader-pill-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Leader 1 | ID: 2130417</span>
+                </div>
+
+                <h3 class="leader-name">MD Sadat Bin Munir</h3>
+                <div class="leader-role-tag">Project Architecture &amp; Computational Logic Lead</div>
+                <div class="leader-affiliation">
+                  Department of Computer Science &amp; Engineering &middot; Independent University, Bangladesh (IUB)
+                </div>
+
+                <!-- Quote Box -->
+                <div class="leader-quote-box">
+                  &ldquo;CSE major exploring the intersection of technology, audio-visual creation, and computational logic. Always curious about how systems work under the hood&mdash;from core algorithms to production workflows.&rdquo;
+                </div>
+
+                <!-- Follow On Row -->
+                <div class="leader-follow-row">
+                  <span class="badge-follow-on">FOLLOW ON</span>
+                  
+                  <!-- Email -->
+                  <a href="mailto:sadatbinmunir@gmail.com" class="leader-email-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>sadatbinmunir@gmail.com</span>
+                  </a>
+
+                  <!-- GitHub -->
+                  <a href="https://github.com/sadatbinmunir" target="_blank" rel="noopener noreferrer" class="leader-social-btn" title="GitHub Profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                  </a>
+
+                  <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/sadat-bin-munir-12035943a/" target="_blank" rel="noopener noreferrer" class="leader-social-btn" title="LinkedIn Profile">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+
+                  <!-- ResearchGate -->
+                  <a href="https://www.researchgate.net/profile/Sadat-Munir" target="_blank" rel="noopener noreferrer" class="leader-social-btn btn-rg-pill" title="ResearchGate Profile">
+                    <span>R<sup>G</sup></span>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Full Width PDF Button -->
+            <a href="assets/literature/sadat_munir_literature_review.pdf" target="_blank" class="btn-leader-pdf">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>Read Literature Review (PDF)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <!-- Collapsible Literature Reviewed (10) -->
+            <details class="leader-literature-accordion">
+              <summary class="leader-literature-summary">
+                <div class="summary-left">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>LITERATURE REVIEWED (10)</span>
+                </div>
+                <svg class="summary-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+              <div class="literature-dropdown-content">
+                <ul class="literature-paper-list">
+                  <li>
+                    <span class="lit-num">[01]</span>
+                    <div>
+                      <span class="lit-source-tag">Springer</span><strong>Application of Human Activity/Action Recognition: A Review</strong> (2025)
+                      <span class="lit-desc">Comprehensive breakdown of computer vision frameworks, video-based pattern recognition, and behavior classification algorithms, distinguishing continuous lifestyle activities from short-term physical actions.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[02]</span>
+                    <div>
+                      <span class="lit-source-tag">MDPI</span><strong>Deep Learning-Based Human Activity Recognition Using Binary Sensor and Vision Fusion</strong> (2025)
+                      <span class="lit-desc">Explores deep stacking neural networks (SNN) integrating CNN and LSTM base models with ASGAN adversarial data augmentation to classify focused activities versus idle states under data scarcity.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[03]</span>
+                    <div>
+                      <span class="lit-source-tag">MDPI</span><strong>A Review of Recent Techniques for Human Activity Recognition</strong> (2024)
+                      <span class="lit-desc">Systematic survey of indoor human activity tracking analyzing multimodality, Deep Reinforcement Learning (DRL), and Large Language Model (LLM) reasoning for personalized behavioral assistance.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[04]</span>
+                    <div>
+                      <span class="lit-source-tag">Frontiers</span><strong>A Review of Human Activity Recognition Methods</strong> (2015)
+                      <span class="lit-desc">Proposes a structured hierarchical taxonomy dividing vision-based HAR into unimodal and multimodal approaches, analyzing space-time, stochastic, and behavioral models to bridge the semantic gap in video sequences.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[05]</span>
+                    <div>
+                      <span class="lit-source-tag">MDPI</span><strong>Human Activity Recognition: Review, Taxonomy and Open Challenges</strong> (2022)
+                      <span class="lit-desc">Comprehensive taxonomy classifying 184 recent articles across vision and sensor domains, evaluating CNN, LSTM, and SVM architectures to address real-world data collection and unconstrained activity detection challenges.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[06]</span>
+                    <div>
+                      <span class="lit-source-tag">arXiv</span><strong>MindEye-OmniAssist: A Gaze-Driven LLM-Enhanced Assistive Robot System for Implicit Intention Recognition and Task Execution</strong> (2025)
+                      <span class="lit-desc">Fuses natural gaze tracking, open-vocabulary object detection (YOLO-World), and LLM reasoning (DeepSeek-R1) to infer open, unconstrained user intentions for autonomous robotic task execution.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[07]</span>
+                    <div>
+                      <span class="lit-source-tag">arXiv</span><strong>Supporting Productivity Skill Development in College Students through Social Robot Coaching: A Proof-of-Concept</strong> (2025)
+                      <span class="lit-desc">Introduces a socially assistive robotic (SAR) coach utilizing LLMs (GPT-4) and QTrobot for time-management education, paired with an interactive student progress and sentiment tracking dashboard (SUS: 81.2/100).</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[08]</span>
+                    <div>
+                      <span class="lit-source-tag">Springer</span><strong>Intelligent Technology and Enhanced Well-Being: Can Artificial Intelligence Mitigate Digital Overload?</strong>
+                      <span class="lit-desc">Investigates whether intelligent technologies can enhance productivity while alleviating digital overload, establishing empirical backing for FocusBot's fatigue-monitoring and break-recommendation cycles.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[09]</span>
+                    <div>
+                      <span class="lit-source-tag">IEEE</span><strong>Interactions with Generative AI: Wearables to Measure Developer Experience and Productivity Objectively</strong>
+                      <span class="lit-desc">Combines wearable physiological metrics with subjective evaluations to objectively quantify cognitive workload and stress during AI interaction, directly informing FocusBot's adaptive desk intervention algorithms.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[10]</span>
+                    <div>
+                      <span class="lit-source-tag">JBR</span><strong>AI and Employee Wellbeing in the Workplace: An Empirical Study</strong> (2025)
+                      <span class="lit-desc">Structural equation analysis across 207 organizations establishing that AI improves employee well-being indirectly through task optimization and safety, reinforcing FocusBot's design philosophy of augmenting natural workflow.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+          </div>
+
+          <!-- LEADER 2: FARIHA MIRZA -->
+          <div class="leader-hud-card" id="leader2">
+            <div class="leader-main-content">
+              
+              <!-- Left: Photo Frame (Swapped with Provided Photo) -->
+              <div class="leader-photo-column">
+                <div class="leader-photo-frame">
+                  <img 
+                    src="assets/fariha-mirza.png" 
+                    alt="Fariha Mirza - Hardware Performance &amp; Standard Theory Lead"
+                  >
+                </div>
+                <div class="leader-badge-pill">&bull; LEAD 2</div>
+              </div>
+
+              <!-- Right: Leader Info & Details -->
+              <div class="leader-info-column">
+                <div class="leader-pill-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Leader 2 | ID: 2231538</span>
+                </div>
+
+                <h3 class="leader-name">Fariha Mirza</h3>
+                <div class="leader-role-tag">Hardware Performance &amp; Standard Theory Lead</div>
+                <div class="leader-affiliation">
+                  Department of Computer Science &amp; Engineering &middot; Independent University, Bangladesh (IUB)
+                </div>
+
+                <!-- Quote Box -->
+                <div class="leader-quote-box">
+                  &ldquo;Computer Science student passionate about standard theory, efficient code, and hardware performance. When I'm not solving complex algorithms, I'm analyzing the latest tech and building digital content.&rdquo;
+                </div>
+
+                <!-- Follow On Row -->
+                <div class="leader-follow-row">
+                  <span class="badge-follow-on">FOLLOW ON</span>
+                  
+                  <!-- Email -->
+                  <a href="mailto:farihamz777@gmail.com" class="leader-email-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>farihamz777@gmail.com</span>
+                  </a>
+
+                  <!-- GitHub -->
+                  <a href="https://github.com/frhmz7" target="_blank" rel="noopener noreferrer" class="leader-social-btn" title="GitHub Profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                  </a>
+
+                  <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/fariha-m-802a75401" target="_blank" rel="noopener noreferrer" class="leader-social-btn" title="LinkedIn Profile">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+
+                  <!-- ResearchGate (Blank Link as requested) -->
+                  <span class="leader-social-btn btn-rg-pill disabled" title="ResearchGate (Not available)">
+                    <span>R<sup>G</sup></span>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Full Width PDF Button -->
+            <a href="assets/literature/fariha_mirza_literature_review.pdf" target="_blank" class="btn-leader-pdf">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>Read Literature Review (PDF)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <!-- Collapsible Literature Reviewed (10) -->
+            <details class="leader-literature-accordion">
+              <summary class="leader-literature-summary">
+                <div class="summary-left">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>LITERATURE REVIEWED (10)</span>
+                </div>
+                <svg class="summary-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+              <div class="literature-dropdown-content">
+                <ul class="literature-paper-list">
+                  <li>
+                    <span class="lit-num">[01]</span>
+                    <div>
+                      <strong>AI-Powered Dynamic Task Allocation for Agile Work Environments</strong>
+                      <span class="lit-desc">Explores NLP and reinforcement learning frameworks to match dynamic tasks with worker skills and changing workloads. Provides foundation for FocusBot's intelligent productivity-support systems.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[02]</span>
+                    <div>
+                      <span class="lit-source-tag">IEEE</span><strong>Interactions with Generative AI: Wearables to Measure Developer Experience &amp; Productivity Objectively</strong>
+                      <span class="lit-desc">Investigates physiological sensor data to objectively assess cognitive workload and stress during AI interaction, directly supporting FocusBot's adaptive break recommendation algorithms.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[03]</span>
+                    <div>
+                      <span class="lit-source-tag">IEEE</span><strong>The Smart Shift: Generative AI and the Rise of Human-AI Productivity</strong>
+                      <span class="lit-desc">Examines human-AI collaboration paradigms, establishing theoretical backing for designing FocusBot as an embodied companion that complements human cognition rather than replacing it.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[04]</span>
+                    <div>
+                      <span class="lit-source-tag">Springer</span><strong>Enhancing Knowledge Workers’ Well-Being and Productivity: A Mindful Co-Working Design Approach</strong>
+                      <span class="lit-desc">Introduces Mindful Co-Working Design combining mindfulness, interruption mitigation, and focus sessions (n=91). Grounds FocusBot's break timers, study sessions, and gentle notification cues.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[05]</span>
+                    <div>
+                      <span class="lit-source-tag">Springer</span><strong>Intelligent Technology and Enhanced Well-Being: Can Artificial Intelligence Mitigate Digital Overload?</strong>
+                      <span class="lit-desc">Evaluates digital overload risks versus AI efficiency benefits, validating FocusBot’s core strategy of monitoring study fatigue intensity and preventing burnout.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[06]</span>
+                    <div>
+                      <span class="lit-source-tag">Springer</span><strong>AI and Work Design: A Positive Psychology Approach to Employee Well-Being</strong>
+                      <span class="lit-desc">Connects positive psychology with work design, informing FocusBot's motivational encouragement loops, positive feedback mechanisms, and healthy habit formation.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[07]</span>
+                    <div>
+                      <span class="lit-source-tag">Springer</span><strong>Mitigating the Effect of AI Anxiety on Employees’ Creativity: A Social Cognitive Perspective</strong>
+                      <span class="lit-desc">Analyzes psychological anxiety triggers around AI systems. Guides FocusBot’s calm, non-threatening, companion-first interaction design over high-pressure surveillance metrics.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[08]</span>
+                    <div>
+                      <span class="lit-source-tag">Elsevier</span><strong>Intelligent Support for Digital Wellbeing: A Design Framework Through a Systematic Literature Review</strong> (2025)
+                      <span class="lit-desc">Presents a 6-dimension, 23-subdimension architectural framework for personalized digital wellbeing systems, guiding FocusBot’s privacy-conscious and adaptive intervention states.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[09]</span>
+                    <div>
+                      <span class="lit-source-tag">JBR</span><strong>AI and Employee Wellbeing in the Workplace: An Empirical Study</strong> (2025)
+                      <span class="lit-desc">Structural equation analysis across 207 organizations demonstrating AI improves wellbeing through workflow optimization and user safety, supporting FocusBot's task support model.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="lit-num">[10]</span>
+                    <div>
+                      <span class="lit-source-tag">JBR</span><strong>Unpacking Human-AI Interaction: Exploring Unintended Consequences on Employee Well-Being</strong> (2025)
+                      <span class="lit-desc">Investigates unintended psychological pressures of continuous automation, reinforcing FocusBot's mandate to safeguard human attention boundaries and encourage healthy recovery.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           5. THREE MEMBER CARDS UNDER LEADERS
+           ========================================================================== -->
+      <div style="margin-top: 4.5rem; margin-bottom: 5rem;">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <span class="section-tag">[ 03 &mdash; ENGINEERING &amp; RESEARCH SQUAD ]</span>
+          <h2 class="section-title">PROJECT RESEARCH MEMBERS</h2>
+          <p class="section-subtitle">
+            Undergraduate researchers developing computer vision edge pipelines, embedded hardware firmware, and mechanical chassis fabrication.
+          </p>
+        </div>
+
+        <div class="three-members-grid">
+          
+          <!-- MEMBER 1: FARIHA AFROZ -->
+          <div class="member-vertical-hud-card" id="member1">
+            
+            <!-- Top Pill Badge -->
+            <div class="member-top-pill">Member 1</div>
+
+            <!-- Circular Portrait with Reticle -->
+            <div class="member-circle-avatar-wrapper">
+              <img 
+                src="assets/fariha-afroz.png?v=2" 
+                alt="Fariha Afroz - Research Team Member" 
+                class="member-circle-img"
+              >
+              <div class="member-circle-reticle"></div>
+            </div>
+
+            <!-- Name -->
+            <h3 class="member-v-name">Fariha Afroz</h3>
+
+            <!-- Meta Pills: ID & Major -->
+            <div class="member-v-meta-pills">
+              <span class="member-v-meta-pill">ID: 2230563</span>
+              <span class="member-v-meta-pill">Major: CSE</span>
+            </div>
+
+            <!-- Role & Dept -->
+            <div class="member-v-role">Placeholder</div>
+            <div class="member-v-dept">Department of Computer Science &amp; Engineering</div>
+
+            <!-- Quote Box -->
+            <div class="member-v-quote">
+              &ldquo;Computer Science and Engineering student focusing on deep learning computer vision, visual attention tracking, and intelligent desk robotics.&rdquo;
+            </div>
+
+            <!-- Phone Badge -->
+            <a href="tel:01957197909" class="member-v-phone">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>01957197909</span>
+            </a>
+
+            <!-- Tags -->
+            <div class="member-v-tags">
+              <span class="member-v-tag">Deep Learning Vision</span>
+              <span class="member-v-tag">Waste Classification</span>
+              <span class="member-v-tag">YOLO Models</span>
+            </div>
+
+            <div class="member-v-divider"></div>
+
+            <!-- Follow On Badge & Icons -->
+            <div class="badge-member-follow">FOLLOW ON</div>
+            <div class="member-v-social-row">
+              <!-- GitHub -->
+              <a href="https://github.com/FarihaAfroz" target="_blank" rel="noopener noreferrer" class="member-v-social-btn" title="GitHub Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/fariha-afroz-8110b9407" target="_blank" rel="noopener noreferrer" class="member-v-social-btn" title="LinkedIn Profile">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- ResearchGate -->
+              <a href="https://www.researchgate.net/profile/Fariha-Afroz?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" class="member-v-social-btn btn-rg-small" title="ResearchGate Profile">
+                <span>R<sup>G</sup></span>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:farihaafroz03@gmail.com" class="member-v-social-btn" title="Email Fariha Afroz">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Collapsible Literature Reviewed (10) -->
+            <details class="member-v-accordion">
+              <summary class="member-v-summary">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>LITERATURE REVIEWED (10)</span>
+                </div>
+                <svg class="summary-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+              <div class="member-v-dropdown-content">
+                <ul class="member-v-lit-list">
+                  <li>
+                    <span class="member-v-lit-num">[01]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE LRA</span><strong>Distributed Multi-Modal Sensing for Human Activity Recognition in Real-Time HRI</strong> (2025)
+                      <span class="member-v-lit-desc">Combines IMU data gloves and vision-based tactile sensors for activity recognition; supports FocusBot's multi-sensory user activity tracking.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[02]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE RAM</span><strong>Natural Multimodal Fusion-Based HRI: Voice &amp; Deictic Posture via LLM</strong> (2025/2026)
+                      <span class="member-v-lit-desc">Fuses visual object detection with speech commands via LLM reasoning; directly inspires FocusBot's Gemini-driven multimodal context awareness.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[03]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEMENTech</span><strong>AURA: Advancing Human-Robot Interaction Through Unified Voice &amp; Gesture Control</strong> (2025)
+                      <span class="member-v-lit-desc">Demonstrates unified voice and air-gesture control on compact hardware, supporting FocusBot's dual vision and speech interaction pipeline.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[04]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE AIIoT</span><strong>Conversational Intelligence in Service Robots via Multimodal Fusion &amp; Resource-Aware Generative Models</strong> (2025)
+                      <span class="member-v-lit-desc">Presents quantized VLM (LLaVA) and speech integration for resource-constrained robotic platforms like FocusBot's dual ESP32-S3 setup.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[05]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE CBS</span><strong>MindEye-OmniAssist: Gaze-Driven LLM-Enhanced Assistive Robot for Implicit Intention Recognition</strong> (2025)
+                      <span class="member-v-lit-desc">Combines gaze tracking with open-vocabulary vision and LLMs to infer implicit user intentions without requiring manual commands every time.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[06]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE ICRA</span><strong>Estimating User Engagement in HRI Using a Dynamic Bayesian Network</strong> (2025)
+                      <span class="member-v-lit-desc">Fuses head pose, eye movements, and facial expressions (AUC 0.82) to classify user engagement, distinguishing focused study from distraction.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[07]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE Access</span><strong>Lightweight Residual Network with Attention for Human Activity Recognition</strong> (2025)
+                      <span class="member-v-lit-desc">Employs depthwise/pointwise convolutions and attention for low-latency activity classification on resource-constrained embedded robotics.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[08]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE ICRA</span><strong>Human Activity Recognition Using Enhanced Radar Point Cloud &amp; Doppler Feature Fusion</strong> (2025)
+                      <span class="member-v-lit-desc">Achieves 99.72% HAR accuracy via spatial radar point clouds, exploring future privacy-preserving non-camera sensing options for FocusBot.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[09]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE RO-MAN</span><strong>Impact of Robot Communication in Action Teams: Verbal vs. Visual Cues</strong> (2025)
+                      <span class="member-v-lit-desc">Shows multimodal context-aware reminders reduce cognitive workload and increase perceived ease of use over fixed repetitive notifications.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[10]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE RIVF</span><strong>Humanoid Robot Prototype for Multimodal HRI with Jetson &amp; YOLO</strong> (2025)
+                      <span class="member-v-lit-desc">Validates integrated architecture combining camera perception, speech, LLM reasoning, display expressions, and physical robotic actuation.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Full Width PDF Button -->
+            <a href="assets/literature/fariha_afroz_literature_review.pdf" target="_blank" class="btn-member-pdf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Open Literature Review (PDF)</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+          </div>
+
+          <!-- MEMBER 2: ISTIAQUE AHMED -->
+          <div class="member-vertical-hud-card" id="member2">
+            
+            <!-- Top Pill Badge -->
+            <div class="member-top-pill">Member 2</div>
+
+            <!-- Circular Portrait with Reticle -->
+            <div class="member-circle-avatar-wrapper">
+              <img 
+                src="assets/istiaque-ahmed.png?v=1" 
+                alt="Istiaque Ahmed - Research Team Member" 
+                class="member-circle-img"
+              >
+              <div class="member-circle-reticle"></div>
+            </div>
+
+            <!-- Name -->
+            <h3 class="member-v-name">Istiaque Ahmed</h3>
+
+            <!-- Meta Pills: ID & Major -->
+            <div class="member-v-meta-pills">
+              <span class="member-v-meta-pill">ID: 2230549</span>
+              <span class="member-v-meta-pill">Major: CSE</span>
+            </div>
+
+            <!-- Role & Dept -->
+            <div class="member-v-role">Placeholder</div>
+            <div class="member-v-dept">Department of Computer Science &amp; Engineering</div>
+
+            <!-- Quote Box -->
+            <div class="member-v-quote">
+              &ldquo;Computer Science enthusiast driven by logic, media creation, and tech innovation. Fueled by problem-solving and clean design.&rdquo;
+            </div>
+
+            <!-- Tags -->
+            <div class="member-v-tags">
+              <span class="member-v-tag">Computational Logic</span>
+              <span class="member-v-tag">Tech Innovation</span>
+              <span class="member-v-tag">Problem Solving</span>
+            </div>
+
+            <div class="member-v-divider"></div>
+
+            <!-- Follow On Badge & Icons -->
+            <div class="badge-member-follow">FOLLOW ON</div>
+            <div class="member-v-social-row">
+              <!-- GitHub -->
+              <a href="https://github.com/istiaque549" target="_blank" rel="noopener noreferrer" class="member-v-social-btn" title="GitHub Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/istiaque-ahmed-12b09b43a" target="_blank" rel="noopener noreferrer" class="member-v-social-btn" title="LinkedIn Profile">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- ResearchGate -->
+              <a href="https://www.researchgate.net/profile/Istiaque-Ahmed-17" target="_blank" rel="noopener noreferrer" class="member-v-social-btn btn-rg-small" title="ResearchGate Profile">
+                <span>R<sup>G</sup></span>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:istiaque00000007@gmail.com" class="member-v-social-btn" title="Email Istiaque Ahmed">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Collapsible Literature Reviewed (10) -->
+            <details class="member-v-accordion">
+              <summary class="member-v-summary">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>LITERATURE REVIEWED (10)</span>
+                </div>
+                <svg class="summary-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+              <div class="member-v-dropdown-content">
+                <ul class="member-v-lit-list">
+                  <li>
+                    <span class="member-v-lit-num">[01]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE Xplore</span><strong>Alex: A Study Companion for College Students with ADHD</strong> (2024)
+                      <span class="member-v-lit-desc">Evaluates a study companion for task prioritisation, scheduling, and sustained focus; establishes the functional baseline for FocusBot's automatic camera-based activity recognition.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[02]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE RO-MAN</span><strong>Social Robot Coaching for Productivity Skill Development</strong> (2025)
+                      <span class="member-v-lit-desc">Combines structured lessons, speech interaction, and progress tracking dashboard (SUS: 79.2); directly informs FocusBot's analytics dashboard to track study, break, and distraction time.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[03]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">ACM / IEEE</span><strong>AMIGUS: A Robot Companion for Students</strong> (2022)
+                      <span class="member-v-lit-desc">Low-cost desk companion combining expressive screen eyes, touch sensing, and motivational messages; provides hardware and display precedents that FocusBot elevates with vision-based recognition.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[04]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">In-Dorm HRI</span><strong>In-Dorm Socially Assistive Robot Schoolwork Companion for College Students with ADHD</strong> (2024)
+                      <span class="member-v-lit-desc">3-week in-dorm deployment showing 91% voluntary use (SUS: 83.8); users specifically asked for distraction detection and Pomodoro structure, forming key empirical justification for FocusBot.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[05]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">arXiv / HRI</span><strong>Motivating Students' Self-Study with Goal Reminder and Emotional Support</strong> (2024)
+                      <span class="member-v-lit-desc">Proves robot interventions during detected distraction help students refocus 79% of the time; justifies FocusBot automating distraction sensing and Gemini API encouragement.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[06]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">LLM-HRI</span><strong>Understanding LLM-Powered Human-Robot Interaction</strong> (2024)
+                      <span class="member-v-lit-desc">Compares LLM robots across conversational tasks; emphasizes that speech must be paired with rich non-verbal cues and brief concise replies during focus work, guiding FocusBot's Gemini voice layer.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[07]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">Frontiers</span><strong>LLM-Powered Multi-Session Human-Robot Interactions with University Students</strong> (2025)
+                      <span class="member-v-lit-desc">Explores long-term open-domain student interactions with conversational memory; supports giving FocusBot multi-session memory of past study patterns and preferred reminder styles.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[08]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">Edge Vision</span><strong>FPI-Det: A Face–Phone Interaction Dataset for Phone-Use Detection</strong> (2025)
+                      <span class="member-v-lit-desc">Benchmarks YOLOv8 and YOLOv11 for co-detecting face and phone interactions; provides the core architectural baseline for FocusBot's edge phone-distraction detection pipeline.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[09]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">Springer</span><strong>AI-Based Multimodal Biometrics for Detecting Smartphone Distractions</strong> (2023)
+                      <span class="member-v-lit-desc">Demonstrates head pose alone achieves 87% accuracy in smartphone distraction detection; validates FocusBot's camera-only design without requiring invasive wearable sensors.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[10]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE Ethics</span><strong>Ethically-Aware Participatory Design of a Productivity Social Robot</strong> (2025)
+                      <span class="member-v-lit-desc">Gathers student-driven ethical requirements for productivity robots; guides FocusBot's privacy-by-design architecture: on-device processing, no raw video storage, and user monitoring control.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Full Width PDF Button -->
+            <a href="assets/literature/istiaque_ahmed_literature_review.pdf" target="_blank" class="btn-member-pdf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Open Literature Review (PDF)</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+          </div>
+
+          <!-- MEMBER 3: KHALIDUR RAHMAN EFTY -->
+          <div class="member-vertical-hud-card" id="member3">
+            
+            <!-- Top Pill Badge -->
+            <div class="member-top-pill">Member 3</div>
+
+            <!-- Circular Portrait with Reticle -->
+            <div class="member-circle-avatar-wrapper">
+              <img 
+                src="assets/khalidur-rahman-efty.png?v=2" 
+                alt="Khalidur Rahman Efty - Research Team Member" 
+                class="member-circle-img"
+              >
+              <div class="member-circle-reticle"></div>
+            </div>
+
+            <!-- Name -->
+            <h3 class="member-v-name">Khalidur Rahman Efty</h3>
+
+            <!-- Meta Pills: ID & Major -->
+            <div class="member-v-meta-pills">
+              <span class="member-v-meta-pill">ID: 2010256</span>
+              <span class="member-v-meta-pill">Major: CS</span>
+            </div>
+
+            <!-- Role & Dept -->
+            <div class="member-v-role">Placeholder</div>
+            <div class="member-v-dept">Department of Computer Science &amp; Engineering</div>
+
+            <!-- Quote Box -->
+            <div class="member-v-quote">
+              &ldquo;Computer Science undergraduate specializing in socially assistive robotics, embedded kinematics, and interactive desk companion coaching for student productivity.&rdquo;
+            </div>
+
+            <!-- Phone Badge -->
+            <a href="tel:01621663577" class="member-v-phone">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>01621663577</span>
+            </a>
+
+            <!-- Tags -->
+            <div class="member-v-tags">
+              <span class="member-v-tag">Social Assistive Robotics</span>
+              <span class="member-v-tag">Servo Actuation &amp; Kinematics</span>
+              <span class="member-v-tag">Study Companion HRI</span>
+            </div>
+
+            <div class="member-v-divider"></div>
+
+            <!-- Follow On Badge & Icons -->
+            <div class="badge-member-follow">FOLLOW ON</div>
+            <div class="member-v-social-row">
+              <!-- GitHub -->
+              <a href="https://github.com/eftyiub" target="_blank" rel="noopener noreferrer" class="member-v-social-btn" title="GitHub Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/khalidur-rahman-efty-436a6b287" target="_blank" rel="noopener noreferrer" class="member-v-social-btn" title="LinkedIn Profile">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- ResearchGate -->
+              <a href="https://www.researchgate.net/profile/Khalidur-Efty" target="_blank" rel="noopener noreferrer" class="member-v-social-btn btn-rg-small" title="ResearchGate Profile">
+                <span>R<sup>G</sup></span>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:khalidurrahmanefty6@gmail.com" class="member-v-social-btn" title="Email Khalidur Rahman Efty">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Collapsible Literature Reviewed (10) -->
+            <details class="member-v-accordion">
+              <summary class="member-v-summary">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>LITERATURE REVIEWED (10)</span>
+                </div>
+                <svg class="summary-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+              <div class="member-v-dropdown-content">
+                <ul class="member-v-lit-list">
+                  <li>
+                    <span class="member-v-lit-num">[01]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">SAR Coaching</span><strong>Supporting Productivity Skill Development in College Students through Social Robot Coaching: A Proof-of-Concept</strong> (2025)
+                      <span class="member-v-lit-desc">Lalwani &amp; Salam (2025) evaluate a Socially Assistive Robot delivering 6 time-management lessons, conversational coaching, and analytics dashboard (SUS: 79.2); directly informs FocusBot's student productivity coaching framework.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[02]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">Ethics &amp; HRI</span><strong>Ethically-Aware Participatory Design of a Productivity Social Robot for College Students</strong> (2025)
+                      <span class="member-v-lit-desc">Lalwani &amp; Salam (2025) investigate college student needs via participatory workshops with well-being coaches, establishing ethical, privacy-preserving guidelines for FocusBot's desk observation and user autonomy.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[03]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">ADHD Support</span><strong>Design and Evaluation of a Socially Assistive Robot Schoolwork Companion for College Students with ADHD</strong> (2024)
+                      <span class="member-v-lit-desc">Evaluates the 3D-printed Blossom robot in dorm environments using subtle gaze shifts and posture movements (SUS: 83.8); demonstrates how non-intrusive embodiment fosters focus and study accountability.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[04]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">Open-Source RSC</span><strong>Open-Source Robotic Study Companion with Multimodal Human–Robot Interaction to Improve Learning</strong> (2024)
+                      <span class="member-v-lit-desc">Presents an affordable 3D-printed desktop companion combining speech, gesture, touchscreen, lights, and audio feedback; guides FocusBot's open hardware and multimodal interaction baseline.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[05]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">TAM Evaluation</span><strong>University Students’ Acceptance of a Robot Study Companion</strong> (2024)
+                      <span class="member-v-lit-desc">Evaluates student perceived usefulness and ease of use under the Technology Acceptance Model (TAM); validates desktop social robotics for higher education study motivation and interactive engagement.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[06]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">DFA / DFD Design</span><strong>Co-Creating Buildable and Open Social Robot Study Companions with University Students</strong> (2024)
+                      <span class="member-v-lit-desc">Applies Design for Assembly (DFA) and Disassembly (DFD) with snap-fit joints and tool-free service access (SUS: 89.4); inspires FocusBot's modular, serviceable 3D-printed mechanical chassis.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[07]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">Safety Assistant</span><strong>Socially Assistive Robot as Laboratory Safety Assistant for Science Students</strong> (2024)
+                      <span class="member-v-lit-desc">Leverages computer vision and sensor telemetry on Misty II to detect unsafe student behaviors and provide real-time friendly supervision; mirrors FocusBot's desk distraction and activity detection pipeline.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[08]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">IEEE HRI</span><strong>Attention Analysis in Robotic-Assistive Therapy for Children with Autism</strong> (IEEE)
+                      <span class="member-v-lit-desc">Develops a quantitative computational model assessing user attention during robot interaction; provides mathematical grounding for FocusBot's focus level telemetry and engagement scoring algorithms.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[09]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">2025 IEEE</span><strong>Motivating Students Self-study with Goal Reminder and Emotional Support</strong> (2025 IEEE)
+                      <span class="member-v-lit-desc">Demonstrates that active robot peer behaviors—such as goal reminders and positive emotional support—significantly increase student study focus and willingness for continued robotic companionship.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="member-v-lit-num">[10]</span>
+                    <div>
+                      <span class="member-v-lit-source-tag">34th IEEE</span><strong>Emotive Design of a Robot Study Companion to Support University Learning</strong> (2025 IEEE)
+                      <span class="member-v-lit-desc">Explores multimodal emotional expression (facial cues, head movement, color, vocal behavior) to counter student fatigue and academic stress; directly inspires FocusBot's expressive OLED eyes and pan-tilt gestures.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Full Width PDF Button -->
+            <a href="assets/literature/khalidur_rahman_efty_literature_review.pdf" target="_blank" class="btn-member-pdf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Open Literature Review (PDF)</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Return Button Banner -->
+      <div style="text-align: center; margin: 4rem 0 6rem;">
+        <a href="index.html" class="btn btn-solid-cyan">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>RETURN TO MAIN TELEMETRY DASHBOARD</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       5. FOOTER (MINIMALIST DARK TACTICAL)
+       ========================================================================== -->
+  
+  
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+    <!-- ==========================================================================
+     UNIFIED GLOBAL SITE FOOTER (MATCHING 1:1 ACROSS ALL PAGES)
+     ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      
+      <!-- Main 4-Column Grid -->
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand & Research Mission -->
+        <div class="footer-col-brand">
+          <a href="/" class="footer-brand-link">
+            <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+          </a>
+          <p class="footer-desc">
+            An embodied AI desk companion combining low-latency edge computer vision and Google Gemini multimodal reasoning to eliminate distraction loops and sustain deep focus.
+          </p>
+          <div class="footer-telemetry-badge">
+            <span class="telemetry-pulse-dot"></span>
+            <span>CCDS HCI WING // INDEPENDENT UNIVERSITY, BANGLADESH</span>
+          </div>
+        </div>
+
+        <!-- Col 2: System & Build -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">SYSTEM &amp; BUILD</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/overview">Project Overview</a></li>
+            <li><a href="/architecture">Architecture &amp; Schematics</a></li>
+            <li><a href="/roadmap">System Roadmap</a></li>
+            <li><a href="/timeline">Development Timeline</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Research & Team -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">RESEARCH &amp; TEAM</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/team">Faculty &amp; Engineering Team</a></li>
+            <li><a href="/literature">Literature Reviews &amp; Paper</a></li>
+            <li><a href="/survey">HRI User Study Survey</a></li>
+            <li><a href="/about">About FocusBot</a></li>
+            <li><a href="/contact">Contact Research Team</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Return to Top -->
+      <div class="footer-bottom-row">
+        <p class="footer-copy-text">
+          &copy; 2026 FocusBot Embodied Robotics. Center for Computational &amp; Data-Sciences (CCDS). All rights reserved.
+        </p>
+
+        <a href="#" class="footer-back-to-top" aria-label="Return to top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+          <span>RETURN TO TOP</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

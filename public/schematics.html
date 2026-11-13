@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture &amp; Schematics // FocusBot.Ai</title>
+  <meta name="description" content="Multi-tier software intelligence pipeline, hardware component specifications, and ESP32-S3 tactical pinout mappings for FocusBot.">
+  
+  <!-- Fonts: Space Grotesk, Rajdhani, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="tactical-hud-body">
+
+  <!-- Ambient Backdrop & PCB Overlay -->
+  <div class="frosted-glass-bg" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL (SEPARATED PAGES)
+       ========================================================================== -->
+  <header class="home-style-header">
+    
+    <!-- Top Left: Focusbot.Ai Brand Logo Link -->
+    <div class="header-logo-wrapper">
+      <a href="/" class="focusbot-brand-link" aria-label="Focusbot.Ai Home">
+        <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+      </a>
+    </div>
+
+    <!-- Center: Horizontal Side-Scrollable Page Selectors Rail -->
+    <div class="header-scroll-rail-wrapper">
+      <button type="button" class="rail-scroll-arrow rail-arrow-left" id="railScrollLeftBtn" aria-label="Scroll left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <nav class="quick-nav-scroll-container" id="quickNavScrollContainer" aria-label="All Pages Navigation">
+        <a href="/" class="nav-rail-item ">Home</a>
+        <a href="/overview" class="nav-rail-item ">Overview</a>
+        <a href="/team" class="nav-rail-item ">Team & Faculty</a>
+        <a href="/literature" class="nav-rail-item ">Literature</a>
+        <a href="/timeline" class="nav-rail-item ">Timeline</a>
+        <a href="/roadmap" class="nav-rail-item ">Roadmap</a>
+        <a href="/architecture" class="nav-rail-item active">Architecture &amp; Schematics</a>
+        <a href="/survey" class="nav-rail-item ">Survey</a>
+        <a href="/about" class="nav-rail-item ">About</a>
+        <a href="/contact" class="nav-rail-item ">Contact</a>
+      </nav>
+
+      <button type="button" class="rail-scroll-arrow rail-arrow-right" id="railScrollRightBtn" aria-label="Scroll right">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    </header>
+
+  <!-- Main Content Area -->
+    <main style="padding-top: calc(var(--header-height) + 2.5rem); min-height: 85vh; padding-bottom: 5rem;">
+    <div class="container">
+
+      <!-- Combined Page Header -->
+      <div class="section-header" style="margin-bottom: 3.5rem;">
+        <span class="section-tag">[ SYSTEM ARCHITECTURE &amp; HARDWARE TOPOLOGY ]</span>
+        <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3rem); text-transform: uppercase;">
+          ARCHITECTURE &amp; SCHEMATICS
+        </h1>
+        <p class="section-subtitle">
+          Comprehensive multi-tier software intelligence pipeline, hardware component specifications, and ESP32-S3 tactical pinout mappings.
+        </p>
+      </div>
+
+      <!-- SECTION 1: SOFTWARE ARCHITECTURE -->
+      <section class="section-block" id="software-architecture" style="margin-bottom: 4rem;">
+        <div class="section-header">
+          <span class="section-tag">[ MULTI-TIER PIPELINE SPECIFICATION ]</span>
+          <h2 class="section-title">SOFTWARE ARCHITECTURE</h2>
+        </div>
+
+        <div class="corner-bracket-box hud-card" style="padding: 2.5rem;">
+          <div class="hud-grid-3" style="gap: 1.5rem; text-align: center;">
+
+            <div class="arch-layer-card">
+              <span class="mono-label cyan-text">LAYER 02</span>
+              <h4 style="margin: 0.8rem 0;">CV Classifier</h4>
+              <p class="muted-text" style="font-size: 0.82rem;">OpenCV Haar/YOLOv8-tiny detects face direction & smartphone bounding box.</p>
+            </div>
+
+            <div class="arch-layer-card orange-layer">
+              <span class="mono-label orange-text">LAYER 03</span>
+              <h4 style="margin: 0.8rem 0;">Gemini 2.0 Synapse</h4>
+              <p class="muted-text" style="font-size: 0.82rem;">Multimodal context reasoning for voice coaching & intervention logic.</p>
+            </div>
+
+            <div class="arch-layer-card">
+              <span class="mono-label cyan-text">LAYER 04</span>
+              <h4 style="margin: 0.8rem 0;">HRI Actuators</h4>
+              <p class="muted-text" style="font-size: 0.82rem;">Synchronized Pan-Tilt servo tracking, OLED gaze change, and audio alert.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: HARDWARE EQUIPMENTS & PINOUT SPECIFICATION -->
+      <section class="section-block" id="equipments">
+        <div class="section-header">
+          <span class="section-tag">[ BILL OF MATERIALS & HARDWARE ARCHITECTURE ]</span>
+          <h2 class="section-title">EQUIPMENTS USED & PINOUT SPECIFICATION</h2>
+          <p class="section-subtitle">
+            Component breakdown, electrical specifications, and microcontroller pinout assignments.
+          </p>
+        </div>
+
+        <!-- Equipments Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">01 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Microcontroller Core</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">ESP32-S3 Dual-Core Xtensa LX7 (240MHz) with 8MB PSRAM & 2.4GHz Wi-Fi / BLE 5.0 for edge orchestration.</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">02 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Vision Sensor</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">OV5640 5MP / USB 1080p 120° Wide-Angle lens module optimized for close-range desktop posture & phone detection.</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">03 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Actuators & Gimbal</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">Dual SG90 / MG90S metal gear micro servos providing 180° horizontal pan and 90° vertical tilt trajectory.</p>
+          </div>
+
+          <div class="corner-bracket-box hud-card">
+            <span class="card-index">04 // COMPONENT</span>
+            <h4 style="margin: 0.5rem 0; color: var(--cyan-primary);">Displays & Audio</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">0.96" SSD1306 OLED (128x64 I2C), 12-LED WS2812B NeoPixel ring, INMP441 I2S microphone, and MAX98357A I2S amplifier with 3W speaker.</p>
+          </div>
+        
+          <div class="corner-bracket-box hud-card orange-brackets">
+            <span class="card-index orange-text">05 // FEATURE SET 1</span>
+            <h4 style="margin: 0.5rem 0; color: var(--orange-primary);">Environment Sensing</h4>
+            <p class="muted-text" style="font-size: 0.85rem;">Digital ambient temperature and relative humidity sensor for real-time desk climate and study comfort telemetry.</p>
+          </div>
+        </div>
+
+        <!-- Pinout Table -->
+        <div class="corner-bracket-box hud-card" id="system-pinouts">
+          <div class="hud-card-header">
+            <span class="section-tag">[ HARDWARE PINOUT MATRIX: ESP32-S3 INTERFACE ]</span>
+            <span class="mono-label cyan-text">BUS VOLTAGE: 3.3V LOGIC / 5.0V VCC</span>
+          </div>
+
+          <div class="tactical-table-wrapper">
+            <table class="tactical-table">
+              <thead>
+                <tr>
+                  <th>MODULE</th>
+                  <th>ESP32 PIN</th>
+                  <th>PROTOCOL</th>
+                  <th>OPERATING VOLTAGE</th>
+                  <th>FUNCTIONAL PURPOSE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>OLED Screen (SSD1306)</td>
+                  <td>GPIO 21 (SDA), GPIO 22 (SCL)</td>
+                  <td>I2C (400kHz)</td>
+                  <td>3.3V</td>
+                  <td>Expressive eye animations, Pomodoro timer digits</td>
+                </tr>
+                <tr>
+                  <td>Pan Servo (Yaw)</td>
+                  <td>GPIO 18 (PWM)</td>
+                  <td>LEDC PWM (50Hz)</td>
+                  <td>5.0V (Ext Regulated)</td>
+                  <td>Horizontal head rotation tracking user presence</td>
+                </tr>
+                <tr>
+                  <td>Tilt Servo (Pitch)</td>
+                  <td>GPIO 19 (PWM)</td>
+                  <td>LEDC PWM (50Hz)</td>
+                  <td>5.0V (Ext Regulated)</td>
+                  <td>Vertical nod & nodding cues</td>
+                </tr>
+                <tr>
+                  <td>WS2812B NeoPixel Ring</td>
+                  <td>GPIO 4 (RMT)</td>
+                  <td>Single-Wire RMT</td>
+                  <td>5.0V</td>
+                  <td>Ambient focus color aura (Cyan / Orange / Red)</td>
+                </tr>
+                <tr>
+                  <td>I2S Microphone (INMP441)</td>
+                  <td>GPIO 12 (BCLK), 14 (LRCLK), 27 (DIN)</td>
+                  <td>I2S Digital Audio</td>
+                  <td>3.3V</td>
+                  <td>Far-field voice capture for Gemini conversational queries</td>
+                </tr>
+                <tr>
+                  <td>I2S DAC Amp (MAX98357A)</td>
+                  <td>GPIO 26 (BCLK), 25 (LRC), 33 (DOUT)</td>
+                  <td>I2S Audio Out</td>
+                  <td>5.0V</td>
+                  <td>Voice synthesis playback & friendly acoustic alerts</td>
+                </tr>
+                <tr>
+                  <td>Environment Sensor (Comfort)</td>
+                  <td>GPIO 4 / GPIO 21, 22</td>
+                  <td>1-Wire / I2C Bus</td>
+                  <td>3.3V</td>
+                  <td>Feature Set 1: Ambient temperature, humidity &amp; study comfort telemetry</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+    <!-- ==========================================================================
+     UNIFIED GLOBAL SITE FOOTER (MATCHING 1:1 ACROSS ALL PAGES)
+     ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      
+      <!-- Main 4-Column Grid -->
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand & Research Mission -->
+        <div class="footer-col-brand">
+          <a href="/" class="footer-brand-link">
+            <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+          </a>
+          <p class="footer-desc">
+            An embodied AI desk companion combining low-latency edge computer vision and Google Gemini multimodal reasoning to eliminate distraction loops and sustain deep focus.
+          </p>
+          <div class="footer-telemetry-badge">
+            <span class="telemetry-pulse-dot"></span>
+            <span>CCDS HCI WING // INDEPENDENT UNIVERSITY, BANGLADESH</span>
+          </div>
+        </div>
+
+        <!-- Col 2: System & Build -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">SYSTEM &amp; BUILD</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/overview">Project Overview</a></li>
+            <li><a href="/architecture">Architecture &amp; Schematics</a></li>
+            <li><a href="/roadmap">System Roadmap</a></li>
+            <li><a href="/timeline">Development Timeline</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Research & Team -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">RESEARCH &amp; TEAM</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/team">Faculty &amp; Engineering Team</a></li>
+            <li><a href="/literature">Literature Reviews &amp; Paper</a></li>
+            <li><a href="/survey">HRI User Study Survey</a></li>
+            <li><a href="/about">About FocusBot</a></li>
+            <li><a href="/contact">Contact Research Team</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Return to Top -->
+      <div class="footer-bottom-row">
+        <p class="footer-copy-text">
+          &copy; 2026 FocusBot Embodied Robotics. Center for Computational &amp; Data-Sciences (CCDS). All rights reserved.
+        </p>
+
+        <a href="#" class="footer-back-to-top" aria-label="Return to top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+          <span>RETURN TO TOP</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

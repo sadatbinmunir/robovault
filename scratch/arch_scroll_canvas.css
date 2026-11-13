@@ -1,0 +1,183 @@
+/* ==========================================================================
+   ARCHITECTURE PAGE: SCROLL-TO-EXPLODE 3D HARDWARE CANVAS SEQUENCE
+   ========================================================================== */
+
+.arch-scroll-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 350vh;
+  background: #000000;
+  margin-top: 0;
+  z-index: 10;
+}
+
+.arch-canvas-viewport {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.arch-canvas-viewport.is-fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: auto !important;
+}
+
+.arch-canvas-viewport.is-after {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+.arch-teardown-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.arch-canvas-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 65%),
+    linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.75) 15%, transparent 35%, transparent 70%, rgba(0, 0, 0, 0.8) 92%, #000000 100%),
+    linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.6) 10%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.6) 90%, #000000 100%);
+}
+
+.arch-canvas-hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: calc(var(--header-height) + 2rem) 2.5rem 2.5rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.arch-hud-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.arch-hud-story-card {
+  max-width: 540px;
+  background: rgba(10, 14, 24, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.arch-hud-phase-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #C084FC;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.arch-hud-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.arch-hud-desc {
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #94A3B8;
+  margin: 0;
+}
+
+.arch-hud-counter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(10, 14, 24, 0.7);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 9999px;
+  padding: 0.55rem 1.1rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #E2E8F0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(168, 85, 247, 0.2);
+}
+
+.arch-hud-scroll-prompt {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 0.55rem 1.25rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #E2E8F0;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: promptBounce 2s ease-in-out infinite;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes promptBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 768px) {
+  .arch-canvas-hud {
+    padding: calc(var(--header-height) + 1rem) 1.25rem 1.5rem;
+  }
+  .arch-hud-story-card {
+    max-width: 100%;
+    padding: 1rem 1.2rem;
+  }
+  .arch-hud-title {
+    font-size: 1.25rem;
+  }
+  .arch-hud-desc {
+    font-size: 0.78rem;
+  }
+}

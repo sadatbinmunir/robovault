@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Overview & Goals // FocusBot.Ai</title>
+  <meta name="description" content="Executive overview, thesis, and core capabilities of FocusBot embodied desk robotics.">
+  
+  <!-- Fonts: Space Grotesk, Rajdhani, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="tactical-hud-body">
+
+  <!-- Ambient Backdrop & PCB Overlay -->
+  <div class="frosted-glass-bg" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL (SEPARATED PAGES)
+       ========================================================================== -->
+  <header class="home-style-header">
+    
+    <!-- Top Left: Focusbot.Ai Brand Logo Link -->
+    <div class="header-logo-wrapper">
+      <a href="/" class="focusbot-brand-link" aria-label="Focusbot.Ai Home">
+        <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+      </a>
+    </div>
+
+    <!-- Center: Horizontal Side-Scrollable Page Selectors Rail -->
+    <div class="header-scroll-rail-wrapper">
+      <button type="button" class="rail-scroll-arrow rail-arrow-left" id="railScrollLeftBtn" aria-label="Scroll left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <nav class="quick-nav-scroll-container" id="quickNavScrollContainer" aria-label="All Pages Navigation">
+        <a href="/" class="nav-rail-item ">Home</a>
+        <a href="/overview" class="nav-rail-item active">Overview</a>
+        <a href="/team" class="nav-rail-item ">Team & Faculty</a>
+        <a href="/literature" class="nav-rail-item ">Literature</a>
+        <a href="/timeline" class="nav-rail-item ">Timeline</a>
+        <a href="/roadmap" class="nav-rail-item ">Roadmap</a>
+        <a href="/architecture" class="nav-rail-item ">Architecture &amp; Schematics</a>
+        <a href="/survey" class="nav-rail-item ">Survey</a>
+        <a href="/about" class="nav-rail-item ">About</a>
+        <a href="/contact" class="nav-rail-item ">Contact</a>
+      </nav>
+
+      <button type="button" class="rail-scroll-arrow rail-arrow-right" id="railScrollRightBtn" aria-label="Scroll right">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    </header>
+
+  <!-- Main Content Area -->
+  <main style="padding-top: calc(var(--header-height) + 2.5rem); min-height: 85vh; padding-bottom: 5rem;">
+    <div class="container">
+      <section class="section-block" id="overview">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">[ 01 — OVERVIEW ]</span>
+          <h2 class="section-title">PROJECT OVERVIEW & SYSTEM GOALS</h2>
+          <p class="section-subtitle">
+            FocusBot revolutionizes the desk workspace by fusing low-cost embedded hardware, physical micro-expressions, and cloud-edge multimodal intelligence.
+          </p>
+        </div>
+
+        <!-- 2 Columns: Goals & Benefits -->
+        <div class="hud-grid-2">
+          
+          <!-- Column 1: System Goals -->
+          <div class="corner-bracket-box hud-card">
+            <div class="hud-card-header">
+              <div class="card-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <span class="card-index">OBJ // 01-08</span>
+            </div>
+
+            <h3 class="cyan-text">ENGINEERING GOALS</h3>
+            <p class="muted-text" style="margin-bottom: 1.5rem;">Target benchmarks and functional milestones of the FocusBot companion:</p>
+
+            <ul class="hud-feature-list">
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 01</span>
+                <div class="feature-text">
+                  <h4>Low-Cost Desktop Robot</h4>
+                  <p>Develop an accessible, open-hardware desk companion capable of recognizing common user activities.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 02</span>
+                <div class="feature-text">
+                  <h4>Computer Vision Activity Classifier</h4>
+                  <p>Use local/edge vision models to distinguish productive studying from phone usage, fatigue, or desk absence.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 03</span>
+                <div class="feature-text">
+                  <h4>Natural Gemini API Dialogue</h4>
+                  <p>Enable natural, contextual voice-based interaction leveraging Gemini API's deep multimodal reasoning.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 04</span>
+                <div class="feature-text">
+                  <h4>Context-Aware Reminders</h4>
+                  <p>Replace jarring audio alarms with intelligent nudges, gentle head turns, and dynamic OLED gaze cues.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 05</span>
+                <div class="feature-text">
+                  <h4>Adaptive Timer Engine</h4>
+                  <p>Allow users to set and manage personalized study-break intervals based on real-time fatigue signals.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 06</span>
+                <div class="feature-text">
+                  <h4>Comprehensive Activity Telemetry</h4>
+                  <p>Continuously track focus ratios, distraction frequency, and healthy break compliance.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 07</span>
+                <div class="feature-text">
+                  <h4>Adaptive Behavioral Persona</h4>
+                  <p>Adjust the robot's physical movement, lighting tone, and speech brevity according to user response.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet">&gt; 08</span>
+                <div class="feature-text">
+                  <h4>Multidisciplinary HRI Proof</h4>
+                  <p>Demonstrate the seamless integration of robotics, embedded systems, computer vision, and generative AI.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: User Benefits -->
+          <div class="corner-bracket-box hud-card orange-brackets">
+            <div class="hud-card-header">
+              <div class="card-icon-wrapper" style="border-color: var(--orange-border); background: var(--orange-subtle);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span class="card-index" style="color: var(--orange-primary);">VAL // 01-07</span>
+            </div>
+
+            <h3 class="orange-text">IMPACT & USER BENEFITS</h3>
+            <p class="muted-text" style="margin-bottom: 1.5rem;">Tangible well-being and productivity advantages delivered to the user:</p>
+
+            <ul class="hud-feature-list">
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 01</span>
+                <div class="feature-text">
+                  <h4>Deep Focus Sustenance</h4>
+                  <p>Helps students and remote workers maintain long-form concentration during rigorous study sessions.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 02</span>
+                <div class="feature-text">
+                  <h4>Distraction Mitigation</h4>
+                  <p>Proactively catches and reduces subconscious smartphone pickups and social media loop triggers.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 03</span>
+                <div class="feature-text">
+                  <h4>Physical Embodiment Over Screen Notifications</h4>
+                  <p>Provides a far more natural, empathetic, and tactile presence than dismissible phone notifications.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 04</span>
+                <div class="feature-text">
+                  <h4>Restorative Study-Break Rhythms</h4>
+                  <p>Encourages hydration, eye rest, and stretching intervals timed to optimal cognitive load.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 05</span>
+                <div class="feature-text">
+                  <h4>Zero-Effort Automated Tracking</h4>
+                  <p>Provides high-fidelity productivity logs without requiring manual stopwatch buttons or time-sheeting.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 06</span>
+                <div class="feature-text">
+                  <h4>Real-World AI Application</h4>
+                  <p>Exemplifies how multimodal neural models break out of chat windows into physical domestic environments.</p>
+                </div>
+              </li>
+              <li class="hud-feature-item">
+                <span class="feature-bullet" style="color: var(--orange-primary);">&gt; 07</span>
+                <div class="feature-text">
+                  <h4>Broad Domain Extensibility</h4>
+                  <p>Scalable foundation for office workplace monitoring, elderly assistance, and personalized therapy support.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+    <!-- ==========================================================================
+     UNIFIED GLOBAL SITE FOOTER (MATCHING 1:1 ACROSS ALL PAGES)
+     ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      
+      <!-- Main 4-Column Grid -->
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand & Research Mission -->
+        <div class="footer-col-brand">
+          <a href="/" class="footer-brand-link">
+            <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+          </a>
+          <p class="footer-desc">
+            An embodied AI desk companion combining low-latency edge computer vision and Google Gemini multimodal reasoning to eliminate distraction loops and sustain deep focus.
+          </p>
+          <div class="footer-telemetry-badge">
+            <span class="telemetry-pulse-dot"></span>
+            <span>CCDS HCI WING // INDEPENDENT UNIVERSITY, BANGLADESH</span>
+          </div>
+        </div>
+
+        <!-- Col 2: System & Build -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">SYSTEM &amp; BUILD</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/overview">Project Overview</a></li>
+            <li><a href="/architecture">Architecture &amp; Schematics</a></li>
+            <li><a href="/roadmap">System Roadmap</a></li>
+            <li><a href="/timeline">Development Timeline</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Research & Team -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">RESEARCH &amp; TEAM</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/team">Faculty &amp; Engineering Team</a></li>
+            <li><a href="/literature">Literature Reviews &amp; Paper</a></li>
+            <li><a href="/survey">HRI User Study Survey</a></li>
+            <li><a href="/about">About FocusBot</a></li>
+            <li><a href="/contact">Contact Research Team</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Return to Top -->
+      <div class="footer-bottom-row">
+        <p class="footer-copy-text">
+          &copy; 2026 FocusBot Embodied Robotics. Center for Computational &amp; Data-Sciences (CCDS). All rights reserved.
+        </p>
+
+        <a href="#" class="footer-back-to-top" aria-label="Return to top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+          <span>RETURN TO TOP</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

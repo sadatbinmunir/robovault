@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Roadmap // FocusBot</title>
+  <meta name="description" content="FocusBot Strategic Roadmap - Phased milestones spanning edge neural acceleration, wireless charging, and multi-occupant affective HRI.">
+  
+  <!-- Fonts: Space Grotesk, Rajdhani, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="tactical-hud-body">
+
+  <!-- Scanline & Ambient Backdrop -->
+  <div class="scanline-overlay" aria-hidden="true"></div>
+  <div class="frosted-glass-bg" aria-hidden="true"></div>
+
+  <!-- Header -->
+    <!-- ==========================================================================
+       TOP FLOATING EDITORIAL NAVBAR (MATCHING HOME PAGE 1:1)
+       ========================================================================== -->
+    <!-- ==========================================================================
+       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL (MATCHING 1:1 ACROSS ALL PAGES)
+       ========================================================================== -->
+    <!-- ==========================================================================
+       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL (SEPARATED PAGES)
+       ========================================================================== -->
+  <header class="home-style-header">
+    
+    <!-- Top Left: Focusbot.Ai Brand Logo Link -->
+    <div class="header-logo-wrapper">
+      <a href="/" class="focusbot-brand-link" aria-label="Focusbot.Ai Home">
+        <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+      </a>
+    </div>
+
+    <!-- Center: Horizontal Side-Scrollable Page Selectors Rail -->
+    <div class="header-scroll-rail-wrapper">
+      <button type="button" class="rail-scroll-arrow rail-arrow-left" id="railScrollLeftBtn" aria-label="Scroll left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <nav class="quick-nav-scroll-container" id="quickNavScrollContainer" aria-label="All Pages Navigation">
+        <a href="/" class="nav-rail-item ">Home</a>
+        <a href="/overview" class="nav-rail-item ">Overview</a>
+        <a href="/team" class="nav-rail-item ">Team & Faculty</a>
+        <a href="/literature" class="nav-rail-item ">Literature</a>
+        <a href="/timeline" class="nav-rail-item ">Timeline</a>
+        <a href="/roadmap" class="nav-rail-item active">Roadmap</a>
+        <a href="/architecture" class="nav-rail-item ">Architecture &amp; Schematics</a>
+        <a href="/survey" class="nav-rail-item ">Survey</a>
+        <a href="/about" class="nav-rail-item ">About</a>
+        <a href="/contact" class="nav-rail-item ">Contact</a>
+      </nav>
+
+      <button type="button" class="rail-scroll-arrow rail-arrow-right" id="railScrollRightBtn" aria-label="Scroll right">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    </header>
+
+  <!-- Main Content Area -->
+  <main style="padding-top: calc(var(--header-height) + 3rem); min-height: 80vh;">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-header" style="margin-bottom: 3rem;">
+        <span class="section-tag">[ LONG-TERM TRAJECTORY &amp; ARCHITECTURAL HORIZON ]</span>
+        <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3rem);">FUTURE ROADMAP</h1>
+        <p class="section-subtitle">
+          Multiphase engineering trajectory transitioning FocusBot from experimental bench prototype to an autonomous commercial desktop ecosystem.
+        </p>
+      </div>
+
+      <!-- Roadmap Phases Grid -->
+      <div style="display: flex; flex-direction: column; gap: 2.5rem; margin-bottom: 5rem;">
+        
+        <!-- Phase 1: Current In-Flight Milestone -->
+        <div class="corner-bracket-box hud-card" style="border-left: 4px solid var(--cyan-primary);">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot"></span>
+              <span class="status-text">PHASE 01 // ACTIVE IN FLIGHT</span>
+            </div>
+            <span class="card-index">HORIZON: Q1 2026</span>
+          </div>
+
+          <h3 style="color: var(--cyan-primary); font-size: 1.4rem; margin-bottom: 1rem;">
+            Core Embodied Architecture &amp; Proof-of-Concept
+          </h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Establishment of the physical pan-tilt 2-DOF companion chassis, edge-based OpenCV activity inference (distinguishing textbook study from mobile scrolling), and low-latency conversational synapse powered by Google Gemini 2.0 API.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">ESP32-S3 Firmware Stack</div>
+            </div>
+            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Edge Vision Pipeline &amp; Phone Detection</div>
+            </div>
+            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Gemini Prompt Context Synthesizer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2: Hardware Refinement & Neural Acceleration -->
+        <div class="corner-bracket-box hud-card orange-brackets" style="border-left: 4px solid var(--orange-primary);">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot" style="background: var(--orange-primary); box-shadow: 0 0 8px var(--orange-primary);"></span>
+              <span class="status-text" style="color: var(--orange-primary);">PHASE 02 // HARDWARE TELEMETRY &amp; EXPANSION</span>
+            </div>
+            <span class="card-index" style="color: var(--orange-primary);">HORIZON: Q2–Q3 2026</span>
+          </div>
+
+          <h3 style="color: var(--orange-primary); font-size: 1.4rem; margin-bottom: 1rem;">
+            On-Device TPU Quantization &amp; Inductive Wireless Power
+          </h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Migration from micro-servos to ultra-quiet magnetic field-oriented control (FOC) gimbal motors to eliminate actuator buzz during deep study sessions. Integration of an inductive charging desktop dock and quantized 8-bit MobileNetV4 models for 100% on-device vision inference without cloud dependencies.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Whisper-Quiet FOC Steppers</div>
+            </div>
+            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Wireless Qi Desk Docking Base</div>
+            </div>
+            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Edge TPU Quantized Neural Models</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3: Multi-User Social Agency & Affective Computing -->
+        <div class="corner-bracket-box hud-card" style="border-left: 4px solid #A855F7;">
+          <div class="hud-card-header">
+            <div class="status-indicator-pill">
+              <span class="status-dot" style="background: #A855F7; box-shadow: 0 0 8px #A855F7;"></span>
+              <span class="status-text" style="color: #A855F7;">PHASE 03 // MULTI-USER COGNITIVE SYNAPSE</span>
+            </div>
+            <span class="card-index" style="color: #A855F7;">HORIZON: 2027</span>
+          </div>
+
+          <h3 style="color: #C084FC; font-size: 1.4rem; margin-bottom: 1rem;">
+            Affective HRI, Multi-Occupant Arbitration &amp; Longitudinal Habit Learning
+          </h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Longitudinal multi-session adaptation that learns an individual's idiosyncratic productivity rhythms over weeks. Addition of multi-occupant gaze arbitration for shared library desks and specialized ADHD cognitive scaffolding modes.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Affective Emotional State Classifier</div>
+            </div>
+            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Shared Desk Spatial Arbitration</div>
+            </div>
+            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
+              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Personalized ADHD Study Scaffolding</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer with Return to Top Only -->
+    <!-- ==========================================================================
+     UNIFIED GLOBAL SITE FOOTER (MATCHING 1:1 ACROSS ALL PAGES)
+     ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      
+      <!-- Main 4-Column Grid -->
+      <div class="footer-top-grid">
+        
+        <!-- Col 1: Brand & Research Mission -->
+        <div class="footer-col-brand">
+          <a href="/" class="footer-brand-link">
+            <span class="brand-text-white">Focusbot</span><span class="brand-text-gradient">.Ai</span>
+          </a>
+          <p class="footer-desc">
+            An embodied AI desk companion combining low-latency edge computer vision and Google Gemini multimodal reasoning to eliminate distraction loops and sustain deep focus.
+          </p>
+          <div class="footer-telemetry-badge">
+            <span class="telemetry-pulse-dot"></span>
+            <span>CCDS HCI WING // INDEPENDENT UNIVERSITY, BANGLADESH</span>
+          </div>
+        </div>
+
+        <!-- Col 2: System & Build -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">SYSTEM &amp; BUILD</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/overview">Project Overview</a></li>
+            <li><a href="/architecture">Architecture &amp; Schematics</a></li>
+            <li><a href="/roadmap">System Roadmap</a></li>
+            <li><a href="/timeline">Development Timeline</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Research & Team -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading">RESEARCH &amp; TEAM</h4>
+          <ul class="footer-nav-list">
+            <li><a href="/team">Faculty &amp; Engineering Team</a></li>
+            <li><a href="/literature">Literature Reviews &amp; Paper</a></li>
+            <li><a href="/survey">HRI User Study Survey</a></li>
+            <li><a href="/about">About FocusBot</a></li>
+            <li><a href="/contact">Contact Research Team</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Return to Top -->
+      <div class="footer-bottom-row">
+        <p class="footer-copy-text">
+          &copy; 2026 FocusBot Embodied Robotics. Center for Computational &amp; Data-Sciences (CCDS). All rights reserved.
+        </p>
+
+        <a href="#" class="footer-back-to-top" aria-label="Return to top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+          <span>RETURN TO TOP</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
