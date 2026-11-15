@@ -71,13 +71,10 @@
       <div class="arch-canvas-vignette"></div>
 
       <!-- Middle of the Screen Coming Soon Overlay -->
-      <div class="arch-hud-center-coming-soon" id="roadmapCenterComingSoon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 5; text-align: center;">
-        <div style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-          <div style="display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.65rem 1.85rem; border-radius: 9999px; background: rgba(8, 10, 18, 0.8); border: 1px solid rgba(168, 85, 247, 0.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(168, 85, 247, 0.35);">
-            <span class="status-dot" style="background: #C084FC; box-shadow: 0 0 10px #C084FC; width: 8px; height: 8px; border-radius: 50%; display: inline-block;"></span>
-            <span style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #FFFFFF; text-shadow: 0 0 14px rgba(168, 85, 247, 0.8);">COMING SOON</span>
-          </div>
-        </div>
+      <div class="arch-hud-center-coming-soon" id="roadmapCenterComingSoon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 5; text-align: center; width: 100%; max-width: 800px; padding: 0 1rem;">
+        <h2 style="font-family: var(--font-sans); font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; margin: 0; filter: drop-shadow(0 4px 30px rgba(0,0,0,0.95));">
+          <span style="background: linear-gradient(135deg, #C084FC 0%, #A855F7 55%, #E9D5FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 28px rgba(168, 85, 247, 0.6));">Coming Soon</span>
+        </h2>
       </div>
 
       <!-- HUD Overlay -->
