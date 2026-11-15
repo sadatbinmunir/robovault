@@ -83,11 +83,6 @@
             </h1>
           </div>
 
-          <div class="arch-hud-counter-pill" id="roadmapCounterPill">
-            <span class="status-dot" style="background: #C084FC; box-shadow: 0 0 10px #C084FC;"></span>
-            <span id="roadmapFrameCounter">SEQUENCE: 001 / 240</span>
-          </div>
-
         </div>
 
         <!-- Bottom Row: Scroll Prompt Indicator -->
@@ -217,7 +212,6 @@
 
     // HUD Elements
     const roadmapScrollPrompt = document.getElementById('roadmapScrollPrompt');
-    const roadmapFrameCounter = document.getElementById('roadmapFrameCounter');
 
     function drawRoadmapFrame(frameNum) {
       if (!roadmapCanvas || !roadmapCtx) return;
@@ -281,10 +275,6 @@
       if (roadmapScrollPrompt) {
         roadmapScrollPrompt.style.opacity = prog > 0.05 ? '0' : '1';
         roadmapScrollPrompt.style.pointerEvents = 'none';
-      }
-      if (roadmapFrameCounter) {
-        const padded = String(Math.min(Math.max(frame, 1), TOTAL_ROADMAP_FRAMES)).padStart(3, '0');
-        roadmapFrameCounter.textContent = 'SEQUENCE: ' + padded + ' / ' + TOTAL_ROADMAP_FRAMES;
       }
     }
 
