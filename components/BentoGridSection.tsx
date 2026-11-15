@@ -329,19 +329,16 @@ export default function BentoGridSection() {
                     </div>
                   </div>
 
-                  {/* Micro-Card 6b (Bottom): Dark Frosted Location / Labs Card (Matches "САНКТ-ПЕТЕРБУРГ" card in reference) */}
-                  <div className="relative rounded-[22px] sm:rounded-[26px] p-4 sm:p-5 border border-white/[0.12] hover:border-white/25 bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] group transition-all duration-300 flex items-center justify-between cursor-pointer">
+                  {/* Micro-Card 6b (Bottom): Open Project Gallery (Non-clickable placeholder) */}
+                  <div className="relative rounded-[22px] sm:rounded-[26px] p-4 sm:p-5 border border-white/[0.08] bg-white/[0.03] backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-between cursor-default select-none">
                     <div>
-                      <div className="text-xs sm:text-sm font-bold tracking-tight text-white uppercase">
-                        TOKYO • SF • MUNICH
-                      </div>
-                      <div className="text-[10px] font-mono text-zinc-400 tracking-wider">
-                        Robotics Design Laboratories
+                      <div className="text-xs sm:text-sm font-bold tracking-tight text-white">
+                        Open Project Gallery
                       </div>
                     </div>
 
                     {/* Expand icon matching the bottom right icon in reference image */}
-                    <div className="w-8 h-8 rounded-lg bg-white/[0.06] border border-white/10 flex items-center justify-center text-zinc-300 group-hover:text-white group-hover:border-white/30 transition-all">
+                    <div className="w-8 h-8 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-zinc-400">
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <polyline points="15 3 21 3 21 9"/>
                         <polyline points="9 21 3 21 3 15"/>
