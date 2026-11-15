@@ -38,15 +38,10 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className="text-sm text-zinc-400 leading-relaxed mb-6 max-w-md font-light">
+            <p className="text-sm text-zinc-400 leading-relaxed max-w-md font-light">
               An embodied AI desk companion combining low-latency edge computer vision 
               and Google Gemini multimodal reasoning to eliminate distraction loops and sustain deep focus.
             </p>
-
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] text-[11px] font-mono text-zinc-300">
-              <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse shadow-[0_0_8px_rgba(168,85,247,0.8)]" />
-              <span>CCDS HCI WING // INDEPENDENT UNIVERSITY, BANGLADESH</span>
-            </div>
           </div>
 
           {/* Col 2: System & Build (3 cols) */}
