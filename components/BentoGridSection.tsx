@@ -61,10 +61,6 @@ export default function BentoGridSection() {
                 {/* Left Side: Bold Display Typography (3 stacked lines matching reference) */}
                 <div className="md:col-span-7 flex flex-col justify-between h-full">
                   <div>
-                    <div className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] uppercase text-zinc-400 font-semibold mb-4">
-                      // 01. ACTIVE EMBODIED INTELLIGENCE
-                    </div>
-
                     <div className="space-y-0.5 mb-5 select-none">
                       <span className="block text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-[0.92]">
                         EMOTIVE
@@ -138,9 +134,6 @@ export default function BentoGridSection() {
               {/* Header with Circular Badge (Matching exact structural badge in reference image) */}
               <div className="flex items-start justify-between relative z-10">
                 <div>
-                  <div className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] uppercase text-zinc-400 font-semibold mb-1">
-                    02 / SPATIAL AUDIO
-                  </div>
                   <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                     Whisper-Voice Synapse
                   </h3>
@@ -228,18 +221,7 @@ export default function BentoGridSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-transparent to-black" />
               </div>
 
-              {/* Top-Left: Neon Circular Indicator Dot (Exact match to reference's neon dot) */}
-              <div className="relative z-10 flex items-center justify-between">
-                <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-black/70 border border-white/15 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-                  </span>
-                  <span className="text-[11px] font-mono tracking-wider uppercase text-zinc-200 font-medium">
-                    ROBOTICS UNIT #01
-                  </span>
-                </div>
-
+              <div className="relative z-10 flex items-center justify-end">
                 <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 bg-white/[0.05] px-2.5 py-1 rounded-full border border-white/[0.08]">
                   GEN 2.0
                 </div>
@@ -275,10 +257,6 @@ export default function BentoGridSection() {
                 
                 {/* Left Side: Bold Uppercase Display Headline & Sub-line (Matching reference) */}
                 <div className="space-y-3 relative z-10 max-w-xl">
-                  <div className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] uppercase text-purple-300 font-semibold">
-                    // REAL-TIME PRODUCTIVITY ORCHESTRATION
-                  </div>
-
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white uppercase leading-[1.05]">
                     AUTONOMOUS WORKSPACE INTELLIGENCE
                   </h3>
