@@ -303,19 +303,6 @@ export default function BentoGridSection() {
                     </p>
                   </div>
 
-                  <div className="relative z-10 pt-4 flex items-center justify-between border-t border-white/[0.06] mt-4">
-                    <div className="flex items-center gap-2 text-[11px] font-mono text-zinc-300">
-                      <svg className="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                      </svg>
-                      <span>Air-Gapped Privacy Mode</span>
-                    </div>
-                    <span className="text-[10px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                      CERTIFIED
-                    </span>
-                  </div>
-
                 </div>
 
                 {/* Card 6: Stacked Micro-Cards (~40% / 5 cols) */}
