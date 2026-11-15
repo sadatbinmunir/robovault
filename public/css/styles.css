@@ -3336,6 +3336,117 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.45;
 }
 
+/* ==========================================================================
+   LEADER 2: FARIHA MIRZA - LIGHT PINK ACCENT THEME
+   ========================================================================== */
+#leader2.leader-hud-card {
+  border-color: rgba(244, 114, 182, 0.45) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), 
+              0 0 25px rgba(244, 114, 182, 0.18),
+              inset 0 0 25px rgba(244, 114, 182, 0.05) !important;
+}
+
+#leader2.leader-hud-card:hover {
+  border-color: rgba(244, 114, 182, 0.75) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75), 
+              0 0 35px rgba(244, 114, 182, 0.32),
+              inset 0 0 30px rgba(244, 114, 182, 0.09) !important;
+}
+
+#leader2 .leader-photo-frame {
+  border: 2.5px solid #F472B6 !important;
+  box-shadow: 0 0 22px rgba(244, 114, 182, 0.45) !important;
+  background: #140812 !important;
+}
+
+#leader2 .leader-badge-pill {
+  background: linear-gradient(135deg, #F472B6 0%, #EC4899 100%) !important;
+  box-shadow: 0 4px 14px rgba(244, 114, 182, 0.55) !important;
+}
+
+#leader2 .leader-pill-badge {
+  background: rgba(244, 114, 182, 0.12) !important;
+  border: 1px solid rgba(244, 114, 182, 0.6) !important;
+  color: #F9A8D4 !important;
+  box-shadow: 0 0 12px rgba(244, 114, 182, 0.22) !important;
+}
+
+#leader2 .leader-role-tag {
+  color: #F472B6 !important;
+}
+
+#leader2 .leader-quote-box {
+  background: rgba(28, 12, 22, 0.65) !important;
+  border: 1px solid rgba(244, 114, 182, 0.28) !important;
+}
+
+#leader2 .leader-quote-box::before {
+  background: #F472B6 !important;
+}
+
+#leader2 .badge-follow-on {
+  background: linear-gradient(135deg, #F472B6 0%, #EC4899 100%) !important;
+  box-shadow: 0 2px 10px rgba(244, 114, 182, 0.38) !important;
+}
+
+#leader2 .leader-email-pill {
+  background: rgba(28, 12, 22, 0.7) !important;
+  border: 1px solid rgba(244, 114, 182, 0.35) !important;
+}
+
+#leader2 .leader-email-pill:hover {
+  background: rgba(244, 114, 182, 0.2) !important;
+  border-color: #F472B6 !important;
+  box-shadow: 0 4px 14px rgba(244, 114, 182, 0.35) !important;
+}
+
+#leader2 .leader-social-btn {
+  background: rgba(28, 12, 22, 0.7) !important;
+  border: 1px solid rgba(244, 114, 182, 0.35) !important;
+}
+
+#leader2 .leader-social-btn:hover:not(.disabled) {
+  background: rgba(244, 114, 182, 0.25) !important;
+  border-color: #F472B6 !important;
+  box-shadow: 0 4px 14px rgba(244, 114, 182, 0.35) !important;
+}
+
+#leader2 .btn-leader-pdf {
+  background: linear-gradient(90deg, #F472B6 0%, #EC4899 100%) !important;
+  box-shadow: 0 5px 22px rgba(244, 114, 182, 0.42) !important;
+}
+
+#leader2 .btn-leader-pdf:hover {
+  box-shadow: 0 10px 30px rgba(244, 114, 182, 0.65) !important;
+}
+
+#leader2 .leader-literature-accordion {
+  border-color: rgba(244, 114, 182, 0.3) !important;
+  background: rgba(22, 10, 18, 0.55) !important;
+}
+
+#leader2 .leader-literature-accordion[open] {
+  border-color: rgba(244, 114, 182, 0.6) !important;
+}
+
+#leader2 .leader-literature-summary:hover {
+  background: rgba(244, 114, 182, 0.12) !important;
+}
+
+#leader2 .summary-chevron {
+  color: #F472B6 !important;
+}
+
+#leader2 .lit-num {
+  color: #F9A8D4 !important;
+}
+
+#leader2 .lit-source-tag {
+  background: rgba(244, 114, 182, 0.15) !important;
+  border-color: rgba(244, 114, 182, 0.45) !important;
+  color: #FBCFE8 !important;
+}
+
 /* 3-Member Cards Under Leaders */
 .three-members-grid {
   display: grid;
