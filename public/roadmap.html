@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Future Roadmap // FocusBot</title>
-  <meta name="description" content="FocusBot Strategic Roadmap - Phased milestones spanning edge neural acceleration, wireless charging, and multi-occupant affective HRI.">
+  <meta name="description" content="FocusBot Strategic Roadmap - Phased milestones spanning edge neural acceleration, wireless charging, and multi-occupant affective HRI. Coming soon.">
   
   <!-- Fonts: Space Grotesk, Rajdhani, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,15 +20,8 @@
   <div class="scanline-overlay" aria-hidden="true"></div>
   <div class="frosted-glass-bg" aria-hidden="true"></div>
 
-  <!-- Header -->
-    <!-- ==========================================================================
-       TOP FLOATING EDITORIAL NAVBAR (MATCHING HOME PAGE 1:1)
-       ========================================================================== -->
-    <!-- ==========================================================================
-       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL (MATCHING 1:1 ACROSS ALL PAGES)
-       ========================================================================== -->
-    <!-- ==========================================================================
-       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL (SEPARATED PAGES)
+  <!-- ==========================================================================
+       TOP FLOATING EDITORIAL NAVBAR WITH HORIZONTAL SIDE-SCROLL
        ========================================================================== -->
   <header class="home-style-header">
     
@@ -46,16 +39,16 @@
       </button>
 
       <nav class="quick-nav-scroll-container" id="quickNavScrollContainer" aria-label="All Pages Navigation">
-        <a href="/" class="nav-rail-item ">Home</a>
-        <a href="/overview" class="nav-rail-item ">Overview</a>
-        <a href="/team" class="nav-rail-item ">Team & Faculty</a>
-        <a href="/literature" class="nav-rail-item ">Literature</a>
-        <a href="/timeline" class="nav-rail-item ">Timeline</a>
+        <a href="/" class="nav-rail-item">Home</a>
+        <a href="/overview" class="nav-rail-item">Overview</a>
+        <a href="/team" class="nav-rail-item">Team & Faculty</a>
+        <a href="/literature" class="nav-rail-item">Literature</a>
+        <a href="/timeline" class="nav-rail-item">Timeline</a>
         <a href="/roadmap" class="nav-rail-item active">Roadmap</a>
-        <a href="/architecture" class="nav-rail-item ">Architecture &amp; Schematics</a>
-        <a href="/survey" class="nav-rail-item ">Survey</a>
-        <a href="/about" class="nav-rail-item ">About</a>
-        <a href="/contact" class="nav-rail-item ">Contact</a>
+        <a href="/architecture" class="nav-rail-item">Architecture &amp; Schematics</a>
+        <a href="/survey" class="nav-rail-item">Survey</a>
+        <a href="/about" class="nav-rail-item">About</a>
+        <a href="/contact" class="nav-rail-item">Contact</a>
       </nav>
 
       <button type="button" class="rail-scroll-arrow rail-arrow-right" id="railScrollRightBtn" aria-label="Scroll right">
@@ -63,136 +56,95 @@
       </button>
     </div>
 
-    </header>
+  </header>
 
-  <!-- Main Content Area -->
-  <main style="padding-top: calc(var(--header-height) + 3rem); min-height: 80vh;">
-    <div class="container">
+  <!-- ==========================================================================
+       HERO: SCROLLABLE CHANGING ROBOT CANVAS SEQUENCE (240 FRAMES)
+       ========================================================================== -->
+  <div class="arch-scroll-canvas-container" id="roadmapCanvasContainer">
+    <div class="arch-canvas-viewport" id="roadmapCanvasViewport">
+      
+      <!-- Canvas Element -->
+      <canvas id="roadmapCanvas" class="arch-teardown-canvas"></canvas>
 
-      <!-- Section Header -->
-      <div class="section-header" style="margin-bottom: 3rem;">
-        <span class="section-tag">[ LONG-TERM TRAJECTORY &amp; ARCHITECTURAL HORIZON ]</span>
-        <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3rem);">FUTURE ROADMAP</h1>
-        <p class="section-subtitle">
-          Multiphase engineering trajectory transitioning FocusBot from experimental bench prototype to an autonomous commercial desktop ecosystem.
-        </p>
-      </div>
+      <!-- Vignette Overlay -->
+      <div class="arch-canvas-vignette"></div>
 
-      <!-- Roadmap Phases Grid -->
-      <div style="display: flex; flex-direction: column; gap: 2.5rem; margin-bottom: 5rem;">
+      <!-- HUD Overlay -->
+      <div class="arch-canvas-hud">
         
-        <!-- Phase 1: Current In-Flight Milestone -->
-        <div class="corner-bracket-box hud-card" style="border-left: 4px solid var(--cyan-primary);">
-          <div class="hud-card-header">
-            <div class="status-indicator-pill">
+        <!-- Top Row: Floating Title & Sequence Counter -->
+        <div class="arch-hud-top-row">
+          
+          <div class="arch-hud-title-wrap" style="max-width: 650px;">
+            <div class="status-indicator-pill" style="margin-bottom: 0.8rem; display: inline-flex;">
               <span class="status-dot"></span>
-              <span class="status-text">PHASE 01 // ACTIVE IN FLIGHT</span>
+              <span class="status-text">DEVELOPMENT HORIZON // CLASSIFIED</span>
             </div>
-            <span class="card-index">HORIZON: Q1 2026</span>
+            <h1 style="font-family: var(--font-sans); font-size: clamp(2.2rem, 3.8vw, 3.2rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.12; margin: 0; filter: drop-shadow(0 4px 24px rgba(0,0,0,0.85));">
+              <span style="color: #FFFFFF;">FocusBot</span><br>
+              <span style="background: linear-gradient(135deg, #C084FC 0%, #A855F7 55%, #E9D5FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 24px rgba(168, 85, 247, 0.45));">Roadmap // Coming Soon</span>
+            </h1>
           </div>
 
-          <h3 style="color: var(--cyan-primary); font-size: 1.4rem; margin-bottom: 1rem;">
-            Core Embodied Architecture &amp; Proof-of-Concept
-          </h3>
-          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
-            Establishment of the physical pan-tilt 2-DOF companion chassis, edge-based OpenCV activity inference (distinguishing textbook study from mobile scrolling), and low-latency conversational synapse powered by Google Gemini 2.0 API.
-          </p>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
-            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">ESP32-S3 Firmware Stack</div>
-            </div>
-            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Edge Vision Pipeline &amp; Phone Detection</div>
-            </div>
-            <div style="background: rgba(0, 210, 255, 0.05); padding: 1rem; border: 1px solid rgba(0, 210, 255, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">✓ COMPLETE</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Gemini Prompt Context Synthesizer</div>
-            </div>
+          <div class="arch-hud-counter-pill" id="roadmapCounterPill">
+            <span class="status-dot" style="background: #C084FC; box-shadow: 0 0 10px #C084FC;"></span>
+            <span id="roadmapFrameCounter">SEQUENCE: 001 / 240</span>
           </div>
+
         </div>
 
-        <!-- Phase 2: Hardware Refinement & Neural Acceleration -->
-        <div class="corner-bracket-box hud-card orange-brackets" style="border-left: 4px solid var(--orange-primary);">
-          <div class="hud-card-header">
-            <div class="status-indicator-pill">
-              <span class="status-dot" style="background: var(--orange-primary); box-shadow: 0 0 8px var(--orange-primary);"></span>
-              <span class="status-text" style="color: var(--orange-primary);">PHASE 02 // HARDWARE TELEMETRY &amp; EXPANSION</span>
-            </div>
-            <span class="card-index" style="color: var(--orange-primary);">HORIZON: Q2–Q3 2026</span>
-          </div>
-
-          <h3 style="color: var(--orange-primary); font-size: 1.4rem; margin-bottom: 1rem;">
-            On-Device TPU Quantization &amp; Inductive Wireless Power
-          </h3>
-          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
-            Migration from micro-servos to ultra-quiet magnetic field-oriented control (FOC) gimbal motors to eliminate actuator buzz during deep study sessions. Integration of an inductive charging desktop dock and quantized 8-bit MobileNetV4 models for 100% on-device vision inference without cloud dependencies.
-          </p>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
-            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Whisper-Quiet FOC Steppers</div>
-            </div>
-            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Wireless Qi Desk Docking Base</div>
-            </div>
-            <div style="background: rgba(255, 107, 0, 0.05); padding: 1rem; border: 1px solid rgba(255, 107, 0, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--orange-primary);">[ IN DESIGN ]</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Edge TPU Quantized Neural Models</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phase 3: Multi-User Social Agency & Affective Computing -->
-        <div class="corner-bracket-box hud-card" style="border-left: 4px solid #A855F7;">
-          <div class="hud-card-header">
-            <div class="status-indicator-pill">
-              <span class="status-dot" style="background: #A855F7; box-shadow: 0 0 8px #A855F7;"></span>
-              <span class="status-text" style="color: #A855F7;">PHASE 03 // MULTI-USER COGNITIVE SYNAPSE</span>
-            </div>
-            <span class="card-index" style="color: #A855F7;">HORIZON: 2027</span>
-          </div>
-
-          <h3 style="color: #C084FC; font-size: 1.4rem; margin-bottom: 1rem;">
-            Affective HRI, Multi-Occupant Arbitration &amp; Longitudinal Habit Learning
-          </h3>
-          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
-            Longitudinal multi-session adaptation that learns an individual's idiosyncratic productivity rhythms over weeks. Addition of multi-occupant gaze arbitration for shared library desks and specialized ADHD cognitive scaffolding modes.
-          </p>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
-            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Affective Emotional State Classifier</div>
-            </div>
-            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Shared Desk Spatial Arbitration</div>
-            </div>
-            <div style="background: rgba(168, 85, 247, 0.05); padding: 1rem; border: 1px solid rgba(168, 85, 247, 0.2);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #C084FC;">[ RESEARCH ]</span>
-              <div style="font-weight: 600; font-size: 0.9rem; margin-top: 0.3rem;">Personalized ADHD Study Scaffolding</div>
-            </div>
-          </div>
+        <!-- Bottom Row: Scroll Prompt Indicator -->
+        <div class="arch-hud-scroll-prompt" id="roadmapScrollPrompt">
+          <span>SCROLL DOWN TO INSPECT ROBOT SEQUENCE</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </div>
 
       </div>
 
     </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: COMING SOON SECTION
+       ========================================================================== -->
+  <main style="min-height: 70vh; padding: 7rem 1.5rem 8rem; position: relative; z-index: 20; background: #000000; text-align: center; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container" style="max-width: 840px; margin: 0 auto;">
+      
+      <div class="status-indicator-pill" style="margin-bottom: 1.8rem; display: inline-flex; border-color: rgba(168,85,247,0.4); background: rgba(168,85,247,0.08);">
+        <span class="status-dot" style="background: #C084FC; box-shadow: 0 0 10px #C084FC;"></span>
+        <span class="status-text" style="color: #E9D5FF;">CLASSIFIED PHASE RELEASE</span>
+      </div>
+
+      <h2 style="font-family: var(--font-sans); font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 1.5rem 0;">
+        <span style="color: #FFFFFF;">ROADMAP</span><br>
+        <span style="background: linear-gradient(135deg, #C084FC 0%, #A855F7 50%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.5));">COMING SOON</span>
+      </h2>
+
+      <p style="color: #94A3B8; font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.7; max-width: 640px; margin: 0 auto 3rem; font-weight: 300;">
+        The multi-phase autonomous desk robotics trajectory, commercial hardware iterations, and multi-modal edge AI roadmap are currently undergoing finalized benchmarking. Check back soon for the official release.
+      </p>
+
+      <!-- Quick Navigation Action Buttons -->
+      <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/" class="hud-btn" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 2rem; border-radius: 9999px; font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; text-decoration: none; background: linear-gradient(135deg, rgba(168,85,247,0.2) 0%, rgba(59,130,246,0.2) 100%); border: 1px solid rgba(168,85,247,0.4); color: #FFFFFF; box-shadow: 0 0 20px rgba(168,85,247,0.25); transition: all 0.3s ease;">
+          <span>&larr; RETURN TO HOME</span>
+        </a>
+        <a href="/architecture" class="hud-btn" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 2rem; border-radius: 9999px; font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; text-decoration: none; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); color: #E2E8F0; transition: all 0.3s ease;">
+          <span>EXPLORE ARCHITECTURE &rarr;</span>
+        </a>
+      </div>
+
+    </div>
   </main>
 
-  <!-- Footer with Return to Top Only -->
-    <!-- ==========================================================================
-     UNIFIED GLOBAL SITE FOOTER (MATCHING 1:1 ACROSS ALL PAGES)
-     ========================================================================== -->
+  <!-- ==========================================================================
+       UNIFIED GLOBAL SITE FOOTER (MATCHING 1:1 ACROSS ALL PAGES)
+       ========================================================================== -->
   <footer class="site-footer" id="siteFooter">
     <div class="container footer-container">
       
-      <!-- Main 4-Column Grid -->
+      <!-- Main 3-Column Grid -->
       <div class="footer-top-grid">
         
         <!-- Col 1: Brand & Research Mission -->
@@ -228,7 +180,6 @@
           </ul>
         </div>
 
-
       </div>
 
       <!-- Bottom Bar: Copyright & Return to Top -->
@@ -247,6 +198,184 @@
 
     </div>
   </footer>
+
+  <!-- ==========================================================================
+       ROADMAP CANVAS CONTROLLER SCRIPT (240 FRAMES)
+       ========================================================================== -->
+  <script>
+    const TOTAL_ROADMAP_FRAMES = 240;
+    const loadedRoadmapImages = {};
+    let lastDrawnRoadmapFrame = 1;
+    let targetRoadmapFrame = 1;
+    let currentRoadmapFrame = 1;
+
+    function getRoadmapFrameUrl(index) {
+      const padded = String(index).padStart(3, '0');
+      return '/roadmap_frames/frame_' + padded + '.png';
+    }
+
+    const roadmapContainer = document.getElementById('roadmapCanvasContainer');
+    const roadmapViewport = document.getElementById('roadmapCanvasViewport');
+    const roadmapCanvas = document.getElementById('roadmapCanvas');
+    const roadmapCtx = roadmapCanvas ? roadmapCanvas.getContext('2d', { alpha: false }) : null;
+
+    // HUD Elements
+    const roadmapScrollPrompt = document.getElementById('roadmapScrollPrompt');
+    const roadmapFrameCounter = document.getElementById('roadmapFrameCounter');
+
+    function drawRoadmapFrame(frameNum) {
+      if (!roadmapCanvas || !roadmapCtx) return;
+
+      // Find loaded image or nearest neighbor
+      let img = loadedRoadmapImages[frameNum];
+      if (!img || !img.complete || img.naturalWidth === 0) {
+        for (let offset = 1; offset < TOTAL_ROADMAP_FRAMES; offset++) {
+          const prev = frameNum - offset;
+          const next = frameNum + offset;
+          if (prev >= 1 && loadedRoadmapImages[prev]?.complete && loadedRoadmapImages[prev].naturalWidth > 0) {
+            img = loadedRoadmapImages[prev];
+            break;
+          }
+          if (next <= TOTAL_ROADMAP_FRAMES && loadedRoadmapImages[next]?.complete && loadedRoadmapImages[next].naturalWidth > 0) {
+            img = loadedRoadmapImages[next];
+            break;
+          }
+        }
+      }
+
+      if (!img || !img.complete || img.naturalWidth === 0) return;
+
+      const cw = roadmapCanvas.width;
+      const ch = roadmapCanvas.height;
+      const iw = img.naturalWidth;
+      const ih = img.naturalHeight;
+
+      const ratio = Math.max(cw / iw, ch / ih);
+      const nw = iw * ratio;
+      const nh = ih * ratio;
+      const cx = (cw - nw) / 2;
+      const cy = (ch - nh) / 2;
+
+      roadmapCtx.imageSmoothingEnabled = true;
+      roadmapCtx.imageSmoothingQuality = 'high';
+      roadmapCtx.drawImage(img, 0, 0, iw, ih, cx, cy, nw, nh);
+    }
+
+    function updateRoadmapCanvasDimensions() {
+      if (!roadmapCanvas) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const displayWidth = window.innerWidth;
+      const displayHeight = window.innerHeight;
+
+      const targetW = Math.round(displayWidth * dpr);
+      const targetH = Math.round(displayHeight * dpr);
+
+      if (roadmapCanvas.width !== targetW || roadmapCanvas.height !== targetH) {
+        roadmapCanvas.width = targetW;
+        roadmapCanvas.height = targetH;
+      }
+
+      if (lastDrawnRoadmapFrame) {
+        drawRoadmapFrame(lastDrawnRoadmapFrame);
+      }
+    }
+
+    function updateRoadmapHud(prog, frame) {
+      // Hide scroll prompt once user starts scrolling
+      if (roadmapScrollPrompt) {
+        roadmapScrollPrompt.style.opacity = prog > 0.05 ? '0' : '1';
+        roadmapScrollPrompt.style.pointerEvents = 'none';
+      }
+      if (roadmapFrameCounter) {
+        const padded = String(Math.min(Math.max(frame, 1), TOTAL_ROADMAP_FRAMES)).padStart(3, '0');
+        roadmapFrameCounter.textContent = 'SEQUENCE: ' + padded + ' / ' + TOTAL_ROADMAP_FRAMES;
+      }
+    }
+
+    function handleRoadmapScroll() {
+      if (!roadmapContainer || !roadmapViewport) return;
+      const rect = roadmapContainer.getBoundingClientRect();
+      const windowH = window.innerHeight;
+      const scrollableDistance = rect.height - windowH;
+
+      if (scrollableDistance <= 0) {
+        targetRoadmapFrame = 1;
+        roadmapViewport.className = 'arch-canvas-viewport';
+        updateRoadmapHud(0, 1);
+        return;
+      }
+
+      if (rect.top > 0) {
+        // Before entering canvas container
+        roadmapViewport.className = 'arch-canvas-viewport';
+        targetRoadmapFrame = 1;
+        updateRoadmapHud(0, 1);
+      } else if (rect.bottom <= windowH) {
+        // Reached end of track: stay at bottom of container and scroll down
+        roadmapViewport.className = 'arch-canvas-viewport is-after';
+        targetRoadmapFrame = TOTAL_ROADMAP_FRAMES;
+        updateRoadmapHud(1, TOTAL_ROADMAP_FRAMES);
+      } else {
+        // Pinned while user scrubs through frames
+        roadmapViewport.className = 'arch-canvas-viewport is-fixed';
+        const scrolled = -rect.top;
+        const prog = Math.max(0, Math.min(1, scrolled / scrollableDistance));
+        targetRoadmapFrame = 1 + prog * (TOTAL_ROADMAP_FRAMES - 1);
+        updateRoadmapHud(prog, Math.round(targetRoadmapFrame));
+      }
+    }
+
+    // Step A: Load Frame 1 immediately
+    const firstImg = new Image();
+    firstImg.src = getRoadmapFrameUrl(1);
+    firstImg.onload = () => {
+      loadedRoadmapImages[1] = firstImg;
+      drawRoadmapFrame(1);
+    };
+
+    // Step B: Batch preloading in parallel
+    for (let i = 2; i <= TOTAL_ROADMAP_FRAMES; i++) {
+      const img = new Image();
+      img.src = getRoadmapFrameUrl(i);
+      img.onload = () => {
+        loadedRoadmapImages[i] = img;
+        if (Math.abs(currentRoadmapFrame - i) <= 1) {
+          drawRoadmapFrame(Math.round(currentRoadmapFrame));
+        }
+      };
+    }
+
+    // Step C: Animation loop with smooth lerp easing
+    function animateRoadmapCanvas() {
+      const target = targetRoadmapFrame;
+      const diff = target - currentRoadmapFrame;
+
+      if (Math.abs(diff) > 0.01) {
+        currentRoadmapFrame += diff * 0.12;
+      } else {
+        currentRoadmapFrame = target;
+      }
+
+      const frameToDraw = Math.min(Math.max(Math.round(currentRoadmapFrame), 1), TOTAL_ROADMAP_FRAMES);
+      if (frameToDraw !== lastDrawnRoadmapFrame) {
+        drawRoadmapFrame(frameToDraw);
+        lastDrawnRoadmapFrame = frameToDraw;
+      }
+
+      requestAnimationFrame(animateRoadmapCanvas);
+    }
+
+    window.addEventListener('scroll', handleRoadmapScroll, { passive: true });
+    window.addEventListener('resize', () => {
+      updateRoadmapCanvasDimensions();
+      handleRoadmapScroll();
+    });
+
+    // Init
+    updateRoadmapCanvasDimensions();
+    handleRoadmapScroll();
+    requestAnimationFrame(animateRoadmapCanvas);
+  </script>
 
   <!-- Main JavaScript File -->
   <script src="/js/main.js"></script>

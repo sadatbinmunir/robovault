@@ -38,3 +38,6 @@ next-env.d.ts
 
 # Large archives (exceeds GitHub 100MB limit)
 *.zip
+
+# Previews
+previews/
