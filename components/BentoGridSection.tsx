@@ -230,15 +230,15 @@ export default function BentoGridSection() {
               {/* Bottom Area: Specs & Floating Frosted Pill Button (Exact match to "Visit site" pill in reference) */}
               <div className="relative z-10 pt-48 flex flex-col items-start">
                 <div className="text-[10px] font-mono tracking-[0.25em] uppercase text-purple-300 font-semibold mb-2">
-                  AEROSPACE HARDWARE UNIBODY
+                  STYLISH COMPACT UNIBODY
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2 leading-tight">
-                  Ceramic & Billet Aluminum Chassis
+                  Stylish Plastic Body with Cute Design
                 </h3>
 
                 <p className="text-xs sm:text-sm text-zinc-300/80 leading-relaxed font-light mb-6">
-                  Zero plastic creaks. Hand-finished sandblasted texture, silent dual-bearing servos, and anti-vibration base dampeners.
+                  Crafted with lightweight durable polymers and smooth rounded curves, featuring silent dual-bearing servos and anti-vibration base dampeners.
                 </p>
 
                 {/* Floating Frosted Pill Button (Matches "↗ Visit site" in reference) */}
