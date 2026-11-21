@@ -292,14 +292,11 @@ export default function BentoGridSection() {
                 <div className="sm:col-span-7 relative rounded-[28px] sm:rounded-[34px] overflow-hidden p-6 sm:p-8 border border-white/[0.08] hover:border-cyan-500/35 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-cyan-950/20 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] group transition-all duration-500 flex flex-col justify-between min-h-[250px]">
                   
                   <div className="relative z-10">
-                    <div className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] uppercase text-cyan-400 font-semibold mb-2">
-                      03 / PRIVACY ENCLAVE
-                    </div>
                     <h4 className="text-lg sm:text-xl font-bold tracking-tight text-white uppercase leading-snug mb-3">
-                      100% PRIVATE ON-DEVICE NEURAL PROCESSING
+                      MULTI-PROCESSOR &amp; MULTIMODAL ANALYSIS
                     </h4>
                     <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
-                      All camera frames, microphone audio, and attention metrics run locally on the integrated Neural Engine. Zero telemetry is sent to the cloud.
+                      Combines high-speed dual-core ESP32-S3 edge vision processing with Google Gemini multimodal reasoning to evaluate study focus, head pose, and distraction patterns in real time.
                     </p>
                   </div>
 
