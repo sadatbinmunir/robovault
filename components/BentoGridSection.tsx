@@ -229,11 +229,15 @@ export default function BentoGridSection() {
 
               {/* Bottom Area: Specs & Floating Frosted Pill Button (Exact match to "Visit site" pill in reference) */}
               <div className="relative z-10 pt-48 flex flex-col items-start">
-                <div className="text-[10px] font-mono tracking-[0.25em] uppercase text-purple-300 font-semibold mb-2">
-                  STYLISH COMPACT UNIBODY
-                </div>
-
-                <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2 leading-tight">
+                <h3 
+                  className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 leading-tight"
+                  style={{
+                    background: "linear-gradient(135deg, #C084FC 0%, #A855F7 55%, #E9D5FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    filter: "drop-shadow(0 0 24px rgba(168, 85, 247, 0.45))",
+                  }}
+                >
                   Stylish Plastic Body with Cute Design
                 </h3>
 
@@ -241,9 +245,9 @@ export default function BentoGridSection() {
                   Crafted with lightweight durable polymers and smooth rounded curves, featuring silent dual-bearing servos and anti-vibration base dampeners.
                 </p>
 
-                {/* Floating Frosted Pill Button (Matches "↗ Visit site" in reference) */}
+                {/* Floating Frosted Pill Button (Matches "Visit site" in reference) */}
                 <button className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 hover:border-purple-400/50 text-xs font-semibold text-white tracking-wide backdrop-blur-xl transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] hover:scale-[1.02]">
-                  <span>↗ Explore Hardware Specs</span>
+                  <span>Explore Hardware Specs</span>
                 </button>
               </div>
 
@@ -292,7 +296,15 @@ export default function BentoGridSection() {
                 <div className="sm:col-span-7 relative rounded-[28px] sm:rounded-[34px] overflow-hidden p-6 sm:p-8 border border-white/[0.08] hover:border-cyan-500/35 bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-cyan-950/20 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] group transition-all duration-500 flex flex-col justify-between min-h-[250px]">
                   
                   <div className="relative z-10">
-                    <h4 className="text-lg sm:text-xl font-bold tracking-tight text-white uppercase leading-snug mb-3">
+                    <h4 
+                      className="text-lg sm:text-xl font-bold tracking-tight uppercase leading-snug mb-3"
+                      style={{
+                        background: "linear-gradient(135deg, #C084FC 0%, #A855F7 55%, #E9D5FF 100%)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        filter: "drop-shadow(0 0 20px rgba(168, 85, 247, 0.4))",
+                      }}
+                    >
                       MULTI-PROCESSOR &amp; MULTIMODAL ANALYSIS
                     </h4>
                     <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
