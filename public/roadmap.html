@@ -103,20 +103,300 @@
     </div>
   </div>
 
-  <!-- ==========================================================================
-       MAIN CONTENT: COMING SOON SECTION
+    <!-- ==========================================================================
+       MAIN CONTENT: UPCOMING CAPABILITIES & STRATEGIC ROADMAP
        ========================================================================== -->
-  <main style="min-height: 70vh; padding: 7rem 1.5rem 8rem; position: relative; z-index: 20; background: #000000; text-align: center; border-top: 1px solid rgba(255,255,255,0.08);">
-    <div class="container" style="max-width: 840px; margin: 0 auto;">
+  <main style="min-height: 85vh; padding: 6rem 1.5rem 8rem; position: relative; z-index: 20; background: #000000; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container" style="max-width: 1280px; margin: 0 auto;">
       
-      <h2 style="font-family: var(--font-sans); font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 1.5rem 0;">
-        <span style="color: #FFFFFF;">ROADMAP</span><br>
-        <span style="background: linear-gradient(135deg, #C084FC 0%, #A855F7 50%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.5));">COMING SOON</span>
-      </h2>
+      <!-- Section Header -->
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 3.5rem;">
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: #C084FC; background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); padding: 0.4rem 1rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; box-shadow: 0 0 20px rgba(168,85,247,0.2);">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #A855F7; box-shadow: 0 0 8px #A855F7;"></span>
+          <span>STRATEGIC R&amp;D PIPELINE // PHASE 2.0 &ndash; 3.0</span>
+        </div>
 
-      <p style="color: #94A3B8; font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.7; max-width: 640px; margin: 0 auto 3rem; font-weight: 300;">
-        The multi-phase autonomous desk robotics trajectory, commercial hardware iterations, and multi-modal edge AI roadmap are currently undergoing finalized benchmarking. Check back soon for the official release.
-      </p>
+        <h2 style="font-family: var(--font-sans); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 1.25rem 0;">
+          <span style="color: #FFFFFF;">UPCOMING</span> <span style="background: linear-gradient(135deg, #C084FC 0%, #A855F7 50%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.5));">CAPABILITIES</span>
+        </h2>
+
+        <p style="color: #94A3B8; font-size: clamp(0.95rem, 1.6vw, 1.12rem); line-height: 1.7; margin: 0 auto; font-weight: 300;">
+          Engineering milestones currently undergoing laboratory prototyping and architectural bench testing. Spanning non-invasive clinical biometrics, affective companion ergonomics, next-gen silicon accelerators, and multimodal ambient intelligence.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+        <div style="display: inline-flex; gap: 0.5rem; background: rgba(15, 23, 42, 0.6); padding: 0.4rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(20px); flex-wrap: wrap; justify-content: center;">
+          <button class="roadmap-filter-btn active" onclick="filterRoadmap('all', this)">
+            <span>ALL CAPABILITIES (10)</span>
+          </button>
+          <button class="roadmap-filter-btn" onclick="filterRoadmap('health', this)">
+            <span>BIOMETRICS &amp; HEALTH (4)</span>
+          </button>
+          <button class="roadmap-filter-btn" onclick="filterRoadmap('hardware', this)">
+            <span>NEXT-GEN HARDWARE (3)</span>
+          </button>
+          <button class="roadmap-filter-btn" onclick="filterRoadmap('ai', this)">
+            <span>MULTIMODAL AI (3)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bento Deck Grid of Upcoming Features -->
+      <div class="roadmap-features-grid" id="roadmapFeaturesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1.75rem; margin-bottom: 5rem;">
+
+        <!-- CARD 1: Google Health Integration -->
+        <div class="roadmap-feature-card" data-category="health">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.35); color: #34D399;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <div class="card-status-pill completed">
+              <span>● PHASE 2.0 // ECOSYSTEM</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Google Health Integration</h3>
+          <p class="feature-card-desc">
+            Seamless bidirectional synchronization between FocusBot's daily attention telemetry and the Google Health Connect framework.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Correlates sleep recovery metrics with next-day study focus retention</span></li>
+            <li><span class="point-check">✓</span><span>Logs active desk duration, ergonomic posture scores, and fatigue intervals</span></li>
+            <li><span class="point-check">✓</span><span>Unified health telemetry accessible across Android, WearOS, and web</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">API: GOOGLE HEALTH CONNECT</span>
+            <span class="phase-tag">ACTIVE R&amp;D</span>
+          </div>
+        </div>
+
+        <!-- CARD 2: Contactless Heart Rate & Blood Pressure (rPPG) -->
+        <div class="roadmap-feature-card" data-category="health">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(244, 63, 94, 0.12); border-color: rgba(244, 63, 94, 0.35); color: #FB7185;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            </div>
+            <div class="card-status-pill active">
+              <span>⚡ PHASE 2.5 // SENSORY</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Contactless Heart Rate &amp; Blood Pressure</h3>
+          <p class="feature-card-desc">
+            Remote Photoplethysmography (rPPG) optical pulse detection through micro-vascular blood volume changes on facial skin.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Measures real-time Heart Rate Variability (HRV) with &plusmn;2 BPM accuracy</span></li>
+            <li><span class="point-check">✓</span><span>Identifies acute sympathetic stress peaks and exam burnout markers</span></li>
+            <li><span class="point-check">✓</span><span>Triggers non-intrusive guided breathing and heart-rate recovery prompts</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">OPTICAL: rPPG 30 FPS</span>
+            <span class="phase-tag">PROTOTYPING</span>
+          </div>
+        </div>
+
+        <!-- CARD 3: Full-Body Ergonomics & Posture Tracking -->
+        <div class="roadmap-feature-card" data-category="health">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.35); color: #38BDF8;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="3"></circle><path d="M12 8v8"></path><path d="m9 12 3-2 3 2"></path><path d="m9 20 3-4 3 4"></path></svg>
+            </div>
+            <div class="card-status-pill completed">
+              <span>● PHASE 2.0 // KINEMATICS</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Full-Body Ergonomics Tracking</h3>
+          <p class="feature-card-desc">
+            33-point 3D kinematic skeleton extraction continuously evaluating desk ergonomics and spinal health.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Detects forward neck angle (&ldquo;tech-neck&rdquo;) and lumbar spine slump</span></li>
+            <li><span class="point-check">✓</span><span>Identifies asymmetrical shoulder lean and repetitive posture strain</span></li>
+            <li><span class="point-check">✓</span><span>Smart standing-desk height guidance and posture realignment cues</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">VISION: 3D SKELETAL POSE</span>
+            <span class="phase-tag">ACTIVE R&amp;D</span>
+          </div>
+        </div>
+
+        <!-- CARD 4: Kinematic Desk Calisthenics & Guided Micro-Breaks -->
+        <div class="roadmap-feature-card" data-category="health">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.35); color: #FBBF24;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </div>
+            <div class="card-status-pill completed">
+              <span>● PHASE 2.0 // AFFECTIVE</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Guided Micro-Breaks &amp; Calisthenics</h3>
+          <p class="feature-card-desc">
+            Embodied physical exercise guidance utilizing FocusBot's 2-DOF pan-tilt articulation and emotive screen.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Leads interactive neck stretches, shoulder rolls, and 20-20-20 eye relief</span></li>
+            <li><span class="point-check">✓</span><span>Physical head nodding and gaze mirroring to enforce break compliance</span></li>
+            <li><span class="point-check">✓</span><span>Dynamically schedules intervals based on cognitive fatigue score</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">INTERACTION: KINEMATIC MIRROR</span>
+            <span class="phase-tag">ALPHA VALIDATION</span>
+          </div>
+        </div>
+
+        <!-- CARD 5: Next-Gen Neural Hardware Architecture -->
+        <div class="roadmap-feature-card" data-category="hardware">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #C084FC;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path></svg>
+            </div>
+            <div class="card-status-pill active">
+              <span>⚡ PHASE 3.0 // ARCHITECTURE</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Next-Gen Neural Hardware Architecture</h3>
+          <p class="feature-card-desc">
+            Upgraded dual-SoC silicon platform featuring dedicated on-device neural acceleration for sub-10ms edge vision models.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Dedicated 1.2 TOPS Neural Processing Unit (NPU) for local inference</span></li>
+            <li><span class="point-check">✓</span><span>Ultra-wide 120 FPS optical sensor array with low-light HDR optics</span></li>
+            <li><span class="point-check">✓</span><span>Modular magnetic expansion bay for environmental sensory pods</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">SILICON: 1.2 TOPS DUAL-SOC</span>
+            <span class="phase-tag">SCHEMATICS</span>
+          </div>
+        </div>
+
+        <!-- CARD 6: Autonomous Magnetic Inductive Charging Base -->
+        <div class="roadmap-feature-card" data-category="hardware">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(34, 197, 94, 0.12); border-color: rgba(34, 197, 94, 0.35); color: #4ADE80;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="card-status-pill completed">
+              <span>● PHASE 2.5 // POWER</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Magnetic Inductive Charging Dock</h3>
+          <p class="feature-card-desc">
+            Cordless Qi2 / MagSafe-compatible desk pad enabling autonomous power delivery and continuous desk presence.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>15W high-efficiency magnetic alignment pad with zero cable tethering</span></li>
+            <li><span class="point-check">✓</span><span>&ldquo;Zen Sleep&rdquo; docking sequence with closed digital eyes &amp; ambient breathing glow</span></li>
+            <li><span class="point-check">✓</span><span>Integrated thermal protection with battery cycle longevity telemetry</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">POWER: QI2 WIRELESS / 15W</span>
+            <span class="phase-tag">LAB BENCH</span>
+          </div>
+        </div>
+
+        <!-- CARD 7: Circadian Lighting & Smart Desk Sync -->
+        <div class="roadmap-feature-card" data-category="hardware">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(234, 179, 8, 0.12); border-color: rgba(234, 179, 8, 0.35); color: #FACC15;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+            </div>
+            <div class="card-status-pill upcoming">
+              <span>⏳ PHASE 2.5 // IOT SYNC</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Circadian Lighting &amp; Smart Desk Sync</h3>
+          <p class="feature-card-desc">
+            Smart home interoperability dynamically controlling ambient workspace lighting based on fatigue and daylight curves.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Native Matter and Zigbee protocol integration for Philips Hue &amp; smart lamps</span></li>
+            <li><span class="point-check">✓</span><span>Transitions from 6500K daylight for alertness to 2700K amber in evening</span></li>
+            <li><span class="point-check">✓</span><span>Blue-light reduction triggers when cognitive exhaustion is classified</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">PROTOCOL: MATTER / ZIGBEE 3.0</span>
+            <span class="phase-tag">SPEC READY</span>
+          </div>
+        </div>
+
+        <!-- CARD 8: Gemini Live Conversational Voice Tutor -->
+        <div class="roadmap-feature-card" data-category="ai">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #E9D5FF;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"></path></svg>
+            </div>
+            <div class="card-status-pill active">
+              <span>⚡ PHASE 2.0 // COGNITIVE</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Gemini Live Conversational Voice Tutor</h3>
+          <p class="feature-card-desc">
+            Bidirectional audio streaming powered by Gemini Live API, turning FocusBot into an intelligent spoken study partner.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Natural low-latency verbal dialogue with conversational interruption support</span></li>
+            <li><span class="point-check">✓</span><span>Socratic study coaching: explains complex algorithms, quizzes chapters aloud</span></li>
+            <li><span class="point-check">✓</span><span>Real-time glance tracking and nod synchronization while speaking</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">ENGINE: GEMINI 3.8 LIVE</span>
+            <span class="phase-tag">IN DEVELOPMENT</span>
+          </div>
+        </div>
+
+        <!-- CARD 9: NFC "Distraction Shield" Tap Station -->
+        <div class="roadmap-feature-card" data-category="ai">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(99, 102, 241, 0.12); border-color: rgba(99, 102, 241, 0.35); color: #818CF8;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <div class="card-status-pill completed">
+              <span>● PHASE 2.0 // DEFENSE</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">NFC &ldquo;Distraction Shield&rdquo; Tap Station</h3>
+          <p class="feature-card-desc">
+            Physical focus gateway utilizing an embedded NFC coil to enforce distraction-free mobile study sprints.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Resting your smartphone on FocusBot's base locks non-essential apps</span></li>
+            <li><span class="point-check">✓</span><span>Triggers automated iOS Focus / Android Do Not Disturb mode</span></li>
+            <li><span class="point-check">✓</span><span>Prevents impulsive phone checking through tangible physical friction</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">GATEWAY: NFC HARDWARE TAG</span>
+            <span class="phase-tag">PROTOTYPING</span>
+          </div>
+        </div>
+
+        <!-- CARD 10: Adaptive Spatial White Noise & Acoustic Shield -->
+        <div class="roadmap-feature-card" data-category="ai">
+          <div class="feature-card-header">
+            <div class="feature-icon-box" style="background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.35); color: #22D3EE;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+            </div>
+            <div class="card-status-pill upcoming">
+              <span>⏳ PHASE 2.5 // SENSORY</span>
+            </div>
+          </div>
+          <h3 class="feature-card-title">Adaptive Acoustic Noise Shield</h3>
+          <p class="feature-card-desc">
+            Dynamic sound masking that listens to ambient room clamor and plays masking frequencies through the I2S speaker.
+          </p>
+          <ul class="feature-card-points">
+            <li><span class="point-check">✓</span><span>Real-time decibel &amp; frequency profiling via digital MEMS microphone</span></li>
+            <li><span class="point-check">✓</span><span>Generates adaptive pink noise, binaural beats, and brownian soundscapes</span></li>
+            <li><span class="point-check">✓</span><span>Masks sudden café, library, or dorm speech bursts without headphones</span></li>
+          </ul>
+          <div class="feature-card-footer">
+            <span class="spec-pill">AUDIO: 20HZ - 20KHZ MASKING</span>
+            <span class="phase-tag">BENCH TESTING</span>
+          </div>
+        </div>
+
+      </div>
 
       <!-- Quick Navigation Action Buttons -->
       <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
@@ -130,6 +410,184 @@
 
     </div>
   </main>
+
+  <style>
+    .roadmap-filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.2rem;
+      border-radius: 9999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #94A3B8;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .roadmap-filter-btn:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .roadmap-filter-btn.active {
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.45);
+    }
+
+    .roadmap-feature-card {
+      position: relative;
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(16, 20, 36, 0.78) 0%, rgba(9, 12, 22, 0.88) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      padding: 1.85rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 380px;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+    .roadmap-feature-card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      opacity: 0.6;
+    }
+    .roadmap-feature-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(168, 85, 247, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    }
+    .roadmap-feature-card:hover::before {
+      opacity: 1;
+    }
+
+    .feature-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+    .feature-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card-title {
+      font-family: var(--font-sans);
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+      margin: 0 0 0.65rem 0;
+      transition: color 0.2s ease;
+    }
+    .roadmap-feature-card:hover .feature-card-title {
+      color: #E9D5FF;
+    }
+
+    .feature-card-desc {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #94A3B8;
+      font-weight: 300;
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-card-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .feature-card-points li {
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: #CBD5E1;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .point-check {
+      color: #A855F7;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    .feature-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 1rem;
+      margin-top: auto;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+    }
+    .spec-pill {
+      color: #38BDF8;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .phase-tag {
+      color: #A855F7;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 640px) {
+      .roadmap-features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
+    }
+  </style>
+
+  <script>
+    function filterRoadmap(category, btn) {
+      document.querySelectorAll('.roadmap-filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.roadmap-feature-card');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 
   <!-- ==========================================================================
        UNIFIED GLOBAL SITE FOOTER (MATCHING 1:1 ACROSS ALL PAGES)
